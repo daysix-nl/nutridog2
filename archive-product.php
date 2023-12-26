@@ -43,8 +43,8 @@ get_header( 'shop' ); ?>
         </div>
 
         <!-- PRODUCTEN -->
-        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1028px] grid grid-cols-2 md:grid-cols-3 gap-x-[7px] gap-y-[30px] lg:gap-x-[30px] ld:gap-y-[40px] items-start h-fit">
-           <div class="col-span-2 md:col-span-3 w-full hidden justify-end lg:flex items-center">
+        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1028px] grid grid-cols-2 md:grid-cols-4 gap-x-[7px] gap-y-[30px] lg:gap-x-[30px] ld:gap-y-[40px] items-start h-fit">
+           <div class="col-span-2 md:col-span-4 w-full hidden justify-end lg:flex items-center">
            
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
