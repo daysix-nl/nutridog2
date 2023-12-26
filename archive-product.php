@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' ); ?>
 
-<main class="pt-[91px] lg:pt-[90.67px]">
+<main>
 
 <?php do_action('woocommerce_before_shop_loop'); ?>
 
@@ -30,18 +30,9 @@ get_header( 'shop' ); ?>
 
    
 
-    <div class="flex justify-end">
-
+    <div class="hidden md:flex justify-end">
         <?php echo do_shortcode('[fe_open_button]'); ?>
     </div>
-
-    <!-- <button class="filter-button-shop lg:hidden">
-        Filter
-    </button>
-    <div class="filter-shop-modal">
-        <button class="filter-close p-10">Close</button>
-    </div>
-    <div class="filter-overlay"></div> -->
 
 
     <div class="flex justify-between">

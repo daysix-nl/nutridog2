@@ -1117,6 +1117,9 @@ video {
 .pt-\[91px\] {
   padding-top: 91px;
 }
+.pt-\[111px\] {
+  padding-top: 111px;
+}
 .text-center {
   text-align: center;
 }
@@ -1281,12 +1284,8 @@ video {
     display: block;
   }
 
-  .md\:grid {
-    display: grid;
-  }
-
-  .md\:hidden {
-    display: none;
+  .md\:flex {
+    display: flex;
   }
 
   .md\:h-\[27px\] {
