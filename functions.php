@@ -700,6 +700,9 @@ function custom_frontend_translations($translated_text, $text, $domain) {
             case 'Add to cart':
             $translated_text = 'Voeg toe +';
             break;
+            case 'Verwijderen van lijst':
+            $translated_text = 'Test';
+            break;
        
     }
     return $translated_text;

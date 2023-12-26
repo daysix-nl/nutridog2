@@ -74,6 +74,7 @@ get_header( 'shop' ); ?>
                         <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                     </div>
                     </a>
+                    <div class="absolute top-[8px] right-[8px]"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
                 <a href="<?php the_permalink(); ?>">
                     <div class="flex justify-between items-end w-full">
                         <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000]"><?php echo $product->get_price_html(); ?></p>
@@ -98,7 +99,19 @@ get_header( 'shop' ); ?>
 </div>
 </main>
 
+<script>
+// Wacht tot de DOM geladen is
+document.addEventListener('DOMContentLoaded', function() {
+    // Zoek het element met de class "delete_item"
+    var deleteItem = document.querySelector('.delete_item');
 
+    // Verwijder de tekstinhoud van het element
+    deleteItem.textContent = '';
+
+    // Of als je alleen de tekst voor het icoon wilt laten staan:
+    // deleteItem.textContent = ' ';
+});
+</script>
 
 <?php
 get_footer( 'shop' ); ?>

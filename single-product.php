@@ -101,19 +101,7 @@ if ( post_password_required() ) {
                 </div>
             </div>
             <!-- PRODUCT TOEVOEGEN -->
-            <?php
-        // Haal het product-ID op van het huidige product
-        $product_id = get_the_ID();
 
-        // Controleer of het product al in de winkelmand zit
-        if (wc_get_product($product_id)->is_purchasable() && wc()->cart->find_product_in_cart($product_id)) {
-            echo 'Het product zit al in de winkelmand.';
-            // Voeg hier je eigen logica toe als het product al in de winkelmand zit
-        } else {
-            echo 'Het product zit nog niet in de winkelmand.';
-            // Voeg hier je eigen logica toe als het product nog niet in de winkelmand zit
-        }
-        ?>
             <div class="pt-3">
                  <?php
                     global $product;
@@ -213,6 +201,7 @@ if ( post_password_required() ) {
                                     <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                                 </div>
                                 </a>
+                                 <div class="absolute top-[8px] right-[8px]"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
                                 <a href="<?php the_permalink(); ?>">
                                 <div class="flex justify-between items-end w-full mt-[15px]">
                                     <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000] mb-[3px]"><?php echo $product->get_price_html(); ?></p>
@@ -272,6 +261,7 @@ if ( post_password_required() ) {
                                     <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                                 </div>
                                 </a>
+                                <div class="absolute top-[8px] right-[8px]"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
                                 <a href="<?php the_permalink(); ?>">
                                 <div class="flex justify-between items-end w-full mt-[15px]">
                                     <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000] mb-[3px]"><?php echo $product->get_price_html(); ?></p>
