@@ -884,6 +884,9 @@ video {
 .max-w-\[90\%\] {
   max-width: 90%;
 }
+.max-w-\[430px\] {
+  max-width: 430px;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

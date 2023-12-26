@@ -71,7 +71,7 @@ if ( post_password_required() ) {
         <div class="w-full max-w-[360px] md:max-w-[360px] lg:max-w-[535px] xl:max-w-[600px] mr-[unset] lg:mr-3 xl:mr-4">
             <!-- PRODUCT TITEL EN PRIJS -->
             <div class="grid gap-[25px]">
-                <div class="">
+                <div class="max-w-[430px]">
                     <h1 class="font-tanker text-28 leading-30 text-[#000000] font-extrabold"><?php the_title();?></h1>
                 </div>
                 <div class="">
