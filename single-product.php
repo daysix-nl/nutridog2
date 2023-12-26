@@ -30,7 +30,7 @@ if ( post_password_required() ) {
                 <?php
                 global $product;
                 if ($product->get_gallery_image_ids()) { ?>
-                    <div class="hidden md:grid grid-cols-2 gap-[15px]">
+                    <!-- <div class="hidden md:grid grid-cols-2 gap-[15px]">
                         <!-- PRODUCT AFBEELDING -->
                         <div class="aspect-square w-full bg-[#F4F8FA] overflow-hidden flex justify-center items-center rounded-[10px]">
                             <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
@@ -49,8 +49,8 @@ if ( post_password_required() ) {
                                 }
                             }
                         ?>
-                    </div>
-                    <div class="md:hidden w-full pb-3">
+                    </div> -->
+                    <div class=" w-full pb-3">
                           <div class="swiper mySwiper-shop relative">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide aspect-[16/12] w-full bg-[#F4F8FA] flex justify-center items-center rounded-[10px]">
