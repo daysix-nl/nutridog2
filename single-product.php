@@ -308,6 +308,25 @@ if ( post_password_required() ) {
 });
 </script>
 
+<script>
+    // Wacht tot de DOM geladen is
+document.addEventListener('DOMContentLoaded', function() {
+    // Zoek alle elementen met de class .variable-item-span
+    var variabelElementen = document.querySelectorAll('.variable-item-span');
+
+    // Loop door elk gevonden element
+    variabelElementen.forEach(function(element) {
+        // Haal de tekst op binnen het element
+        var tekst = element.innerText;
+
+        // Zoek naar tekst tussen haakjes en verwijder het
+        var aangepasteTekst = tekst.replace(/\(\d+\)/, '');
+
+        // Zet de aangepaste tekst terug in het element
+        element.innerText = aangepasteTekst;
+    });
+});
+</script>
 
 
 
