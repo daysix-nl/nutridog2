@@ -404,6 +404,14 @@ form.cart {
     display: flex !important;
 }
 
+form.variations_form.cart {
+    display: grid !important;
+
+    .single_variation_wrap {
+        display: flex !important;
+    }
+}
+
 main .button {
     height: 45px !important;
     width: 100% !important;
