@@ -260,7 +260,6 @@ html .wpc-filters-range-inputs .ui-button.ui-state-disabled:hover {
 }
 
 .wpc-filters-range-inputs .ui-slider .ui-slider-handle {
-    -ms-touch-action: none;
     width: 26px !important;
     height: 26px !important;
 }
@@ -398,4 +397,18 @@ body .wpc-filter-chips-list li.wpc-filter-chip:not(.wpc-chip-reset-all) a {
 .woocommerce-result-count,
 .woocommerce-ordering {
     display: none !important;
+}
+
+
+form.cart {
+    display: flex !important;
+}
+
+main .button {
+    height: 45px !important;
+    width: 100% !important;
+    background: #C2F0A0 !important;
+    color: #000 !important;
+    border-radius: 30px !important;
+
 }

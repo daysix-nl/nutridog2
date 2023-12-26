@@ -32,9 +32,9 @@ if ( post_password_required() ) {
                 if ($product->get_gallery_image_ids()) { ?>
           
                     <div class=" w-full pb-3">
-                          <div class="swiper mySwiper-shop relative">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide aspect-[16/12] w-full bg-[#F4F8FA] flex justify-center items-center rounded-[10px]">
+                          <div class="swiper mySwiper-shop relative rounded-[10px] overlow-hidden">
+                                <div class="swiper-wrapper ">
+                                    <div class="swiper-slide aspect-[16/12] w-full bg-[#F4F8FA] flex justify-center items-center">
                                         <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                                     </div>
                                     <?php
@@ -57,7 +57,7 @@ if ( post_password_required() ) {
                     </div>
                 <?php
                 } else { ?>
-                <div class="grid grid-cols-1">
+                <div class="grid grid-cols-1 pb-3">
                     <!-- PRODUCT AFBEELDING -->
                     <div class="aspect-[16/12] w-full bg-[#F4F8FA] overflow-hidden flex justify-center items-center rounded-[10px]">
                         <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-ful w-auto max-h-[70%] max-w-[90%] mix-blend-multiply">
@@ -119,7 +119,7 @@ if ( post_password_required() ) {
             </div>
             
             <!-- PRODUCT BESCHRIJVING -->
-            <div class="border-accordion mt-4"></div>
+            <div class="border-accordion mt-0"></div>
             <div class="accordion-item"> 
                 <button class="accordion text-14 leading-32 font-jakarta font-normal text-[#2B2828] py-[25px] flex">Product informatie</button>
                 <div class="panel">
@@ -155,9 +155,9 @@ if ( post_password_required() ) {
     </div>
 
     <!-- GERELATEERDE PRODUCTEN -->
-    <div class="w-full mt-6">
-        <h2 class="text-24 leading-22 font-jakarta font-semibold text-[#38241B] pb-3">Gerelateerde producten</h2>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[7px] gap-y-[30px] lg:gap-x-[15px]">
+    <div class="w-full mt-6 lg:px-5">
+        <h2 class="text-24 leading-22 font-jakarta font-semibold text-[#38241B] pb-3 text-center">Vergelijkbare producten</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px]">
             <?php
             global $post;
 
@@ -195,81 +195,17 @@ if ( post_password_required() ) {
                         $product = wc_get_product( get_the_ID() ); ?>
                         <!-- PRODUCT -->
                         <div class="product-item h-fit relative">
-                            <div class="w-full aspect-[16/13] bg-[#F4F8FA] flex justify-center overflow-hidden lg:relative">
-                                <a class="w-full flex justify-center" href="<?php the_permalink();?>">
-                                    <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-ful w-auto mix-blend-multiply">
-                                     <!-- NIEUW -->
-                                    <?php 
-                                    global $product;
-                                    // Haal de publicatiedatum van het product op
-                                    $publish_date = $product->get_date_created();
-                                    $current_date = new WC_DateTime();
-                                    $days_difference = $current_date->diff($publish_date)->days;
-                                    if ($days_difference > 19) {
-                                    
-                                    } else { ?>
-                                    <div class="absolute w-[43px] h-[20px] md:w-[76px] md:h-[33px] lg:w-[95px] lg:h-[41px] bg-[#8CC63F] top-0 right-0 flex items-center justify-center">
-                                        <p class="font-tanker text-12 leading-12 md:text-19 md:leading-19 lg:text-24 lg:leading-24 text-white">Nieuw</p>
-                                    </div>
-                                        <?php
-                                    }
-                                    ?>
-                                    <!-- SALE -->
-                                    <?php
-                                    if ( $product->is_on_sale() ) { ?>
-                                    <div class="absolute w-[43px] h-[20px] md:w-[76px] md:h-[33px] lg:w-[95px] lg:h-[41px] bg-[#C69C6D] top-0 right-0 flex items-center justify-center">
-                                        <p class="font-tanker text-12 leading-12 md:text-19 md:leading-19 lg:text-24 lg:leading-24 text-white">
-                                            <?php
-                                                global $product;
-                                                if ( $product->is_on_sale() ) {
-                                                    $regular_price = $product->get_regular_price();
-                                                    $sale_price = $product->get_sale_price();
-                                                    
-                                                    $discount_percentage = 100 - ( ( $sale_price / $regular_price ) * 100 );
-                                                    
-                                                    echo '' . round( $discount_percentage, 0 ) . '%';
-                                                } else {
-                                                }
-                                                ?>
-                                        </p>
-                                    </div>
-                                        <?php
-                                    } else {
-                                    }
-                                    ?>
-                                </a>
-                                <?php
-                                global $product;
-
-                                if ($product->is_type('variable')) { ?>
-                                    <div class="product-add absolute left-[0px] bottom-[0px] right-[0px] lg:left-[8px] lg:right-[8px] lg:bottom-[8px] bg-[#fff] z-[2] hidden lg:block">
-                                    <div class="relative w-full h-full overflow-hidden p-[8px]">
-                                        <?php
-                                       global $product;
-                                        if ($product->is_type('variable')) {
-                                            woocommerce_template_single_add_to_cart();
-                                        } else {
-                                            echo '<form class="cart" method="post" enctype="multipart/form-data">';
-                                            echo woocommerce_template_single_add_to_cart();
-                                            echo '</form>';
-                                        }
-                                        ?>
-                                    </div>
+                            <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
+                                <div class="aspect-square w-full bg-[#F2F4F5] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
+                                    <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                                 </div>
-                                    <?php
-                                } else { ?>
-
-                                    <a href="/shop/?add-to-cart=<?php echo $product->get_id();?>" class="product-add add-fast-button hidden absolute left-[8px] right-[8px] bottom-[8px] h-[45px] bg-[#8CC63F] hover:bg-black duration-300 lg:flex justify-center items-center z-[1]">
-                                    <p class="font-tanker text-25 leading-25 text-white">Snel toevoegen</p>
-                                    </a>
-                                    <?php
-                                }
-                                ?>
-                            </div>
-                            <a href="<?php the_permalink();?>">
-                                <h2 class="font-jakarta text-16 leading-16 md:text-20 md:leading-20 lg:text-24 lg:leading-24 text-[#2B2828] pt-[20px] pb-[10px] font-normal"><?php the_title();?></h2>
-                                <div class="font-jakarta text-12 leading-12 md:text-16 md:leading-16 lg:text-16 lg:leading-16 text-[#2B2828] opacity-[0.5] mb-[10px] line-clamp-1 pr-2"><?php the_excerpt();?></div>
-                                <p class="font-jakarta text-16 leading-16 md:text-18 md:leading-18 lg:text-18 lg:leading-18 text-[#2B2828] font-semibold"><?php echo  $product->get_price_html();?></p>
+                                </a>
+                                <a href="<?php the_permalink(); ?>">
+                                <div class="flex justify-between items-end w-full mt-[15px]">
+                                    <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000] mb-[3px]"><?php echo $product->get_price_html(); ?></p>
+                                    <div class="h-3 w-3 rounded-full bg-[#FFF2E2] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000] mr-[8px]"><span class="mb-[5px]">+</span></div>
+                                </div>
+                                <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[8px] font-medium"><?php the_title(); ?></h2>            
                             </a>
                         </div>
                     
@@ -283,7 +219,7 @@ if ( post_password_required() ) {
     </div>
 
     <!-- RECENT BEKEKEN PRODUCTEN -->
-    <div class="w-full mt-6">
+    <div class="w-full mt-6 lg:px-5">
         
         
             <?php
@@ -310,91 +246,27 @@ if ( post_password_required() ) {
                     $recently_viewed_products = new WP_Query($args);
 
                     if ($recently_viewed_products->have_posts()) : 
-                        echo '<h2 class="text-24 leading-22 font-jakarta font-semibold text-[#38241B] pb-3">Recent bekeken</h2>';
-                        echo '<div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[7px] gap-y-[30px] lg:gap-x-[15px] pb-[60px]">';
+                        echo '<h2 class="text-24 leading-22 font-jakarta font-semibold text-[#38241B] pb-3 text-center">Recent bekeken</h2>';
+                        echo '<div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] pb-[60px]">';
           
                         while ($recently_viewed_products->have_posts()) : $recently_viewed_products->the_post(); 
                             
                             $product = wc_get_product( get_the_ID() ); ?>
-                        <!-- PRODUCT -->
-                        <div class="product-item h-fit">
-                            <div class="w-full aspect-[16/13] bg-[#F4F8FA] flex justify-center overflow-hidden lg:relative">
-                                <a class="w-full flex justify-center" href="<?php the_permalink();?>">
-                                    <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-ful w-auto mix-blend-multiply">
-                                     <!-- NIEUW -->
-                                    <?php 
-                                    global $product;
-                                    // Haal de publicatiedatum van het product op
-                                    $publish_date = $product->get_date_created();
-                                    $current_date = new WC_DateTime();
-                                    $days_difference = $current_date->diff($publish_date)->days;
-                                    if ($days_difference > 19) {
-                                    
-                                    } else { ?>
-                                    <div class="absolute w-[43px] h-[20px] md:w-[76px] md:h-[33px] lg:w-[95px] lg:h-[41px] bg-[#8CC63F] top-0 right-0 flex items-center justify-center">
-                                        <p class="font-tanker text-12 leading-12 md:text-19 md:leading-19 lg:text-24 lg:leading-24 text-white">Nieuw</p>
-                                    </div>
-                                        <?php
-                                    }
-                                    ?>
-                                    <!-- SALE -->
-                                    <?php
-                                    if ( $product->is_on_sale() ) { ?>
-                                    <div class="absolute w-[43px] h-[20px] md:w-[76px] md:h-[33px] lg:w-[95px] lg:h-[41px] bg-[#C69C6D] top-0 right-0 flex items-center justify-center">
-                                        <p class="font-tanker text-12 leading-12 md:text-19 md:leading-19 lg:text-24 lg:leading-24 text-white">
-                                            <?php
-                                                global $product;
-                                                if ( $product->is_on_sale() ) {
-                                                    $regular_price = $product->get_regular_price();
-                                                    $sale_price = $product->get_sale_price();
-                                                    
-                                                    $discount_percentage = 100 - ( ( $sale_price / $regular_price ) * 100 );
-                                                    
-                                                    echo '' . round( $discount_percentage, 0 ) . '%';
-                                                } else {
-                                                }
-                                                ?>
-                                        </p>
-                                    </div>
-                                        <?php
-                                    }
-                                    ?>
-                                </a>
-                                <?php
-                                global $product;
-
-                                if ($product->is_type('variable')) { ?>
-                                    <div class="product-add absolute left-[0px] bottom-[0px] right-[0px] lg:left-[8px] lg:right-[8px] lg:bottom-[8px] bg-[#fff] z-[2] hidden lg:block">
-                                    <div class="relative w-full h-full overflow-hidden p-[8px]">
-                                        <?php
-                                       global $product;
-                                        if ($product->is_type('variable')) {
-                                            woocommerce_template_single_add_to_cart();
-                                        } else {
-                                            echo '<form class="cart" method="post" enctype="multipart/form-data">';
-                                            echo woocommerce_template_single_add_to_cart();
-                                            echo '</form>';
-                                        }
-                                        ?>
-                                    </div>
+                       <!-- PRODUCT -->
+                        <div class="product-item h-fit relative">
+                            <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
+                                <div class="aspect-square w-full bg-[#F2F4F5] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
+                                    <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                                 </div>
-                                    <?php
-                                } else { ?>
-
-                                    <a href="/shop/?add-to-cart=<?php echo $product->get_id();?>" class="product-add add-fast-button hidden absolute left-[8px] right-[8px] bottom-[8px] h-[45px] bg-[#8CC63F] hover:bg-black duration-300 lg:flex justify-center items-center z-[1]">
-                                    <p class="font-tanker text-25 leading-25 text-white">Snel toevoegen</p>
-                                    </a>
-                                    <?php
-                                }
-                                ?>
-                            </div>
-                            <a href="<?php the_permalink();?>">
-                                <h2 class="font-jakarta text-16 leading-16 md:text-20 md:leading-20 lg:text-24 lg:leading-24 text-[#2B2828] pt-[20px] pb-[10px] font-normal"><?php the_title();?></h2>
-                                <div class="font-jakarta text-12 leading-12 md:text-16 md:leading-16 lg:text-16 lg:leading-16 text-[#2B2828] opacity-[0.5] mb-[10px] line-clamp-1 pr-2"><?php the_excerpt();?></div>
-                                <p class="font-jakarta text-16 leading-16 md:text-18 md:leading-18 lg:text-18 lg:leading-18 text-[#2B2828] font-semibold"><?php echo  $product->get_price_html();?></p>
+                                </a>
+                                <a href="<?php the_permalink(); ?>">
+                                <div class="flex justify-between items-end w-full mt-[15px]">
+                                    <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000] mb-[3px]"><?php echo $product->get_price_html(); ?></p>
+                                    <div class="h-3 w-3 rounded-full bg-[#FFF2E2] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000] mr-[8px]"><span class="mb-[5px]">+</span></div>
+                                </div>
+                                <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[8px] font-medium"><?php the_title(); ?></h2>            
                             </a>
                         </div>
-                        
                         
                         <?php 
                     endwhile;

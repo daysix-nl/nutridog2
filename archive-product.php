@@ -43,48 +43,46 @@ get_header( 'shop' ); ?>
         </div>
 
         <!-- PRODUCTEN -->
-        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1028px] grid grid-cols-2 md:grid-cols-4 gap-x-[7px] gap-y-[30px] lg:gap-x-[30px] ld:gap-y-[40px] items-start h-fit">
-           <div class="col-span-2 md:col-span-4 w-full hidden justify-end lg:flex items-center">
-           
+        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1028px] grid grid-cols-2 md:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[30px] ld:gap-y-[40px] items-start h-fit">
+           <!-- MOBILE FILTER -->
+            <div class="col-span-2 md:col-span-4 w-full hidden justify-end lg:flex items-center">
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
            </div>
-           <?php
-        // Aangepaste query om alle producten op te halen
-        $args = array(
-            'post_type' => 'product', // Het posttype van producten
-            'posts_per_page' => -1,   // Toon alle producten
-        );
+           <!-- PRODUCTEN -->
+            <?php
+            // Aangepaste query om alle producten op te halen
+            $args = array(
+                'post_type' => 'product', // Het posttype van producten
+                'posts_per_page' => -1,   // Toon alle producten
+            );
 
-        $products_query = new WP_Query($args);
+            $products_query = new WP_Query($args);
 
-        if ($products_query->have_posts()) :
-            while ($products_query->have_posts()) : $products_query->the_post();
+            if ($products_query->have_posts()) :
+                while ($products_query->have_posts()) : $products_query->the_post();
 
-        // Informatie over het product ophalen
-        $product = wc_get_product(get_the_ID());
-        
-        ?>
-
-        <!-- PRODUCT -->
-        <div class="product-item h-fit relative">
-            <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
-                <div class="aspect-square w-full bg-[#fff] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
-                
-                    <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
-                
+            // Informatie over het product ophalen
+            $product = wc_get_product(get_the_ID());
+            
+            ?>
+            <!-- PRODUCT -->
+            <div class="product-item h-fit relative">
+                <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
+                    <div class="aspect-square w-full bg-[#fff] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
+                        <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
                     </div>
-                     </a>
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="flex justify-between items-end w-full">
-                            <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000]"><?php echo $product->get_price_html(); ?></p>
-                            <div class="h-3 w-3 rounded-full bg-[#FFF2E2] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000]"><span class="mb-[5px]">+</span></div>
-                        </div>
-                        
-                        <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[10px] pb-[10px] font-medium"><?php the_title(); ?></h2>            
                     </a>
-                </div>
+                <a href="<?php the_permalink(); ?>">
+                    <div class="flex justify-between items-end w-full">
+                        <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000]"><?php echo $product->get_price_html(); ?></p>
+                        <div class="h-3 w-3 rounded-full bg-[#F2F4F5] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000] mr-[8px]"><span class="mb-[5px]">+</span></div>
+                    </div>
+                    
+                    <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[10px] pb-[10px] font-medium"><?php the_title(); ?></h2>            
+                </a>
+            </div>
 
             <?php
             endwhile;

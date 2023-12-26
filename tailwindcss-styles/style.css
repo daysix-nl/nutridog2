@@ -711,6 +711,27 @@ video {
 .mt-\[45px\] {
   margin-top: 45px;
 }
+.mr-3 {
+  margin-right: 30px;
+}
+.mr-\[15px\] {
+  margin-right: 15px;
+}
+.mt-1 {
+  margin-top: 10px;
+}
+.mb-\[3px\] {
+  margin-bottom: 3px;
+}
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mr-\[8px\] {
+  margin-right: 8px;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -787,6 +808,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-\[55px\] {
+  height: 55px;
+}
 .max-h-\[70\%\] {
   max-height: 70%;
 }
@@ -832,6 +856,9 @@ video {
 }
 .w-screen {
   width: 100vw;
+}
+.w-\[100px\] {
+  width: 100px;
 }
 .min-w-\[41px\] {
   min-width: 41px;
@@ -909,6 +936,10 @@ video {
 .gap-y-\[30px\] {
   row-gap: 30px;
 }
+.gap-x-\[15px\] {
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -920,6 +951,9 @@ video {
 }
 .rounded-none {
   border-radius: 0px;
+}
+.rounded-\[30px\] {
+  border-radius: 30px;
 }
 .border-\[1px\] {
   border-width: 1px;
@@ -937,6 +971,10 @@ video {
 .border-\[\#B5BBB8\] {
   --tw-border-opacity: 1;
   border-color: rgb(181 187 184 / var(--tw-border-opacity));
+}
+.border-\[\#707070\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(112 112 112 / var(--tw-border-opacity));
 }
 .bg-\[\#8CC63F\] {
   --tw-bg-opacity: 1;
@@ -988,6 +1026,14 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#FCF7F3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 247 243 / var(--tw-bg-opacity));
+}
+.bg-\[\#F2F4F5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 244 245 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -1119,6 +1165,9 @@ video {
 }
 .pt-\[111px\] {
   padding-top: 111px;
+}
+.pt-\[8px\] {
+  padding-top: 8px;
 }
 .text-center {
   text-align: center;
@@ -1523,6 +1572,16 @@ video {
   .lg\:gap-x-\[30px\] {
     -moz-column-gap: 30px;
          column-gap: 30px;
+  }
+
+  .lg\:gap-x-\[50px\] {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
+  .lg\:px-5 {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .lg\:pb-\[80px\] {

@@ -697,10 +697,163 @@ function custom_frontend_translations($translated_text, $text, $domain) {
              case 'Reset all':
             $translated_text = 'Reset alle filters';
             break;
+            case 'Add to cart':
+            $translated_text = 'Voeg toe +';
+            break;
        
     }
     return $translated_text;
 }
 
 add_filter('gettext', 'custom_frontend_translations', 20, 3);
+
+
+
+/*
+|--------------------------------------------------------------------------
+| FILTER EVERYTHING POP-UP INSTELLING
+|--------------------------------------------------------------------------
+|
+| 
+| 
+|
+*/
+
+/* Start code to add in the functions.php */
+add_filter( 'wpc_mobile_width', 'my_custom_wpc_mobile_width' );
+function my_custom_wpc_mobile_width( $width ) {
+    // Screen width in px when Filters widget should become mobile
+    $width = 1200; 
+    return $width;
+}
+/* End code to add in the functions.php  */
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| SIDE BAR
+|--------------------------------------------------------------------------
+|
+| 
+| 
+|
+*/
+
+
+register_sidebar( array(
+  'name' => __( 'Filter sidebar', 'rmccollin' ),
+  'id' => 'filter-sidebar',
+  'description' => __( 'A widget area located to the left filter sidebar.', 'rmccollin' ),
+  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<p class="">',
+  'after_title' => '</p>',
+) );
+ 
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
+ 
+// Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
+add_filter( 'use_widgets_block_editor', '__return_false' );
+
+
+// Make an own input field for the quantity in the cart because why not!!
+add_action('wp_ajax_update_cart_quantity', 'handle_update_cart_quantity');
+add_action('wp_ajax_nopriv_update_cart_quantity', 'handle_update_cart_quantity');
+
+function handle_update_cart_quantity() {
+    $cart_item_key = sanitize_text_field($_POST['cart_item_key']);
+    $quantity = intval($_POST['quantity']);
+
+    if ($cart_item = WC()->cart->get_cart_item($cart_item_key)) {
+        WC()->cart->set_quantity($cart_item_key, $quantity, true);
+        WC()->cart->calculate_totals();
+        wp_send_json_success();
+    } else {
+        wp_send_json_error('Invalid cart item key');
+    }
+}
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| VOORRAAD 0 NAAR CONCEPT
+|--------------------------------------------------------------------------
+|
+| 
+| 
+|
+*/
+
+// Voeg de volgende code toe aan het functions.php bestand van je thema
+
+function voorraad_nul_naar_concept( $ID, $post ) {
+    // Controleer of het product een WooCommerce-product is
+    if ( 'product' === $post->post_type ) {
+        // Krijg de voorraadstatus van het product
+        $voorraad = get_post_meta( $ID, '_stock', true );
+
+        // Als voorraad 0 is, stel de status in op concept
+        if ( 0 === intval( $voorraad ) ) {
+            // Stel de status in op concept
+            $post_data = array(
+                'ID'          => $ID,
+                'post_status' => 'draft',
+            );
+            wp_update_post( $post_data );
+        }
+    }
+}
+
+// Haak de functie in op het save_post-evenement
+add_action( 'save_post', 'voorraad_nul_naar_concept', 10, 2 );
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| RECENT BEKEKEN
+|--------------------------------------------------------------------------
+|
+| 
+| 
+|
+*/
+
+
+function track_viewed_products() {
+    if (is_product()) {
+        global $post;
+
+        // Haal de recent bekeken producten op
+        $recently_viewed = get_transient('wcj_viewed_products');
+
+        // Haal het ID van het huidige product op
+        $current_product_id = $post->ID;
+
+        if (empty($recently_viewed)) {
+            $recently_viewed = array();
+        }
+
+        // Voeg het huidige product toe aan de lijst van recent bekeken producten
+        if (!in_array($current_product_id, $recently_viewed)) {
+            $recently_viewed[] = $current_product_id;
+
+            // Beperk de lijst tot bijvoorbeeld de laatste 10 bekeken producten
+            if (count($recently_viewed) > 10) {
+                array_shift($recently_viewed);
+            }
+
+            // Bijwerk de transient
+            set_transient('wcj_viewed_products', $recently_viewed, 12 * WEEK_IN_SECONDS); // 12 weken (aan te passen)
+        }
+    }
+}
+add_action('template_redirect', 'track_viewed_products');
 

@@ -7,7 +7,7 @@
  get_header(); ?>
 
 <main>
-    <div class="bg-[#C2EAFF] h-[calc(100dvh-142px)] w-full mt-[112px]">
+    <div class="bg-[#C2EAFF] h-[calc(100dvh-142px)] w-full">
         <div class="container h-full items-center grid grid-cols-4 gap-2">
             <div class="relative">
                 <img src="/wp-content/themes/nutridog/img/local/product.png" alt="" class="w-[138px] h-auto absolute bottom-0 left-3 right-0 z-[4]">
