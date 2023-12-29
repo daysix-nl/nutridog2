@@ -799,6 +799,9 @@ video {
 .h-\[65\%\] {
   height: 65%;
 }
+.h-\[100\%\] {
+  height: 100%;
+}
 .max-h-\[680px\] {
   max-height: 680px;
 }
@@ -822,6 +825,12 @@ video {
 }
 .max-h-\[calc\(100\%-100px\)\] {
   max-height: calc(100% - 100px);
+}
+.max-h-\[calc\(100\%\)\] {
+  max-height: calc(100%);
+}
+.max-h-\[calc\(100\%-\[100px\]\)\] {
+  max-height: calc(100% - [100px]);
 }
 .min-h-\[520px\] {
   min-height: 520px;
