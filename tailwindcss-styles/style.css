@@ -744,6 +744,9 @@ video {
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+.aspect-\[1\/1\] {
+  aspect-ratio: 1/1;
+}
 .h-3 {
   height: 30px;
 }
