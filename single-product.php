@@ -81,12 +81,7 @@ if ( post_password_required() ) {
             <!-- INFORMATIE -->
             <div class="w-full grid gap-[15px] mt-4">
                 <!-- USP'S -->
-                <div class="flex items-start">
-                    <svg class="mt-[2px w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
-                        <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </svg>
-                    <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Onze klantenservice helpt je graag verder</p>
-                </div>
+              
                 <div class="flex items-start">
                     <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
                         <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -194,22 +189,7 @@ if ( post_password_required() ) {
             if ($related_products->have_posts()) :
                 while ($related_products->have_posts()) : $related_products->the_post();  // Informatie over het product ophalen
                         $product = wc_get_product( get_the_ID() ); ?>
-                        <!-- PRODUCT -->
-                        <div class="product-item h-fit relative">
-                            <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
-                                <div class="aspect-square w-full bg-[#F2F4F5] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
-                                    <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
-                                </div>
-                                </a>
-                                 <div class="absolute top-[8px] right-[8px]"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
-                                <a href="<?php the_permalink(); ?>">
-                                <div class="flex justify-between items-end w-full mt-[15px]">
-                                    <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000] mb-[3px]"><?php echo $product->get_price_html(); ?></p>
-                                    <div class="h-3 w-3 rounded-full bg-[#FFF2E2] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000] mr-[8px]"><span class="mb-[5px]">+</span></div>
-                                </div>
-                                <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[8px] font-medium"><?php the_title(); ?></h2>            
-                            </a>
-                        </div>
+                        <?php include get_template_directory() . '/componenten/product-item.php'; ?>
                     
                 <?php endwhile;
             endif;
@@ -222,8 +202,6 @@ if ( post_password_required() ) {
 
     <!-- RECENT BEKEKEN PRODUCTEN -->
     <div class="w-full mt-6 lg:px-5">
-        
-        
             <?php
             global $post;
 
@@ -254,23 +232,7 @@ if ( post_password_required() ) {
                         while ($recently_viewed_products->have_posts()) : $recently_viewed_products->the_post(); 
                             
                             $product = wc_get_product( get_the_ID() ); ?>
-                       <!-- PRODUCT -->
-                        <div class="product-item h-fit relative">
-                            <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
-                                <div class="aspect-square w-full bg-[#F2F4F5] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
-                                    <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
-                                </div>
-                                </a>
-                                <div class="absolute top-[8px] right-[8px]"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
-                                <a href="<?php the_permalink(); ?>">
-                                <div class="flex justify-between items-end w-full mt-[15px]">
-                                    <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000] mb-[3px]"><?php echo $product->get_price_html(); ?></p>
-                                    <div class="h-3 w-3 rounded-full bg-[#FFF2E2] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000] mr-[8px]"><span class="mb-[5px]">+</span></div>
-                                </div>
-                                <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[8px] font-medium"><?php the_title(); ?></h2>            
-                            </a>
-                        </div>
-                        
+                       <?php include get_template_directory() . '/componenten/product-item.php'; ?>
                         <?php 
                     endwhile;
                     echo '</div>';
@@ -284,8 +246,6 @@ if ( post_password_required() ) {
                         
                     }
                     ?>
-
-
         </div>
     </div>
 

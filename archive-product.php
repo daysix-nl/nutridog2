@@ -26,7 +26,7 @@ get_header( 'shop' ); ?>
 <?php do_action('woocommerce_before_shop_loop'); ?>
 
 <!-- SHOP CONTAINER -->
-<div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1326px] mx-auto pb-[85px] xl:pb-[105px]">
+<div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] mx-auto pb-[85px] xl:pb-[105px]">
 
    
 
@@ -43,9 +43,9 @@ get_header( 'shop' ); ?>
         </div>
 
         <!-- PRODUCTEN -->
-        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1028px] grid grid-cols-2 md:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[30px] ld:gap-y-[40px] items-start h-fit">
+        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[20px] ld:gap-y-[40px] items-start h-fit">
            <!-- MOBILE FILTER -->
-            <div class="col-span-2 md:col-span-4 w-full hidden justify-end lg:flex items-center">
+            <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden justify-end lg:flex items-center">
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
@@ -67,23 +67,7 @@ get_header( 'shop' ); ?>
             $product = wc_get_product(get_the_ID());
             
             ?>
-            <!-- PRODUCT -->
-            <div class="product-item h-fit relative">
-                <a class="w-full flex justify-center" href="<?php the_permalink(); ?>">
-                    <div class="aspect-square w-full bg-[#fff] flex justify-center items-center rounded-[10px] overflow-hidden lg:relative">
-                        <img src="<?php echo get_the_post_thumbnail_url($product->get_id()); ?>" alt="" class="h-ful w-auto max-h-[70%] px-2 mix-blend-multiply">
-                    </div>
-                    </a>
-                    <div class="absolute top-[8px] right-[8px]"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
-                <a href="<?php the_permalink(); ?>">
-                    <div class="flex justify-between items-end w-full">
-                        <p class="font-jakarta text-15 leading-16 font-extrabold text-[#000]"><?php echo $product->get_price_html(); ?></p>
-                        <div class="h-3 w-3 rounded-full bg-[#F2F4F5] flex items-center justify-center font-jakarta text-15 leading-15 font-extrabold text-[#000] mr-[8px]"><span class="mb-[5px]">+</span></div>
-                    </div>
-                    
-                    <h2 class="font-jakarta text-14 leading-20 text-[#2B2828] pt-[10px] pb-[10px] font-medium"><?php the_title(); ?></h2>            
-                </a>
-            </div>
+            <?php include get_template_directory() . '/componenten/product-item.php'; ?>
 
             <?php
             endwhile;
