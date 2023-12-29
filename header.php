@@ -10,6 +10,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/CyGroteskGrandDark.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/Wedges Italic.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/Wedges.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -20,6 +23,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title><?php bloginfo( 'name' ); ?></title>
     <?php wp_head(); ?>
+
+    <!-- /**
+    * @license
+    * MyFonts Webfont Build ID 805648
+    *
+    * The fonts listed in this notice are subject to the End User License
+    * Agreement(s) entered into by the website owner. All other parties are
+    * explicitly restricted from using the Licensed Webfonts(s).
+    *
+    * You may obtain a valid license from one of MyFonts official sites.
+    * http://www.fonts.com
+    * http://www.myfonts.com
+    * http://www.linotype.com
+    *
+    */ -->
+
 </head>
 <body <?php body_class( 'page-block' ); ?>>
 <header class="fixed w-screen z-[9999]">

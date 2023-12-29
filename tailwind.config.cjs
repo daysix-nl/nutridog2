@@ -29,6 +29,8 @@ module.exports = {
     extend: {
       fontFamily: {
         "jakarta": ["Plus Jakarta Sans", "sans-serif"],
+        "wedges": ["Wedges", "sans-serif"],
+        "grotesk": ["Grotesk", "sans-serif"],
       },
       colors: {
         white: "#FFFFFF",
@@ -404,8 +406,8 @@ module.exports = {
             width: "auto",
           },
           "@screen md": {
-            maxWidth: "691px",
-            width: "691px",
+            maxWidth: "718px",
+            width: "718px",
             paddingLeft: "0px",
             paddingRight: "0px",
           },
