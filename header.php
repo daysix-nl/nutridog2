@@ -43,7 +43,7 @@
 <body <?php body_class( 'page-block' ); ?>>
 <header class="fixed w-screen z-[9999]">
 <section class="h-[34px] w-full bg-[#C2F0A0] flex justify-between">
-    <div class="h-[34px] flex items-center pl-4">
+    <div class="h-[34px] lg:flex items-center pl-4 hidden">
         <div class="flex items-center pr-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
                 <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
@@ -63,12 +63,12 @@
             <p class="font-jakarta text-12 leading-12 ml-[15px]">Uitgebreid assortiment en voorraad speciaal voor honden</p>
         </div>
     </div>
-    <div class="h-[34px] flex items-center pr-4">
+    <div class="h-[34px] lg:flex items-center pr-4 hidden">
         <p class="font-jakarta text-12 leading-12">Klantenservice</p>
     </div>
 </section>
 <section class="h-[77px] w-full bg-white grid grid-cols-3 items-center px-5">
-    <div class="flex justify-between md:w-[320px]">
+    <div class="flex justify-between w-fit md:w-[320px]">
         <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:block">Assortiment</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Winter</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
@@ -100,8 +100,8 @@
         </g>
         </svg>
     </a>
-    <div class="flex justify-end ">
-        <div class=" flex justify-between w-[200px]">
+    <div class="flex justify-end">
+        <div class=" flex justify-between w-fit md:w-[200px]">
             <a href="" class="hidden md:block">
                 <svg id="Group_200" data-name="Group 200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                     <path id="search" d="M10.242,2a8.223,8.223,0,0,1,6.137,13.72L20,19.009,19.069,20,15.4,16.647A8.233,8.233,0,1,1,10.242,2Zm0,15.117a6.887,6.887,0,1,0-6.9-6.887,6.892,6.892,0,0,0,6.9,6.887Z" transform="translate(-2.003 -2)" fill="#121212"/>
