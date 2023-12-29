@@ -79,7 +79,7 @@ if ( post_password_required() ) {
             <div class="grid gap-[25px]">
                 <div class="max-w-[430px]">
                     <h1 class="font-tanker text-28 leading-30 text-[#000000] font-extrabold"><?php the_title();?></h1>
-                    <p><?php  $brand = $product->get_attribute('Brand'); echo esc_html($brand); ?></p>
+                    <?php  $brand = $product->get_attribute('Brand');  echo '<p>' . esc_html($brand) . '</p>'; ?>
                 </div>
                 <div class="">
                     <p class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
