@@ -1599,6 +1599,11 @@ video {
     padding-right: 50px;
   }
 
+  .lg\:px-8 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
   .lg\:pb-\[80px\] {
     padding-bottom: 80px;
   }
