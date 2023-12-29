@@ -883,6 +883,12 @@ video {
 .min-h-\[680px\] {
   min-height: 680px;
 }
+.min-h-\[5200px\] {
+  min-height: 5200px;
+}
+.min-h-\[520px\] {
+  min-height: 520px;
+}
 .w-3 {
   width: 30px;
 }
