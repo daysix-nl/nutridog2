@@ -18,22 +18,22 @@
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/beeld-3.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <div class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Snacks</div>
+                    <a href="/shop" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Snacks</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/beeld-1.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <div class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Spelen</div>
+                    <a href="/shop" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Spelen</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/beeld-3.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <div class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Voeding</div>
+                    <a href="/shop" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Voeding</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/beeld-1.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <div class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Verzorging</div>
+                    <a href="/shop" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Verzorging</a>
                 </div>
             </div>
             <div class="absolute left-0 right-0 top-[-80px] bottom-[-30px] overflow-hidden">
