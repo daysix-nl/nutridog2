@@ -69,7 +69,12 @@
 </section>
 <section class="h-[77px] w-full bg-white grid grid-cols-3 items-center px-5">
     <div class="flex justify-between w-fit md:w-[320px]">
-        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:block">Assortiment</a>
+        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex  navbar-dropdown-btn space-x-3 items-center">
+            <span>Assortiment </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8.716" height="5.26" viewBox="0 0 8.716 5.26">
+                <path id="Down_Arrow_3_" d="M23.858,44.208a.35.35,0,0,1-.248-.1L20.1,40.6a.351.351,0,0,1,.5-.5l3.259,3.259L27.117,40.1a.351.351,0,0,1,.5.5l-3.507,3.507a.35.35,0,0,1-.248.1Z" transform="translate(-19.5 -39.448)" fill="#fff" stroke="#000" stroke-width="1"/>
+            </svg>
+        </a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Winter</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
     </div>
@@ -107,7 +112,7 @@
                     <path id="search" d="M10.242,2a8.223,8.223,0,0,1,6.137,13.72L20,19.009,19.069,20,15.4,16.647A8.233,8.233,0,1,1,10.242,2Zm0,15.117a6.887,6.887,0,1,0-6.9-6.887,6.892,6.892,0,0,0,6.9,6.887Z" transform="translate(-2.003 -2)" fill="#121212"/>
                 </svg>
             </a>
-            <a href="" class="hidden md:block">
+            <a href="/verlanglijst" class="hidden md:block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19.641" height="17.28" viewBox="0 0 19.641 17.28">
                     <path id="love" d="M13.892,4A5.658,5.658,0,0,0,9.77,5.789,5.648,5.648,0,0,0,0,9.648c0,5.624,9.071,11.144,9.465,11.361a.611.611,0,0,0,.629,0c.376-.217,9.447-5.737,9.447-11.361A5.655,5.655,0,0,0,13.892,4ZM9.77,19.767C8.192,18.759,1.221,14.051,1.221,9.648A4.427,4.427,0,0,1,9.27,7.105a.611.611,0,0,0,1,0,4.427,4.427,0,0,1,8.051,2.543C18.319,14.048,11.349,18.756,9.77,19.767Z" transform="translate(0.05 -3.875)" fill="#121212" stroke="#121212" stroke-width="0.1"/>
                 </svg>
@@ -122,3 +127,6 @@
 </section>
 
 </header>
+
+
+<?php include 'componenten/navbar-dropdown.php'; ?>

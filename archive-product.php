@@ -28,7 +28,6 @@ get_header( 'shop' ); ?>
 <!-- SHOP CONTAINER -->
 <div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1330px] mx-auto pb-[85px] xl:pb-[105px]">
 
-   
 
     <!-- <div class="flex justify-end">
         <?php echo do_shortcode('[fe_open_button]'); ?>
@@ -42,7 +41,6 @@ get_header( 'shop' ); ?>
             <?php echo do_shortcode('[fe_widget]'); ?>
         </div>
 
-        <!-- PRODUCTEN -->
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
            <!-- CATEGORIE SLIDER -->
            <div class="col-span-2 md:col-span-3 lg:col-span-4">
@@ -117,12 +115,10 @@ get_header( 'shop' ); ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
            </div>
-           <!-- PRODUCTEN -->
             <?php
-            // Aangepaste query om alle producten op te halen
             $args = array(
-                'post_type' => 'product', // Het posttype van producten
-                'posts_per_page' => -1,   // Toon alle producten
+                'post_type' => 'product',
+                'posts_per_page' => -1, 
             );
 
             $products_query = new WP_Query($args);
@@ -130,7 +126,6 @@ get_header( 'shop' ); ?>
             if ($products_query->have_posts()) :
                 while ($products_query->have_posts()) : $products_query->the_post();
 
-            // Informatie over het product ophalen
             $product = wc_get_product(get_the_ID());
             
             ?>
@@ -139,7 +134,6 @@ get_header( 'shop' ); ?>
             <?php
             endwhile;
 
-            // Herstel de oorspronkelijke query
             wp_reset_postdata();
         else :
             echo 'Geen producten gevonden';
