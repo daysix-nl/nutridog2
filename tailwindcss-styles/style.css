@@ -595,8 +595,8 @@ video {
 .right-0 {
   right: 0;
 }
-.right-\[4px\] {
-  right: 4px;
+.right-1 {
+  right: 10px;
 }
 .right-\[8px\] {
   right: 8px;
@@ -604,17 +604,17 @@ video {
 .top-0 {
   top: 0;
 }
+.top-1 {
+  top: 10px;
+}
 .top-\[-80px\] {
   top: -80px;
 }
-.top-\[4px\] {
-  top: 4px;
-}
-.top-\[77px\] {
-  top: 77px;
-}
 .top-\[111px\] {
   top: 111px;
+}
+.z-10 {
+  z-index: 10;
 }
 .z-\[2\] {
   z-index: 2;
@@ -637,14 +637,11 @@ video {
 .z-\[9999\] {
   z-index: 9999;
 }
-.z-10 {
-  z-index: 10;
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 .col-span-2 {
   grid-column: span 2 / span 2;
-}
-.col-span-1 {
-  grid-column: span 1 / span 1;
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
@@ -694,11 +691,17 @@ video {
 .ml-\[15px\] {
   margin-left: 15px;
 }
+.ml-\[30px\] {
+  margin-left: 30px;
+}
 .mr-1 {
   margin-right: 10px;
 }
 .mr-\[15px\] {
   margin-right: 15px;
+}
+.mr-\[5px\] {
+  margin-right: 5px;
 }
 .mr-\[unset\] {
   margin-right: unset;
@@ -741,9 +744,6 @@ video {
 }
 .mt-\[45px\] {
   margin-top: 45px;
-}
-.mr-3 {
-  margin-right: 30px;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -792,6 +792,9 @@ video {
 }
 .h-\[29px\] {
   height: 29px;
+}
+.h-\[33px\] {
+  height: 33px;
 }
 .h-\[34px\] {
   height: 34px;
@@ -869,6 +872,9 @@ video {
 .w-\[29px\] {
   width: 29px;
 }
+.w-\[33px\] {
+  width: 33px;
+}
 .w-auto {
   width: auto;
 }
@@ -911,6 +917,10 @@ video {
 }
 .max-w-\[600px\] {
   max-width: 600px;
+}
+.rotate-\[-180deg\] {
+  --tw-rotate: -180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1024,9 +1034,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(242 251 255 / var(--tw-bg-opacity));
 }
-.bg-\[\#F4F8FA\] {
+.bg-\[\#F6FAFC\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(244 248 250 / var(--tw-bg-opacity));
+  background-color: rgb(246 250 252 / var(--tw-bg-opacity));
 }
 .bg-\[\#FFC9B5\] {
   --tw-bg-opacity: 1;
@@ -1212,6 +1222,9 @@ video {
 .text-40 {
   font-size: 40px;
 }
+.font-bold {
+  font-weight: 700;
+}
 .font-extrabold {
   font-weight: 800;
 }
@@ -1256,6 +1269,9 @@ video {
 }
 .leading-26 {
   line-height: 26px;
+}
+.leading-28 {
+  line-height: 28px;
 }
 .leading-30 {
   line-height: 30px;
