@@ -37,14 +37,81 @@ get_header( 'shop' ); ?>
 
     <div class="flex justify-between">
         <!-- FILTER -->
-        <div class="hidden lg:block lg:w-[214px] filter">
+        <div class="hidden lg:block lg:w-[214px] filter mt-[45px]">
          
             <?php echo do_shortcode('[fe_widget]'); ?>
         </div>
 
         <!-- PRODUCTEN -->
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
-           <!-- FILTER SIDEBAR -->
+           <!-- CATEGORIE SLIDER -->
+           <div class="col-span-2 md:col-span-3 lg:col-span-4">
+                <div class="swiper mySwiper-categorie">
+                    <div class="flex items-center mb-[30px]">
+                        <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000]">Selecteer een categorie</h2>
+                        <div class="swiper-button-prev-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center ml-[30px] mr-[5px]">
+                            <svg class="rotate-[-180deg]" xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
+                            <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
+                                <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
+                            <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
+                                <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                            </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Geneesmiddelen</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Voeding</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Snacks</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Spelen</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Slapen</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Verzorging</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Uitlaten</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Musthaves</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Aanbiedingen</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Cadeaus</p>
+                        </div>
+                    </div>
+                    
+                </div>
+           </div>
+            <!-- FILTER SIDEBAR -->
             <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden lg:flex justify-between items-center">
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>

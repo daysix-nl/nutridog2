@@ -720,6 +720,33 @@ video {
 .mt-\[45px\] {
   margin-top: 45px;
 }
+.mt-\[5px\] {
+  margin-top: 5px;
+}
+.mt-\[8px\] {
+  margin-top: 8px;
+}
+.mt-\[12px\] {
+  margin-top: 12px;
+}
+.mr-2 {
+  margin-right: 20px;
+}
+.mr-\[5px\] {
+  margin-right: 5px;
+}
+.ml-\[20px\] {
+  margin-left: 20px;
+}
+.ml-\[30px\] {
+  margin-left: 30px;
+}
+.mb-\[2\] {
+  margin-bottom: 2;
+}
+.mt-\[50px\] {
+  margin-top: 50px;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -799,6 +826,12 @@ video {
 .h-full {
   height: 100%;
 }
+.h-\[107px\] {
+  height: 107px;
+}
+.h-\[33px\] {
+  height: 33px;
+}
 .max-h-\[680px\] {
   max-height: 680px;
 }
@@ -854,6 +887,12 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-\[107px\] {
+  width: 107px;
+}
+.w-\[33px\] {
+  width: 33px;
+}
 .min-w-\[41px\] {
   min-width: 41px;
 }
@@ -883,6 +922,14 @@ video {
 }
 .max-w-\[600px\] {
   max-width: 600px;
+}
+.rotate-\[-100deg\] {
+  --tw-rotate: -100deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[-180deg\] {
+  --tw-rotate: -180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1014,6 +1061,13 @@ video {
 .bg-\[\#F2FBFF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 251 255 / var(--tw-bg-opacity));
+}
+.bg-\[\] {
+  background-color: ;
+}
+.bg-\[\#F6FAFC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 250 252 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -1180,6 +1234,9 @@ video {
 .text-40 {
   font-size: 40px;
 }
+.text-13 {
+  font-size: 13px;
+}
 .font-extrabold {
   font-weight: 800;
 }
@@ -1191,6 +1248,9 @@ video {
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1236,6 +1296,15 @@ video {
 }
 .leading-37 {
   line-height: 37px;
+}
+.leading-28 {
+  line-height: 28px;
+}
+.leading-25 {
+  line-height: 25px;
+}
+.leading-23 {
+  line-height: 23px;
 }
 .text-\[\#000000\] {
   --tw-text-opacity: 1;

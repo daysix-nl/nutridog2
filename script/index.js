@@ -11,6 +11,38 @@ try {
     console.error(error);
 }
 
+try {
+    var swiperShop = new Swiper(".mySwiper-categorie", {
+        slidesPerView: 3,
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next-categorie",
+            prevEl: ".swiper-button-prev-categorie",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            },
+            // when window width is >= 480px
+            1200: {
+                slidesPerView: 8,
+                spaceBetween: 10
+            },
+            // when window width is >= 640px
+            1352: {
+                slidesPerView: 9,
+                spaceBetween: 10
+            }
+        },
+    });
+} catch (error) {
+    console.error(error);
+}
+
+
 
 try {
     const acc = document.getElementsByClassName("accordion");

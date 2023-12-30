@@ -34,7 +34,7 @@ if ( post_password_required() ) {
                     <div class=" w-full pb-3">
                           <div class="swiper mySwiper-shop relative rounded-[10px] overlow-hidden">
                                 <div class="swiper-wrapper ">
-                                    <div class="swiper-slide aspect-[16/12] w-full bg-[#F4F8FA] flex justify-center items-center">
+                                    <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
                                         <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
                                             <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-full w-auto max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] px-3 lg:px-8 mix-blend-multiply">
                                         </div>
@@ -45,7 +45,7 @@ if ( post_password_required() ) {
                                             $gallery_image_ids = $product->get_gallery_image_ids(); 
                                             foreach ( $gallery_image_ids as $image_id ) { 
                                                 $image_url = wp_get_attachment_url($image_id); ?>
-                                                <div class="swiper-slide aspect-[16/12] w-full bg-[#F4F8FA] flex justify-center items-center">
+                                                <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
                                                     <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
                                                         <img src="<?php echo esc_url($image_url);?>" alt="" class="h-full w-auto max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] px-3 lg:px-8 mix-blend-multiply">
                                                     </div>
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
                 } else { ?>
                 <div class="grid grid-cols-1 pb-3">
                     <!-- PRODUCT AFBEELDING -->
-                    <div class="aspect-[16/12] w-full bg-[#F4F8FA] flex justify-center items-center rounded-[10px]">
+                    <div class="aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center rounded-[10px]">
                         <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
                             <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-full w-auto max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] px-3 lg:px-8 mix-blend-multiply">
                         </div>

@@ -317,8 +317,8 @@ body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
 
 .wpc-chip-reset-all {
@@ -352,6 +352,16 @@ li.wpc-filter-chip {
     color: #000000 !important;
 }
 
+
+
+.wpc-filter-layout-dropdown select {
+    border: 1px solid #000;
+    display: none !important;
+}
+
+.wpc-filter-layout-dropdown .widget-title {
+    display: none !important;
+}
 
 .wpc-sorting-form select {
     font-size: 13px !important;
