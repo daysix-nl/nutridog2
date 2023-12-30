@@ -860,3 +860,31 @@ function track_viewed_products() {
 }
 add_action('template_redirect', 'track_viewed_products');
 
+
+/*
+|--------------------------------------------------------------------------
+| SIDE BAR
+|--------------------------------------------------------------------------
+|
+| 
+| 
+|
+*/
+
+
+register_sidebar( array(
+  'name' => __( 'Filter sidebar', 'rmccollin' ),
+  'id' => 'filter-sidebar',
+  'description' => __( 'A widget area located to the left filter sidebar.', 'rmccollin' ),
+  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<p class="">',
+  'after_title' => '</p>',
+) );
+ 
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
+ 
+// Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
+add_filter( 'use_widgets_block_editor', '__return_false' );
+

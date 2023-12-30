@@ -98,15 +98,15 @@
     height: 12px !important;
     width: 12px !important;
     border-radius: 2px !important;
-    border: 1px solid #8CC63F !important;
-    background: #8CC63F !important;
+    border: 1px solid #000 !important;
+    background: #fff !important;
     transition-duration: 0.3s !important;
     position: relative !important;
 
     &::before {
-        content: '\2713';
+        content: '\2717';
         display: block;
-        color: #fff !important;
+        color: #000 !important;
         position: absolute;
         left: 1px !important;
         top: -2px !important;
@@ -306,81 +306,57 @@ body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
     border: 1px solid #8CC63F !important;
 }
 
-.wpc-filters-close-button {
-    width: 100% !important;
-    background: #fff !important;
-    z-index: 1 !important;
-    font-family: Karlsen, sans-serif !important;
-    font-size: 16px !important;
-    line-height: 25px !important;
+
+
+
+.wpc-filter-chip {
+    background: #CDEEFF !important;
+    border-radius: 22px !important;
+    border: 0px solid #CDEEFF !important;
+    height: 35px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    border-radius: 0px !important;
-    font-weight: 400 !important;
-    color: #0A1F16 !important;
-    border: 1px solid #0A1F16 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
-.wpc-orderby-select {
-    font-family: Karlsen, sans-serif !important;
+.wpc-chip-reset-all {
+    display: none !important;
+
 }
 
-.wpc-custom-selected-terms {
-    clear: both;
-    width: unset !important;
-    margin-right: 20px !important;
+.wpc-chip-remove-icon {
+    display: inline-block;
+
+    line-height: 13px !important;
+    margin-bottom: 2px !important;
+    font-size: 13px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    color: #000000 !important;
+}
+
+body .wpc-filter-chips-list li.wpc-filter-chip:not(.wpc-chip-reset-all) a {
+    border-color: #CDEEFF !important;
 }
 
 .wpc-filter-chips-list li,
 body .wpc-filter-chips-list li.wpc-filter-chip,
 li.wpc-filter-chip {
+    margin: 0 7px 0px 0 !important;
+    padding: 0;
+    border: none;
+    list-style: none;
     font-size: 11px !important;
-    line-height: 11px !important;
-    letter-spacing: 0.05em !important;
-}
-
-body .wpc-filter-chips-list li.wpc-filter-chip:not(.wpc-chip-reset-all) a {
-    border-color: #2B2828 !important;
-    font-family: Karlsen, sans-serif !important;
-    border-radius: 4px !important;
-    display: none !important;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 1200px) {
-    body .wpc-filter-chips-list li.wpc-chip-reset-all a {
-        display: none !important;
-
-    }
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    color: #000000 !important;
 }
 
 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1200px) {
-    body .wpc-filter-chips-list li.wpc-chip-reset-all a {
-        border-color: #2B2828 !important;
-        // background-color: #2B2828 !important;
-        color: #2B2828 !important;
-        font-family: Karlsen, sans-serif !important;
-        border-radius: 0px !important;
-        height: 37px !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 0px 20px !important;
-        margin-bottom: 10px !important;
-        transition-duration: 0.3s !important;
-
-        &:hover {
-            color: #fff !important;
-            background: #2B2828 !important;
-            transition-duration: 0.3s !important;
-        }
-    }
+.wpc-sorting-form select {
+    font-size: 13px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    color: #000 !important;
 }
 
 .woocommerce-error::before,
@@ -470,4 +446,42 @@ p.out-of-stock {
 .fa-heart:before {
     content: "\f004";
     color: #d4d6d8 !important;
+}
+
+
+.wpc-filters-main-wrap li.wpc-term-item a {
+    text-decoration: none;
+    font-weight: 400;
+    outline: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 13px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    color: #000000 !important;
+}
+
+.wpc-term-count {
+    white-space: nowrap;
+    margin: 0 5px;
+    display: none !important;
+    opacity: 1 !important;
+    font-size: 13px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    color: #000000 !important;
+}
+
+.wpc-wrap-icons {
+    font-size: 13px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.wpc-filter-selected-values {
+    visibility: hidden;
+    opacity: 0 !important;
+    margin-top: 5px;
+    font-size: 13px;
+    padding-right: 10px;
+    line-height: 0 !important;
 }

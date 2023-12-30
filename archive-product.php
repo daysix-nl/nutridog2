@@ -26,26 +26,26 @@ get_header( 'shop' ); ?>
 <?php do_action('woocommerce_before_shop_loop'); ?>
 
 <!-- SHOP CONTAINER -->
-<div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] mx-auto pb-[85px] xl:pb-[105px]">
+<div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1330px] mx-auto pb-[85px] xl:pb-[105px]">
 
    
 
-    <div class="hidden md:flex justify-end">
+    <!-- <div class="flex justify-end">
         <?php echo do_shortcode('[fe_open_button]'); ?>
-    </div>
+    </div> -->
 
 
     <div class="flex justify-between">
-        <!-- SIDEBAR -->
-        <div class="hidden lg:block lg:w-[222px] filter">
-             <?php echo do_shortcode('[fe_chips]'); ?>
+        <!-- FILTER -->
+        <div class="hidden lg:block lg:w-[214px] filter">
+         
             <?php echo do_shortcode('[fe_widget]'); ?>
         </div>
 
         <!-- PRODUCTEN -->
-        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[20px] ld:gap-y-[40px] items-start h-fit">
-           <!-- MOBILE FILTER -->
-            <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden justify-end lg:flex items-center">
+        <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
+           <!-- FILTER SIDEBAR -->
+            <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden justify-end lg:flex justify-between items-center">
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
