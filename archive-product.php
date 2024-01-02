@@ -66,44 +66,64 @@ get_header( 'shop' ); ?>
                     </div>
                     <div class="swiper-wrapper max-h-[calc(113px+30px)] md:max-h-[calc(175px+30px)] lg:max-h-[calc(104px+30px)] xl:max-h-[calc(113px+30px)]">
                         <div class="swiper-slide">
-                            <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Geneesmiddelen</p>
+                            <a href="/shop/categorie-geneesmiddelen">
+                                <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Geneesmiddelen</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Voeding</p>
+                            <a href="/shop/categorie-voeding">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Voeding</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Snacks</p>
+                            <a href="/shop/categorie-snacks">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Snacks</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Spelen</p>
+                            <a href="/shop/categorie-spelen">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Spelen</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Slapen</p>
+                            <a href="/shop/categorie-slapen">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Slapen</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Verzorging</p>
+                            <a href="/shop/categorie-verzorging">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Verzorging</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Uitlaten</p>
+                            <a href="/shop/categorie-uitlaten">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Uitlaten</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Musthaves</p>
+                            <a href="/shop/categorie-musthaves">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Musthaves</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Aanbiedingen</p>
+                            <a href="/shop/categorie-aanbiedingen">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Aanbiedingen</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
-                            <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Cadeaus</p>
+                            <a href="/shop/categorie-cadeaus">
+                                <div class="w-full h-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                                <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Cadeaus</p>
+                            </a>
                         </div>
                     </div>
                     
