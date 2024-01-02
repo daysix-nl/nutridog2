@@ -795,26 +795,26 @@ function handle_update_cart_quantity() {
 
 // Voeg de volgende code toe aan het functions.php bestand van je thema
 
-function voorraad_nul_naar_concept( $ID, $post ) {
-    // Controleer of het product een WooCommerce-product is
-    if ( 'product' === $post->post_type ) {
-        // Krijg de voorraadstatus van het product
-        $voorraad = get_post_meta( $ID, '_stock', true );
+// function voorraad_nul_naar_concept( $ID, $post ) {
+//     // Controleer of het product een WooCommerce-product is
+//     if ( 'product' === $post->post_type ) {
+//         // Krijg de voorraadstatus van het product
+//         $voorraad = get_post_meta( $ID, '_stock', true );
 
-        // Als voorraad 0 is, stel de status in op concept
-        if ( 0 === intval( $voorraad ) ) {
-            // Stel de status in op concept
-            $post_data = array(
-                'ID'          => $ID,
-                'post_status' => 'draft',
-            );
-            wp_update_post( $post_data );
-        }
-    }
-}
+//         // Als voorraad 0 is, stel de status in op concept
+//         if ( 0 === intval( $voorraad ) ) {
+//             // Stel de status in op concept
+//             $post_data = array(
+//                 'ID'          => $ID,
+//                 'post_status' => 'draft',
+//             );
+//             wp_update_post( $post_data );
+//         }
+//     }
+// }
 
-// Haak de functie in op het save_post-evenement
-add_action( 'save_post', 'voorraad_nul_naar_concept', 10, 2 );
+// // Haak de functie in op het save_post-evenement
+// add_action( 'save_post', 'voorraad_nul_naar_concept', 10, 2 );
 
 
 
@@ -861,30 +861,5 @@ function track_viewed_products() {
 add_action('template_redirect', 'track_viewed_products');
 
 
-/*
-|--------------------------------------------------------------------------
-| SIDE BAR
-|--------------------------------------------------------------------------
-|
-| 
-| 
-|
-*/
 
-
-register_sidebar( array(
-  'name' => __( 'Filter sidebar', 'rmccollin' ),
-  'id' => 'filter-sidebar',
-  'description' => __( 'A widget area located to the left filter sidebar.', 'rmccollin' ),
-  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-  'after_widget' => '</div>',
-  'before_title' => '<p class="">',
-  'after_title' => '</p>',
-) );
- 
-// Disables the block editor from managing widgets in the Gutenberg plugin.
-add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
- 
-// Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
-add_filter( 'use_widgets_block_editor', '__return_false' );
 
