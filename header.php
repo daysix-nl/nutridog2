@@ -67,10 +67,10 @@
         <p class="font-jakarta text-12 leading-12">Klantenservice</p>
     </div>
 </section>
-<section class="h-[77px] w-full bg-white grid grid-cols-3 items-center px-5">
-    <div class="flex justify-between w-fit md:w-[320px]">
-        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex  navbar-dropdown-btn space-x-3 items-center">
-            <span>Assortiment </span>
+<section class="h-[77px] w-full bg-white flex justify-between items-center px-5">
+    <div class="flex justify-between w-[0px] md:w-[130px] lg:w-[320px]">
+        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center">
+            <span>Assortiment</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="8.716" height="5.26" viewBox="0 0 8.716 5.26">
                 <path id="Down_Arrow_3_" d="M23.858,44.208a.35.35,0,0,1-.248-.1L20.1,40.6a.351.351,0,0,1,.5-.5l3.259,3.259L27.117,40.1a.351.351,0,0,1,.5.5l-3.507,3.507a.35.35,0,0,1-.248.1Z" transform="translate(-19.5 -39.448)" fill="#fff" stroke="#000" stroke-width="1"/>
             </svg>
@@ -105,8 +105,8 @@
         </g>
         </svg>
     </a>
-    <div class="flex justify-end">
-        <div class=" flex justify-between w-fit md:w-[200px]">
+    <div class="flex justify-end w-[0px] md:w-[130px] lg:w-[320px]">
+        <div class="flex justify-between w-fit md:w-[200px]">
             <a href="" class="hidden md:block">
                 <svg id="Group_200" data-name="Group 200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                     <path id="search" d="M10.242,2a8.223,8.223,0,0,1,6.137,13.72L20,19.009,19.069,20,15.4,16.647A8.233,8.233,0,1,1,10.242,2Zm0,15.117a6.887,6.887,0,1,0-6.9-6.887,6.892,6.892,0,0,0,6.9,6.887Z" transform="translate(-2.003 -2)" fill="#121212"/>
