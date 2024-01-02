@@ -842,6 +842,12 @@ video {
 .max-h-\[113px\] {
   max-height: 113px;
 }
+.max-h-\[calc\(113px\+40px\)\] {
+  max-height: calc(113px + 40px);
+}
+.max-h-\[calc\(113px\+30px\)\] {
+  max-height: calc(113px + 30px);
+}
 .min-h-\[520px\] {
   min-height: 520px;
 }
@@ -1396,6 +1402,14 @@ video {
     max-height: 175px;
   }
 
+  .md\:max-h-\[calc\(175px\+40px\)\] {
+    max-height: calc(175px + 40px);
+  }
+
+  .md\:max-h-\[calc\(175px\+30px\)\] {
+    max-height: calc(175px + 30px);
+  }
+
   .md\:min-h-\[575px\] {
     min-height: 575px;
   }
@@ -1555,6 +1569,14 @@ video {
     max-height: 104px;
   }
 
+  .lg\:max-h-\[calc\(104px\+40px\)\] {
+    max-height: calc(104px + 40px);
+  }
+
+  .lg\:max-h-\[calc\(104px\+30px\)\] {
+    max-height: calc(104px + 30px);
+  }
+
   .lg\:min-h-\[575px\] {
     min-height: 575px;
   }
@@ -1702,6 +1724,14 @@ video {
 
   .xl\:max-h-\[113px\] {
     max-height: 113px;
+  }
+
+  .xl\:max-h-\[calc\(113px\+40px\)\] {
+    max-height: calc(113px + 40px);
+  }
+
+  .xl\:max-h-\[calc\(113px\+30px\)\] {
+    max-height: calc(113px + 30px);
   }
 
   .xl\:w-\[450px\] {
