@@ -65,7 +65,7 @@ if ( post_password_required() ) {
                     <!-- PRODUCT AFBEELDING -->
                     <div class="aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center rounded-[10px]">
                         <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
-                            <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-full w-auto max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] px-3 lg:px-8 mix-blend-multiply">
+                            <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="packshot mix-blend-multiply">
                         </div>
                     </div>
                 </div>
