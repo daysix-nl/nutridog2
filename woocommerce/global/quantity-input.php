@@ -67,6 +67,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 					</g>
 				</svg>
 			</div>
+			
 	
 		<?php
 		/**
@@ -77,6 +78,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 		do_action( 'woocommerce_after_quantity_input_field' );
 		?>
 	</div>
+
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
