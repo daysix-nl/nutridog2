@@ -75,8 +75,8 @@ main {
 
 .woocommerce img,
 .woocommerce-page img {
-  height: 100% !important;
-  max-width: 100% !important;
+  height: unset !important;
+  max-width: unset !important;
 }
 
 :focus-visible {

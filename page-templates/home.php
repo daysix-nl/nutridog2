@@ -68,9 +68,301 @@
         </g>
         </svg>
     </section>
+    <!-- KORTING -->
+    <section>
+        <div class="container lg:flex justify-between xl:px-[40px] mt-[50px] lg:mt-[90px]">
+            <div class="lg:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
+                <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In the spotlight</h3>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Mis onze kortingen niet</h2>
+                <p class="text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px] xl:max-w-[230px]">Lorem ipsum dolor sit amet, consetetur </p>
+            </div>
+            <div class="lg:w-[757px] xl:w-[892px] grid grid-cols-2 md:grid-cols-3 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
+                <?php
+                    $args = array(
+                        'post_type' => 'product',
+                        'posts_per_page' => 4, 
+                    );
+                    $products_query = new WP_Query($args);
+                    if ($products_query->have_posts()) :
+                        while ($products_query->have_posts()) : $products_query->the_post();
+                    $product = wc_get_product(get_the_ID());
+                    ?>
+                    <div class="md:last-of-type:hidden">
+                        <?php include get_template_directory() . '/componenten/product-item.php'; ?>
+                    </div>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    echo 'Geen producten gevonden';
+                endif;
+                ?>
+            </div>
+        </div>
+    </section>
 
-    <div class="h-[800px] w-full bg-white"></div>
+    <!-- CATEGORIEN -->
+    <section>
+        <h2 class="text-center text-32 leading-32 max-w-[304px] md:max-w-[unset] lg:text-40 lg:leading-40 font-grotesk text-[#FF6248] mt-[60px] lg:mt-[90px] mx-auto">Shop alle categorieen</h2>
+        <div class="swiper mySwiper-categorie mt-[40px]">
+            <div class="swiper-wrapper max-h-[calc(113px+30px)] md:max-h-[calc(175px+30px)] lg:max-h-[calc(104px+30px)] xl:max-h-[calc(113px+30px)]">
+                <div class="swiper-slide ml-[25px] md:ml-[30px]">
+                    <a href="/shop/categorie-voeding">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Voeding</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-snacks">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Snacks</p>
+                    </a>
+                </div>
+                    <div class="swiper-slide">
+                    <a href="/shop/categorie-geneesmiddelen">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Geneesmiddelen</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-spelen">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Spelen</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-slapen">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Slapen</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-verzorging">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Verzorging</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-uitlaten">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Uitlaten</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-musthaves">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Musthaves</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-aanbiedingen">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Aanbiedingen</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/shop/categorie-cadeaus">
+                        <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
+                        <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Cadeaus</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- SPAARPROGRAMMA -->
+    <section class="mt-[80px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 relative">
+            <div class="h-[500px] bg-[#535353] overflow-hidden">
+                <img src="" alt="" class="min-w-full min-h-full object-cover object-center">
+            </div>
+            <div class="bg-[#FF91C8]">
+                <img src="" alt="">
+            </div>
+            <div class="absolute left-0 top-0 right-0 bottom-[unset]">
+                <div class="h-[500px] container flex items-end">
+                    <div class="w-[500px] xl:w-[577px] h-[250px] mb-[60px] flex flex-col justify-end">
+                        <div class="ml-[-55px] md:ml-[-25px] scale-[0.8] md:scale-[1]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="169.385" height="142.551" viewBox="0 0 169.385 142.551">
+                                <g id="Group_446" data-name="Group 446" transform="translate(-54.866 -1693.062)">
+                                    <path id="Path_762" data-name="Path 762" d="M31.3,1.8C37.584-.164,51.964-2.338,70.774,6.013S101.63,21.35,105.659,30.757s.33,28.024-7.376,46.752S76.9,108.309,70.774,110s-21.182-2.27-40.357-10.058S4.674,84.741,1.6,77.508-.373,50.8,7.222,30.757,25.01,3.772,31.3,1.8Z" transform="translate(54.866 1733.26) rotate(-22)" fill="#57dd04"/>
+                                    <path id="Path_763" data-name="Path 763" d="M18.288,1.054C21.962-.1,30.364-1.366,41.355,3.514s18.03,8.962,20.385,14.458.193,16.375-4.31,27.318-12.494,18-16.075,18.988S28.978,62.952,17.774,58.4,2.731,49.516.934,45.29-.218,29.681,4.22,17.972,14.614,2.2,18.288,1.054Z" transform="translate(161.892 1763.368) rotate(6)" fill="#8ed9ff"/>
+                                    <g id="Screenshot_2023-12-18_at_11.43.24" data-name="Screenshot 2023-12-18 at 11.43.24" transform="translate(161.531 1784.167) rotate(149)">
+                                    <path id="Path_699" data-name="Path 699" d="M12.684,22.475a.031.031,0,0,1,.028.04c-.372,2.347-.564,4.778-.715,7.162q-.675,10.729-1.332,21.4a.041.041,0,0,1-.039.039,10.818,10.818,0,0,0-3.544.756,11.016,11.016,0,0,0-4.992,3.983A11.6,11.6,0,0,0,4.532,71.722a10.655,10.655,0,0,0,4.089,1.827,10.508,10.508,0,0,0,5.947-.494,11.237,11.237,0,0,0,3.96-2.682.129.129,0,0,1,.081-.038.433.433,0,0,1,.408.132,13.314,13.314,0,0,0,.9,1.051A10.915,10.915,0,0,0,23.3,73.834a10.341,10.341,0,0,0,5,.819,10.9,10.9,0,0,0,5.068-1.8,11.32,11.32,0,0,0,3.035-3.063,11.749,11.749,0,0,0,.792-11.7,10.961,10.961,0,0,0-6.075-5.477.017.017,0,0,1-.012-.019q1.23-14.2,1.827-28.122a.048.048,0,0,1,.049-.05,10.767,10.767,0,0,0,4.233-1.1,11.281,11.281,0,0,0,4.388-3.891,11.8,11.8,0,0,0,1.913-7.1A11.369,11.369,0,0,0,38.853,3.7a11.075,11.075,0,0,0-5.777-1.944,10.99,10.99,0,0,0-8.689,4.1q-.04.049-.07-.007a10.88,10.88,0,0,0-4.351-4.516A10.41,10.41,0,0,0,11.02.739,10.916,10.916,0,0,0,5.833,5a11.576,11.576,0,0,0-1.9,7.24,11.046,11.046,0,0,0,8.747,10.239" transform="translate(0 0)" fill="none"/>
+                                    <path id="Path_701" data-name="Path 701" d="M12.684,22.475A11.046,11.046,0,0,1,3.936,12.236,11.576,11.576,0,0,1,5.833,5,10.916,10.916,0,0,1,11.02.739a10.41,10.41,0,0,1,8.947.593,10.88,10.88,0,0,1,4.351,4.516q.03.057.07.007a10.99,10.99,0,0,1,8.689-4.1A11.075,11.075,0,0,1,38.853,3.7a11.369,11.369,0,0,1,4.67,8.641,11.8,11.8,0,0,1-1.913,7.1,11.281,11.281,0,0,1-4.388,3.891,10.767,10.767,0,0,1-4.233,1.1.048.048,0,0,0-.049.05Q32.343,38.4,31.113,52.6a.017.017,0,0,0,.012.019A10.961,10.961,0,0,1,37.2,58.092a11.749,11.749,0,0,1-.792,11.7,11.32,11.32,0,0,1-3.035,3.063,10.9,10.9,0,0,1-5.068,1.8,10.341,10.341,0,0,1-5-.819,10.915,10.915,0,0,1-3.382-2.315,13.314,13.314,0,0,1-.9-1.051.433.433,0,0,0-.408-.132.129.129,0,0,0-.081.038,11.237,11.237,0,0,1-3.96,2.682,10.508,10.508,0,0,1-5.947.494,10.655,10.655,0,0,1-4.089-1.827A11.6,11.6,0,0,1,2.089,55.859a11.016,11.016,0,0,1,4.992-3.983,10.818,10.818,0,0,1,3.544-.756.041.041,0,0,0,.039-.039q.657-10.675,1.332-21.4c.151-2.384.344-4.816.715-7.162A.031.031,0,0,0,12.684,22.475Z" transform="translate(0 0)" fill="#fff"/>
+                                    </g>
+                                    <g id="Screenshot_2023-12-18_at_11.43.24-2" data-name="Screenshot 2023-12-18 at 11.43.24" transform="translate(202.958 1818.894) rotate(177)">
+                                    <path id="Path_699-2" data-name="Path 699" d="M7.411,13.133a.018.018,0,0,1,.016.023c-.217,1.371-.33,2.792-.418,4.185q-.395,6.269-.778,12.507a.024.024,0,0,1-.023.023,6.321,6.321,0,0,0-2.071.442A6.437,6.437,0,0,0,1.221,32.64a6.778,6.778,0,0,0,1.428,9.269,6.226,6.226,0,0,0,2.389,1.068,6.14,6.14,0,0,0,3.475-.288,6.566,6.566,0,0,0,2.314-1.567.075.075,0,0,1,.047-.022.253.253,0,0,1,.238.077,7.779,7.779,0,0,0,.528.614,6.378,6.378,0,0,0,1.976,1.353,6.043,6.043,0,0,0,2.923.479A6.372,6.372,0,0,0,19.5,42.571a6.615,6.615,0,0,0,1.773-1.79,6.865,6.865,0,0,0,.463-6.836,6.4,6.4,0,0,0-3.55-3.2.01.01,0,0,1-.007-.011q.719-8.3,1.068-16.432a.028.028,0,0,1,.029-.029,6.292,6.292,0,0,0,2.473-.64,6.592,6.592,0,0,0,2.564-2.273,6.893,6.893,0,0,0,1.118-4.148A6.643,6.643,0,0,0,22.7,2.161a6.471,6.471,0,0,0-3.375-1.136,6.422,6.422,0,0,0-5.077,2.4q-.023.029-.041,0A6.357,6.357,0,0,0,11.667.778,6.083,6.083,0,0,0,6.44.432,6.379,6.379,0,0,0,3.409,2.919,6.764,6.764,0,0,0,2.3,7.15a6.455,6.455,0,0,0,5.111,5.983" transform="translate(0 0)" fill="none"/>
+                                    <path id="Path_701-2" data-name="Path 701" d="M7.411,13.133A6.455,6.455,0,0,1,2.3,7.15,6.764,6.764,0,0,1,3.409,2.919,6.379,6.379,0,0,1,6.44.432a6.083,6.083,0,0,1,5.228.347A6.357,6.357,0,0,1,14.21,3.417q.017.033.041,0a6.422,6.422,0,0,1,5.077-2.4A6.471,6.471,0,0,1,22.7,2.161a6.643,6.643,0,0,1,2.729,5.049,6.893,6.893,0,0,1-1.118,4.148,6.592,6.592,0,0,1-2.564,2.273,6.292,6.292,0,0,1-2.473.64.028.028,0,0,0-.029.029Q18.9,22.438,18.18,30.734a.01.01,0,0,0,.007.011,6.4,6.4,0,0,1,3.55,3.2,6.865,6.865,0,0,1-.463,6.836,6.615,6.615,0,0,1-1.773,1.79,6.372,6.372,0,0,1-2.961,1.051,6.043,6.043,0,0,1-2.923-.479,6.378,6.378,0,0,1-1.976-1.353,7.779,7.779,0,0,1-.528-.614.253.253,0,0,0-.238-.077.075.075,0,0,0-.047.022,6.566,6.566,0,0,1-2.314,1.567,6.14,6.14,0,0,1-3.475.288,6.226,6.226,0,0,1-2.389-1.068A6.778,6.778,0,0,1,1.221,32.64a6.437,6.437,0,0,1,2.917-2.327,6.321,6.321,0,0,1,2.071-.442.024.024,0,0,0,.023-.023q.384-6.238.778-12.507c.088-1.393.2-2.814.418-4.185A.018.018,0,0,0,7.411,13.133Z" transform="translate(0 0)" fill="#fff"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <h2 class="font-wedges text-40 leading-40 md:text-51 md:leading-51 text-white uppercase mt-[15px]">Ontvang nu <span class="font-grotesk text-32 leading-32 lg:text-45 lg:leading-45 xl:text-51 xl:leading-51">Spaarbotjes</span></h2>
+                        <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-[74px] bg-[#2A813B] w-full"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="auto" viewBox="0 0 1437.006 15.442">
+        <g id="Group_324" data-name="Group 324" transform="translate(-5868.5 4307) rotate(180)">
+            <path id="Path_650" data-name="Path 650" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7305.506 4286.5)" fill="#2A813B"/>
+            <path id="Path_640" data-name="Path 640" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6868.35 4286.5)" fill="#2A813B"/>
+            <path id="Path_634" data-name="Path 634" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6431.193 4286.5)" fill="#2A813B"/>
+            <path id="Path_629" data-name="Path 629" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-5994.037 4286.5)" fill="#2A813B"/>
+            <path id="Path_651" data-name="Path 651" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7242.737 4286.5)" fill="#2A813B"/>
+            <path id="Path_641" data-name="Path 641" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6805.581 4286.5)" fill="#2A813B"/>
+            <path id="Path_635" data-name="Path 635" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6368.425 4286.5)" fill="#2A813B"/>
+            <path id="Path_630" data-name="Path 630" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-5931.268 4286.5)" fill="#2A813B"/>
+            <path id="Path_645" data-name="Path 645" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7179.97 4286.5)" fill="#2A813B"/>
+            <path id="Path_642" data-name="Path 642" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6742.813 4286.5)" fill="#2A813B"/>
+            <path id="Path_636" data-name="Path 636" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6305.656 4286.5)" fill="#2A813B"/>
+            <path id="Path_646" data-name="Path 646" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7117.201 4286.5)" fill="#2A813B"/>
+            <path id="Path_643" data-name="Path 643" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6680.045 4286.5)" fill="#2A813B"/>
+            <path id="Path_637" data-name="Path 637" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6242.888 4286.5)" fill="#2A813B"/>
+            <path id="Path_647" data-name="Path 647" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7056.654 4286.5)" fill="#2A813B"/>
+            <path id="Path_644" data-name="Path 644" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6619.498 4286.5)" fill="#2A813B"/>
+            <path id="Path_631" data-name="Path 631" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6182.341 4286.5)" fill="#2A813B"/>
+            <path id="Path_648" data-name="Path 648" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6993.886 4286.5)" fill="#2A813B"/>
+            <path id="Path_638" data-name="Path 638" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6556.729 4286.5)" fill="#2A813B"/>
+            <path id="Path_632" data-name="Path 632" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6119.573 4286.5)" fill="#2A813B"/>
+            <path id="Path_649" data-name="Path 649" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6931.118 4286.5)" fill="#2A813B"/>
+            <path id="Path_639" data-name="Path 639" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6493.961 4286.5)" fill="#2A813B"/>
+            <path id="Path_633" data-name="Path 633" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6056.805 4286.5)" fill="#2A813B"/>
+        </g>
+        </svg>
+    </section>
+
+    <!-- MERKEN -->
+    <section>
+        <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[40px] lg:mt-[70px]">
+            <div class="md:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
+                <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Van alles wat</h3>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[203px] lg:max-w-[246px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <span class="text-[#3A4069]">onze merken</span></h2>
+            </div>
+            <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+                <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
+            
+                <div class="w-full h-[50px] bg-[#f3f3f3] hidden lg:block"></div>
+            </div>
+        </div>
+    </section>
+
+     <!-- IN THE SPOTLIGHT -->
+    <section class="bg-[#CDEEFF] overflow-hidden">
+        <div class="container grid grid-cols-1 md:grid-cols-2 pt-[85px] lg:pt-[90px] xl:pt-[90px] pb-[75px] lg:pb-[80px] xl:pb-[80px] items-center">
+            <div class="flex justify-center md:justify-end">
+                <div class="w-full lg:max-w-[376px] xl:max-w-[405px] lg:mr-[65px] xl:mr-[35px] relative">
+                    <div class="h-[343px] lg:h-[427px] xl:h-[458px] rotate-[15deg] md:rotate-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 386.04 458.646">
+                            <path id="Path_600" data-name="Path 600" d="M317.171,23.059c23.622,3.384,55.8,11.8,74.075,27.684,51.129,44.441,64.379,134.247,27.634,232.078C369.09,415.383,271.021,493.977,164.446,478.836S33.67,354.5,68.77,238.676,227.01,10.143,317.171,23.059Z" transform="translate(-53.74 -22.045)" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 right-[30px] lg:right-0 lg:left-0 bottom-[40px]">
+                        <div class="w-full h-full flex items-center">
+                            <img src="/wp-content/themes/nutridog2/img/local/img1.png" alt="" class="w-auto h-[325px] lg:h-[360px] xl:h-[432px] ml-[40px]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex lg:justify-center mt-[50px] lg:mt-[unset]">
+                <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
+                    <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In the spotlight</h3>
+                    <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Traditional <span class="text-[#2A813B]">colour combination</span></h2>
+                    <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Lorem ipsum dolor sit amet, consetetur </p>
+                    <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BLOGS -->
+    <section class="bg-[#FDF3E4]">
+        <div class="py-[40px] lg:py-[50px] xl:py-[80px]">
+            <div class="w-full max-w-[335px] md:max-w-[624px] lg:max-w-[460px] xl:max-w-[460px] mx-auto">
+                <h2 class="font-wedges text-52 leading-31 uppercase text-center text-[#57DD04]">Leer meer <br><span class="font-grotesk text-51 leading-51 lowercase text-[#2A813B]">over jouw viervoeter</span></h2>
+            </div>
+            <div class="container md:px-[30px] lg:px-[unset] grid grid-cols-2 lg:grid-cols-4 gap-[15px] md:gap-[40px] lg:gap-[30px] mt-[40px] md:mt-[40px] lg:mt-[45px] xl:mt-[45px]">
+                <a href="" class="col-span-1">
+                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
+                        <img src="/wp-content/themes/salgabriel/img/local/img3.png" alt="" class="min-h-full min-w-full object-center object-cover">
+                    </div>
+                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
+                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
+                </a>
+                <a href="" class="col-span-1">
+                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
+                        <img src="/wp-content/themes/salgabriel/img/local/img4.png" alt="" class="min-h-full min-w-full object-center object-cover">
+                    </div>
+                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
+                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
+                </a>
+                <a href="" class="col-span-1">
+                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
+                        <img src="/wp-content/themes/salgabriel/img/local/img5.png" alt="" class="min-h-full min-w-full object-center object-cover">
+                    </div>
+                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
+                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
+                </a>
+                 <div class="col-span-1 h-full">
+                    <div class="w-full aspect-[1/1] flex items-center justify-center">
+                         <div class="w-fit text-left">
+                            <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212]">Learn</h3>
+                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">View more <br><span class="font-syne">articles</span></h2>
+                            <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- FOLLOW US -->
+    <section class="h-full lg:h-[418px] xl:h-[470px] bg-[#FFC3DF] grid lg:flex justify-end relative overflow-hidden">
+        <div class="h-full w-screen lg:w-[calc(50%-345px)] xl:w-[calc(50%-390px)] bg-black relative overflow-hidden order-2">
+            <img src="/wp-content/themes/salgabriel/img/local/img6.png" alt="" class="min-h-full min-w-full object-cover ocject-center-top">
+        </div>
+        <div class="lg:absolute top-0 left-0 right-0 bottom-0 order-1 z-[2]">
+            <div class="w-full h-full flex items-center">
+                <div class="container h-[592px] lg:h-[202px] xl:h-[228px]">
+                    <div class="w-full lg:max-w-[956px] xl:max-w-[1080px] h-full lg:ml-[45px] xl:ml-[50px] flex flex-col lg:flex-row items-center justify-between">
+                        <div class="h-full w-full lg:w-[288px] xl:w-[329px] flex items-center order-2 lg:order-1">
+                            <div class="">
+                                <h3 class="font-jost italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
+                                <h2 class="text-white font-jost font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
+                                <a href="" class="text-white font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline block">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
+                            <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
+                                <img src="/wp-content/themes/salgabriel/img/local/img7.png" alt="" class="min-h-full min-w-full object-cover ocject-center">
+                            </div>
+                            <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
+                                <img src="/wp-content/themes/salgabriel/img/local/img8.png" alt="" class="min-h-full min-w-full object-cover ocject-center">
+                            </div>
+                            <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden">
+                                <img src="/wp-content/themes/salgabriel/img/local/img9.png" alt="" class="min-h-full min-w-full object-cover ocject-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 <?php get_footer('nofooter'); ?>

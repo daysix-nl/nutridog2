@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 } ?>
 
 <main>
-    <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto">
+    <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto mt-[30px]">
 
     <div class="w-full flex flex-col md:flex-row justify-between">
         <div class="w-full max-w-[354px] md:max-w-[334px] lg:max-w-[565px] xl:max-w-[640px]">
@@ -36,7 +36,7 @@ if ( post_password_required() ) {
                                 <div class="swiper-wrapper ">
                                     <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
                                         <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
-                                            <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="h-full w-auto max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] px-3 lg:px-8 mix-blend-multiply">
+                                            <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="packshot mix-blend-multiply">
                                         </div>
                                     </div>
                                     <?php
@@ -47,7 +47,7 @@ if ( post_password_required() ) {
                                                 $image_url = wp_get_attachment_url($image_id); ?>
                                                 <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
                                                     <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
-                                                        <img src="<?php echo esc_url($image_url);?>" alt="" class="h-full w-auto max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] px-3 lg:px-8 mix-blend-multiply">
+                                                        <img src="<?php echo esc_url($image_url);?>" alt="" class="packshot mix-blend-multiply">
                                                     </div>
                                                 </div>
                                             <?php
@@ -76,7 +76,7 @@ if ( post_password_required() ) {
 
         <div class="w-full max-w-[360px] md:max-w-[360px] lg:max-w-[535px] xl:max-w-[600px] mr-[unset] lg:mr-3 xl:mr-4">
             <!-- PRODUCT TITEL EN PRIJS -->
-            <div class="grid gap-[25px]">
+            <div class="grid gap-[25px] lg:mt-[25px]">
                 <div class="max-w-[430px]">
                     <h1 class="font-tanker text-28 leading-30 text-[#000000] font-extrabold"><?php the_title();?></h1>
                     <?php  $brand = $product->get_attribute('Brand');  echo '<p>' . esc_html($brand) . '</p>'; ?>

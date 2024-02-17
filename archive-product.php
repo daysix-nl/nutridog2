@@ -26,7 +26,7 @@ get_header( 'shop' ); ?>
 <?php do_action('woocommerce_before_shop_loop'); ?>
 
 <!-- SHOP CONTAINER -->
-<div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1330px] mx-auto pb-[85px] xl:pb-[105px]">
+<div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1330px] mx-auto pb-[85px] xl:pb-[105px] mt-[30px]">
 
 
     <!-- <div class="flex justify-end">

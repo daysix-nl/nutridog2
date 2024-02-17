@@ -75,7 +75,7 @@
                 <path id="Down_Arrow_3_" d="M23.858,44.208a.35.35,0,0,1-.248-.1L20.1,40.6a.351.351,0,0,1,.5-.5l3.259,3.259L27.117,40.1a.351.351,0,0,1,.5.5l-3.507,3.507a.35.35,0,0,1-.248.1Z" transform="translate(-19.5 -39.448)" fill="#fff" stroke="#000" stroke-width="1"/>
             </svg>
         </a>
-        <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Winter</a>
+        <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Voorjaar</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
     </div>
     <a href="/" class="flex justify-center w-[143.448px] mx-auto">
