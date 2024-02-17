@@ -290,7 +290,7 @@
     <section class="bg-[#FDF3E4]">
         <div class="py-[40px] lg:py-[50px] xl:py-[80px]">
             <div class="w-full max-w-[335px] md:max-w-[624px] lg:max-w-[460px] xl:max-w-[460px] mx-auto">
-                <h2 class="font-wedges text-52 leading-31 uppercase text-center text-[#57DD04]">Leer meer <br><span class="font-grotesk text-51 leading-51 lowercase text-[#2A813B]">over jouw viervoeter</span></h2>
+                <h2 class="font-wedges text-52 leading-31 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-51 leading-51 lowercase text-[#2A813B]">jouw hond</span></h2>
             </div>
             <div class="container md:px-[30px] lg:px-[unset] grid grid-cols-2 lg:grid-cols-4 gap-[15px] md:gap-[40px] lg:gap-[30px] mt-[40px] md:mt-[40px] lg:mt-[45px] xl:mt-[45px]">
                 <a href="" class="col-span-1">
