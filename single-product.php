@@ -31,7 +31,7 @@ if ( post_password_required() ) {
                 global $product;
                 if ($product->get_gallery_image_ids()) { ?>
           
-                    <div class=" w-full pb-3">
+                    <div class=" w-full pb-3 md:pb-[0px]">
                           <div class="swiper mySwiper-shop relative rounded-[10px] overlow-hidden">
                                 <div class="swiper-wrapper ">
                                     <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
@@ -61,7 +61,7 @@ if ( post_password_required() ) {
                     </div>
                 <?php
                 } else { ?>
-                <div class="grid grid-cols-1 pb-3">
+                <div class="grid grid-cols-1 pb-3 md:pb-[0px]">
                     <!-- PRODUCT AFBEELDING -->
                     <div class="aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center rounded-[10px]">
                         <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)]">
@@ -74,17 +74,18 @@ if ( post_password_required() ) {
                 ?>
         </div>
 
-        <div class="w-full max-w-[360px] md:max-w-[360px] lg:max-w-[535px] xl:max-w-[600px] mr-[unset] lg:mr-3 xl:mr-4">
+        <div class="w-full max-w-[360px] md:max-w-[360px] lg:max-w-[535px] xl:max-w-[600px] mr-[unset] lg:mr-3 xl:mr-4 flex flex-col justify-between lg:min-h-[446px] xl:min-h-[500px]">
             <!-- PRODUCT TITEL EN PRIJS -->
             <div class="grid gap-[25px] lg:mt-[25px]">
                 <div class="max-w-[430px]">
                     <h1 class="font-tanker text-28 leading-30 text-[#000000] font-extrabold"><?php the_title();?></h1>
-                    <?php  $brand = $product->get_attribute('Brand');  echo '<p>' . esc_html($brand) . '</p>'; ?>
+                    <?php  $brand = $product->get_attribute('Brand');  echo '<p class="font-jakarta text-14 leading-25 mt-[5px] text-[#888888]">' . esc_html($brand) . '</p>'; ?>
                 </div>
                 <div class="">
                     <p class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
                 </div>
             </div>
+            <div class="">
             <!-- INFORMATIE -->
             <div class="w-full grid gap-[15px] mt-4">
                 <!-- USP'S -->
@@ -119,15 +120,10 @@ if ( post_password_required() ) {
                     <?php
                     }
                     ?>
-                    <?php $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-                     <button class="add-favorite h-[45px] w-[45px] border-[1px] border-[#000] rounded-full flex justify-center items-center  <?php echo str_contains($actual_link, 'verlanglijst') ? "close-button-favorite" : "" ?> " id-data="<?php echo $product->get_id(); ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/ fill="#000"></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/ fill="#000"></svg>
-                    </button>
-                    
+            </div>
             </div>
             
-            <!-- PRODUCT BESCHRIJVING -->
+            <!-- PRODUCT BESCHRIJVING
             <div class="border-accordion mt-0"></div>
             <div class="accordion-item"> 
                 <button class="accordion text-14 leading-32 font-jakarta font-normal text-[#2B2828] py-[25px] flex">Product informatie</button>
@@ -148,7 +144,7 @@ if ( post_password_required() ) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
          
           
             <!-- <div class="accordion-item"> 
@@ -164,8 +160,8 @@ if ( post_password_required() ) {
     </div>
 
     <!-- GERELATEERDE PRODUCTEN -->
-    <div class="w-full mt-6 lg:px-5">
-        <h2 class="text-24 leading-22 font-jakarta font-semibold text-[#38241B] pb-3 text-center">Vergelijkbare producten</h2>
+    <div class="w-full mt-8 lg:px-5">
+        <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#FF6248] pb-4 text-center">Shop meer</h2>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px]">
             <?php
             global $post;
@@ -214,7 +210,7 @@ if ( post_password_required() ) {
     </div>
 
     <!-- RECENT BEKEKEN PRODUCTEN -->
-    <div class="w-full mt-6 lg:px-5">
+    <div class="w-full mt-8 lg:px-5">
             <?php
             global $post;
 
@@ -239,7 +235,7 @@ if ( post_password_required() ) {
                     $recently_viewed_products = new WP_Query($args);
 
                     if ($recently_viewed_products->have_posts()) : 
-                        echo '<h2 class="text-24 leading-22 font-jakarta font-semibold text-[#38241B] pb-3 text-center">Recent bekeken</h2>';
+                        echo '<h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#FF6248] pb-4 text-center">Bekeken door anderen</h2>';
                         echo '<div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] pb-[60px]">';
           
                         while ($recently_viewed_products->have_posts()) : $recently_viewed_products->the_post(); 

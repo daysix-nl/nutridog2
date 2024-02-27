@@ -9,7 +9,7 @@
 <main>
     <!-- HEADER -->
     <section class="overflow-hidden">
-        <div class="bg-[#C2EAFF] h-[calc(100dvh-111px)] min-h-[520px] max-h-[680px] md:min-h-[575px] md:max-h-[575px] lg:min-h-[575px] lg:max-h-[810px] w-full flex flex-col justify-center relative">
+        <div class="bg-[#C2EAFF] h-[calc(100vh-111px)] min-h-[520px] max-h-[680px] md:min-h-[575px] md:max-h-[575px] lg:min-h-[575px] lg:max-h-[810px] w-full flex flex-col justify-center relative">
             <div class="container z-[2]">
                 <h1 class="text-29 leading-19 md:text-37 md:leading-27 lg:text-50 lg:leading-40 font-wedges font-normal text-[#275E47] text-center">Het allerbeste voor <br><span class="font-grotesk font-normal text-33 leading-33 md:text-42 md:leading-42 lg:text-58 lg:leading-58 text-[#57DD04] uppercase">jouw hond</span></h1>
                 <p class="max-w-[292px] md:max-w-[406px] lg:max-w-[486px] mx-auto text-center mt-1 font-jakarta font-semibold text-15 leading-26 md:text-14 md:leading-22 lg:text-16 lg:leading-25 text-[#3A4069] hidden md:block">Lorem ipsum dolor sit amet, consetetur sadipscing. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>

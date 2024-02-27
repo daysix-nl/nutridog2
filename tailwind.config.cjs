@@ -10,6 +10,7 @@ module.exports = {
     "./woocommerce/*.{html,js,php}",
     "./woocommerce/checkout/*.{html,js,php}",
     "./woocommerce/global/*.{html,js,php}",
+    "./woocommerce/single-product/add-to-cart/*.{html,js,php}",
   ],
   theme: {
     container: {

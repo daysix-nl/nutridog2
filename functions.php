@@ -863,3 +863,35 @@ add_action('template_redirect', 'track_viewed_products');
 
 
 
+
+
+function na_toevoegen_aan_winkelwagen($cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data) {
+    // Controleer of de actie al is uitgevoerd
+    if (!isset($_SESSION['toegevoegd_aan_winkelwagen'])) {
+        // Voeg hier je aangepaste functionaliteit toe nadat een product aan het winkelmandje is toegevoegd
+        // Bijvoorbeeld, voeg je JavaScript-code toe om de pop-up te tonen.
+        ?>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            try {
+                const overlayShopCart = document.querySelector(".sidecart-overlay");
+                const sidecart = document.querySelector("#sidecart-menu");
+               
+                overlayShopCart.classList.toggle("sidecart-overlay-active");
+                sidecart.classList.toggle("sidecart-hidden");
+                
+            } catch (error) {
+                console.error(error);
+            }
+
+            console.log('Product is toegevoegd aan het winkelmandje!');
+            });
+        </script>
+        <?php
+
+        // Markeer de actie als uitgevoerd in de sessievariabele
+        $_SESSION['toegevoegd_aan_winkelwagen'] = true;
+    }
+}
+
+add_action('woocommerce_add_to_cart', 'na_toevoegen_aan_winkelwagen', 10, 6);

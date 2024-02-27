@@ -177,3 +177,35 @@ try {
 } catch (error) {
   console.error("Error in main try-catch block: ", error);
 }
+
+
+
+
+
+try {
+  const overlayShopCart = document.querySelector(".sidecart-overlay");
+  const sidecart = document.querySelector("#sidecart-menu");
+  const sidecartClose = document.querySelector("#sidecart-close");
+  const sidecartButton = document.querySelectorAll(".sidecar");
+  // const closeHandler = document.querySelector("#hamburger-menu");
+
+  for (let i = 0; i < sidecartButton.length; i++) {
+    sidecartButton[i].addEventListener("click", () => {
+      // closeHandler.classList.add("hidden");
+      overlayShopCart.classList.toggle("sidecart-overlay-active");
+      sidecart.classList.toggle("sidecart-hidden");
+    });
+  }
+
+  overlayShopCart.addEventListener("click", () => {
+    overlayShopCart.classList.toggle("sidecart-overlay-active");
+    sidecart.classList.toggle("sidecart-hidden");
+  });
+
+  sidecartClose.addEventListener("click", () => {
+    overlayShopCart.classList.toggle("sidecart-overlay-active");
+    sidecart.classList.toggle("sidecart-hidden");
+  });
+} catch (error) {
+  console.error(error);
+}

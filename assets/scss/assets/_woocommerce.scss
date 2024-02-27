@@ -497,3 +497,46 @@ p.out-of-stock {
     padding-right: 10px;
     line-height: 0 !important;
 }
+
+.woocommerce-notices-wrapper {
+    display: none !important;
+}
+
+.stock {
+    display: none !important;
+}
+
+.reset_variations {
+    display: none !important;
+}
+
+.woocommerce-variation-price {
+    margin-top: 15px !important;
+}
+
+.variations .label {
+    display: none !important;
+}
+
+.variations {
+    margin-bottom: 0px !important;
+    width: 100% !important;
+
+    li {
+        width: 30% !important;
+        font-size: 13px !important;
+        font-family: Plus Jakarta Sans, sans-serif !important;
+        color: #000000 !important;
+        font-weight: 400 !important;
+        height: fit-content !important;
+    }
+}
+
+.woocommerce-variation-add-to-cart {
+    margin-top: 20px !important;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).disabled .variable-item-contents:before,
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).disabled:hover .variable-item-contents:before {
+    display: none !important;
+}

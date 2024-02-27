@@ -29,3 +29,35 @@
         }
     }
 }
+
+
+#sidecart-menu {
+    transition: transform 0.3s ease-in-out;
+
+    &.sidecart-hidden {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.sidecart-overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9999;
+    background-color: #0A1F16;
+    opacity: 0;
+    pointer-events: none;
+
+    &.sidecart-overlay-active {
+        visibility: visible;
+        opacity: 0.3;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: all;
+    }
+
+}

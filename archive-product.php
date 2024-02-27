@@ -46,7 +46,7 @@ get_header( 'shop' ); ?>
            <div class="col-span-2 md:col-span-3 lg:col-span-4">
                 <div class="swiper mySwiper-categorie">
                     <div class="flex items-center mb-[30px]">
-                        <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000]">Selecteer een categorie</h2>
+                        <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000] w-[283px] md:w-[auto]">Selecteer een categorie</h2>
                         <div class="swiper-button-prev-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center ml-[30px] mr-[5px]">
                             <svg class="rotate-[-180deg]" xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
                             <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
