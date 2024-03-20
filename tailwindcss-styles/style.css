@@ -936,6 +936,9 @@ video {
 .max-h-\[calc\(113px\+30px\)\] {
   max-height: calc(113px + 30px);
 }
+.max-h-\[550px\] {
+  max-height: 550px;
+}
 .min-h-\[520px\] {
   min-height: 520px;
 }
