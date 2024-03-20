@@ -40,9 +40,10 @@
     */ -->
 
 </head>
-<body <?php body_class( 'page-block' ); ?>>
+<body <?php body_class( 'page-block menu-non-active' ); ?>>
 <header class="fixed w-screen z-[9999]">
-<section class="h-[34px] w-full bg-[#C2F0A0] flex justify-between">
+
+<section class="h-[34px] w-full bg-[#C2F0A0] justify-between hidden lg:flex">
     <div class="h-[34px] lg:flex items-center pl-4 hidden">
         <div class="flex items-center pr-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
@@ -67,9 +68,58 @@
         <p class="font-jakarta text-12 leading-12">Klantenservice</p>
     </div>
 </section>
-<section class="h-[77px] w-full bg-white flex justify-between items-center px-5">
-    <div class="flex justify-between w-[0px] md:w-[130px] lg:w-[320px]">
-        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center">
+
+<section class="h-[34px] w-full bg-[#C2F0A0] justify-between flex lg:hidden swiper swiperhero overflow-x-hidden relative">
+    <div id="scroll-text"  class="w-full swiper-wrapper">
+        <div class="h-[34px] flex items-center w-max space-x-3 swiper-slide">
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
+                    <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
+                </svg>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 15:00 besteld de volgende werkdag in huis</p>
+            </div>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
+                    <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
+                </svg>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Gratis verzending vanaf 50 euro</p>
+            </div>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
+                    <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
+                </svg>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Uitgebreid assortiment en voorraad speciaal voor honden</p>
+            </div>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
+                    <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
+                </svg>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 15:00 besteld de volgende werkdag in huis</p>
+            </div>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
+                    <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
+                </svg>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Gratis verzending vanaf 50 euro</p>
+            </div>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
+                    <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
+                </svg>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Uitgebreid assortiment en voorraad speciaal voor honden</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="h-[77px] w-full bg-white flex justify-between items-center px-[15px] md:px-[25px] lg:px-5">
+    <div class="flex justify-between w-[42px] md:w-[167px] lg:w-[320px]">
+        <button id="menu" class="h-[40px] w-[42px] lg:hidden flex flex-col justify-center items-center relative md:mr-[25px]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a id="assortiment" href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center">
             <span>Assortiment</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="8.716" height="5.26" viewBox="0 0 8.716 5.26">
                 <path id="Down_Arrow_3_" d="M23.858,44.208a.35.35,0,0,1-.248-.1L20.1,40.6a.351.351,0,0,1,.5-.5l3.259,3.259L27.117,40.1a.351.351,0,0,1,.5.5l-3.507,3.507a.35.35,0,0,1-.248.1Z" transform="translate(-19.5 -39.448)" fill="#fff" stroke="#000" stroke-width="1"/>
@@ -105,7 +155,7 @@
         </g>
         </svg>
     </a>
-    <div class="flex justify-end w-[0px] md:w-[130px] lg:w-[320px]">
+    <div class="flex justify-end w-[42px] md:w-[167px] lg:w-[320px]">
         <div class="flex justify-between w-fit md:w-[200px]">
             <a href="" class="hidden md:block">
                 <svg id="Group_200" data-name="Group 200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
@@ -127,6 +177,13 @@
 </section>
 
 </header>
+
+
+<div class="menu fixed h-[100dvh] w-full top-0 bottom-0 bg-white z-[999] lg:hidden">
+    <div class="h-full w-[390px] px-[20px] md:w-[768px] md:px-[40px] mx-auto flex flex-col justify-center">
+        
+    </div>
+</div>
 
 
 <?php include 'componenten/navbar-dropdown.php'; ?>

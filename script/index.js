@@ -209,3 +209,45 @@ try {
 } catch (error) {
   console.error(error);
 }
+
+
+
+try {
+  var swiperHero = new Swiper(".swiperhero", {
+    spaceBetween: 40,
+    lazy: false,
+    freeMode: true,
+    loop: true,
+    speed: 100000,
+
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    breakpoints: {
+      640: {
+        speed: 100000,
+      },
+      768: {
+        speed: 100000,
+      },
+      1024: {
+        speed: 100000,
+      },
+    },
+  });
+} catch (error) { }
+
+
+try {
+  // JavaScript-code om class te togglen
+  document.getElementById('menu').addEventListener('click', function () {
+    // Verkrijg het body-element
+    var bodyElement = document.body;
+
+    // Toggle class 'active' en 'non-active' op het body-element
+    bodyElement.classList.toggle('menu-active');
+    bodyElement.classList.toggle('menu-non-active');
+  });
+} catch (error) { }
