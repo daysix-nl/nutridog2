@@ -113,18 +113,18 @@
 </section>
 
 <section class="h-[77px] w-full bg-white flex justify-between items-center px-[15px] md:px-[25px] lg:px-5">
-    <div class="flex justify-between w-[42px] md:w-[167px] lg:w-[320px]">
+    <div class="flex justify-between w-[65px] md:w-[167px] lg:w-[320px]">
         <button id="menu" class="h-[40px] w-[42px] lg:hidden flex flex-col justify-center items-center relative md:mr-[25px]">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <a id="assortiment" href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center">
+        <button class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center hide-in-menu">
             <span>Assortiment</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="8.716" height="5.26" viewBox="0 0 8.716 5.26">
                 <path id="Down_Arrow_3_" d="M23.858,44.208a.35.35,0,0,1-.248-.1L20.1,40.6a.351.351,0,0,1,.5-.5l3.259,3.259L27.117,40.1a.351.351,0,0,1,.5.5l-3.507,3.507a.35.35,0,0,1-.248.1Z" transform="translate(-19.5 -39.448)" fill="#fff" stroke="#000" stroke-width="1"/>
             </svg>
-        </a>
+        </button>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Voorjaar</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
     </div>
@@ -155,22 +155,31 @@
         </g>
         </svg>
     </a>
-    <div class="flex justify-end w-[42px] md:w-[167px] lg:w-[320px]">
-        <div class="flex justify-between w-fit md:w-[200px]">
-            <a href="" class="hidden md:block">
+    <div class="flex justify-end w-[65px] md:w-[167px] lg:w-[320px]">
+        <div class="flex justify-between items-center w-[65px] md:w-[225px] mr-[7px]">
+            <a href="" class="flex items-center space-x-1 hide-in-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                    <path id="user" d="M17.925,3.075a10.5,10.5,0,0,0-14.849,0A10.679,10.679,0,0,0,.27,8.118,9.979,9.979,0,0,0,0,10.5a10.5,10.5,0,0,0,17.925,7.425,10.5,10.5,0,0,0,0-14.849ZM4.557,17.608A6.007,6.007,0,0,1,10.5,12.321a5.985,5.985,0,0,1,5.943,5.286,9.25,9.25,0,0,1-11.886,0ZM10.5,11.054a3.189,3.189,0,1,1,3.189-3.189A3.193,3.193,0,0,1,10.5,11.054Zm7,5.514a7.233,7.233,0,0,0-4.528-5.043,4.42,4.42,0,1,0-4.947,0,7.227,7.227,0,0,0-4.53,5.04,9.27,9.27,0,1,1,14.005,0Zm0,0"/>
+                </svg>
+                <p class="hidden lg:block mr-2 font-jakarta font-medium text-15 leading-19 text-[#000000]">Inloggen</p>
+            </a>
+            <a href="" class="hidden md:block hide-in-menu">
                 <svg id="Group_200" data-name="Group 200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                     <path id="search" d="M10.242,2a8.223,8.223,0,0,1,6.137,13.72L20,19.009,19.069,20,15.4,16.647A8.233,8.233,0,1,1,10.242,2Zm0,15.117a6.887,6.887,0,1,0-6.9-6.887,6.892,6.892,0,0,0,6.9,6.887Z" transform="translate(-2.003 -2)" fill="#121212"/>
                 </svg>
             </a>
-            <a href="/verlanglijst" class="hidden md:block">
+            <a href="/verlanglijst" class="hidden md:block hide-in-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19.641" height="17.28" viewBox="0 0 19.641 17.28">
                     <path id="love" d="M13.892,4A5.658,5.658,0,0,0,9.77,5.789,5.648,5.648,0,0,0,0,9.648c0,5.624,9.071,11.144,9.465,11.361a.611.611,0,0,0,.629,0c.376-.217,9.447-5.737,9.447-11.361A5.655,5.655,0,0,0,13.892,4ZM9.77,19.767C8.192,18.759,1.221,14.051,1.221,9.648A4.427,4.427,0,0,1,9.27,7.105a.611.611,0,0,0,1,0,4.427,4.427,0,0,1,8.051,2.543C18.319,14.048,11.349,18.756,9.77,19.767Z" transform="translate(0.05 -3.875)" fill="#121212" stroke="#121212" stroke-width="0.1"/>
                 </svg>
             </a>
-            <button class="sidecar">
+            <button class="sidecar relative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20.34" height="18.387" viewBox="0 0 20.34 18.387">
                     <path id="shopping-bag" d="M23.136,9.943a.693.693,0,0,0-.536-.256H19.044A5.308,5.308,0,0,0,13.841,5h-1.4a5.308,5.308,0,0,0-5.2,4.687H3.681a.692.692,0,0,0-.544.254.736.736,0,0,0-.156.594L4.858,21.458A2.3,2.3,0,0,0,7.1,23.387H19.177a2.3,2.3,0,0,0,2.246-1.932L23.3,10.534A.736.736,0,0,0,23.136,9.943Zm-10.7-3.5h1.4a3.886,3.886,0,0,1,3.787,3.245H8.652A3.886,3.886,0,0,1,12.439,6.442ZM20.046,21.2a.887.887,0,0,1-.869.743H7.1a.887.887,0,0,1-.865-.739L4.514,11.129H21.766Z" transform="translate(-2.969 -5)" fill="#121212"/>
                 </svg>
+                 <?php  if ( ! WC()->cart->get_cart_contents_count() == 0 ) { ?>
+                <div class="absolute bottom-[14px] right-[-7px] bg-[#57dd04] h-[14px] w-[14px] rounded-full flex justify-center items-center text-8 font-jakarta font-medium text-white"><?php echo WC()->cart->get_cart_contents_count(); ?></div>
+                <?php } ?>
             </button>
         </div>
     </div>

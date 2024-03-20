@@ -271,7 +271,7 @@ html .wpc-filters-range-inputs .ui-button.ui-state-disabled:hover {
 
 body .wpc-filters-open-button-container a.wpc-filters-open-widget,
 body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
-    display: inline-block;
+    display: inline-block !important;
     text-align: left;
     border: 0px solid #2c2d33 !important;
     border-radius: 2px;

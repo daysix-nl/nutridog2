@@ -28,3 +28,11 @@
     box-shadow: none;
     transform: translateY(4px);
 }
+
+.wpc-filters-open-button-container {
+    position: fixed !important;
+    bottom: 10px !important;
+    left: 20px !important;
+    background-color: #000 !important;
+    z-index: 9999 !important;
+}
