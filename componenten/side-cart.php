@@ -98,7 +98,7 @@
                         if ($verzendkosten >= 1) {
                             echo '' . wc_price($verzendkosten);
                         } else {
-                            echo '<span class="text-[#000]">Free</span>';
+                            echo '<span class="text-[#000]">Gratis</span>';
                         }
                         ?>
                     </p>

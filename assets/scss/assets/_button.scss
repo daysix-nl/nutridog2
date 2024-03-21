@@ -31,8 +31,12 @@
 
 .wpc-filters-open-button-container {
     position: fixed !important;
-    bottom: 10px !important;
-    left: 20px !important;
-    background-color: #000 !important;
-    z-index: 9999 !important;
+    bottom: 15px !important;
+    left: 15px !important;
+    margin-bottom: 0px !important;
+    background-color: #fff !important;
+    border: 1px solid #dddddd !important;
+    z-index: 998 !important;
+    padding: 8px 15px !important;
+    border-radius: 99px !important;
 }

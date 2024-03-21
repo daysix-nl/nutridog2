@@ -16,7 +16,7 @@
             </div>
             <div class="w-full px-2 md:px-[unset] mx-auto max-w-[360px] md:max-w-[718px] lg:max-w-[900px] grid grid-cols-2 md:grid-cols-4 gap-3 mt-3 z-[2]">
                 <div class="relative h-full w-full flex items-end">
-                    <img src="/wp-content/themes/nutridog2/img/local/test6.png" alt="" class="w-full mx-auto h-auto z-[4]">
+                    <img src="/wp-content/themes/nutridog2/img/local/test7.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
                     <a href="/shop/categorie-snacks" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Snacks</a>
                 </div>
@@ -26,7 +26,7 @@
                     <a href="/shop/categorie-spelen" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Spelen</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
-                    <img src="/wp-content/themes/nutridog2/img/local/test5.png" alt="" class="w-full mx-auto h-auto z-[4]">
+                    <img src="/wp-content/themes/nutridog2/img/local/test9.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
                     <a href="/shop/categorie-voeding" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Voeding</a>
                 </div>
@@ -73,7 +73,7 @@
         <div class="container lg:flex justify-between xl:px-[40px] mt-[50px] lg:mt-[90px]">
             <div class="lg:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Slim shoppen</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Meer voor minder</h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
                 <p class="text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px] xl:max-w-[230px]">Ondek onze week- en seizoensaanbiedingen.</p>
             </div>
             <div class="lg:w-[757px] xl:w-[892px] grid grid-cols-2 md:grid-cols-3 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
@@ -81,6 +81,21 @@
                     $args = array(
                         'post_type' => 'product',
                         'posts_per_page' => 4, 
+                        'meta_query'     => array(
+        'relation' => 'AND',
+        array(
+            'key'     => '_sale_price',
+            'value'   => '',
+            'compare' => '!=', // Check of er een verkoopprijs is ingesteld
+            'type'    => 'NUMERIC',
+        ),
+        array(
+            'key'     => '_regular_price',
+            'value'   => 0,
+            'compare' => '>',
+            'type'    => 'NUMERIC',
+        ),
+    ),
                     );
                     $products_query = new WP_Query($args);
                     if ($products_query->have_posts()) :
@@ -94,7 +109,7 @@
                     endwhile;
                     wp_reset_postdata();
                 else :
-                    echo 'Geen producten gevonden';
+                    echo 'Geen kortingen gevonden';
                 endif;
                 ?>
             </div>
@@ -173,7 +188,7 @@
     <!-- SPAARPROGRAMMA -->
     <section class="mt-[80px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 relative">
-            <div class="h-[500px] bg-[#535353] overflow-hidden">
+            <div class="h-[500px] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-w-full min-h-full object-cover object-center">
             </div>
             <div class="bg-[#FF91C8]">
@@ -305,7 +320,7 @@
                                 </g>
                             </g>
                         </svg> 
-                        <p class="font-jakarta font-bold text-white text-15 leading-15 lg:text-18 lg:leading-18 ml-[15px]">Alleen vaste lasten</p>
+                        <p class="font-jakarta font-bold text-white text-15 leading-15 lg:text-18 lg:leading-18 ml-[15px]">Alleen vaste klanten</p>
                     </div>
                      <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="53.006" height="53.647" viewBox="0 0 53.006 53.647">
@@ -353,7 +368,7 @@
                                 </g>
                             </g>
                         </svg> 
-                        <p class="font-jakarta font-bold text-white text-15 leading-15 lg:text-18 lg:leading-18 ml-[15px]">Alleen vaste lasten</p>
+                        <p class="font-jakarta font-bold text-white text-15 leading-15 lg:text-18 lg:leading-18 ml-[15px]">Alleen vaste klanten</p>
                     </div>
                      
                   
@@ -394,7 +409,7 @@
         <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[40px] lg:mt-[70px]">
             <div class="md:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Heb je al een voorkeur?</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">op merk</span></h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct op merk</span></h2>
             </div>
             <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
                 <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
@@ -413,30 +428,90 @@
     </section>
 
      <!-- IN THE SPOTLIGHT -->
-    <section class="bg-[#CDEEFF] overflow-hidden">
-        <div class="container grid grid-cols-1 md:grid-cols-2 pt-[85px] lg:pt-[90px] xl:pt-[90px] pb-[75px] lg:pb-[80px] xl:pb-[80px] items-center">
-            <div class="flex justify-center md:justify-end">
-                <div class="w-full lg:max-w-[376px] xl:max-w-[405px] lg:mr-[65px] xl:mr-[35px] relative">
-                    <div class="h-[343px] lg:h-[427px] xl:h-[458px] rotate-[15deg] md:rotate-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 386.04 458.646">
-                            <path id="Path_600" data-name="Path 600" d="M317.171,23.059c23.622,3.384,55.8,11.8,74.075,27.684,51.129,44.441,64.379,134.247,27.634,232.078C369.09,415.383,271.021,493.977,164.446,478.836S33.67,354.5,68.77,238.676,227.01,10.143,317.171,23.059Z" transform="translate(-53.74 -22.045)" fill="#fff"/>
-                        </svg>
-                    </div>
-                    <div class="absolute top-0 right-[30px] lg:right-0 lg:left-0 bottom-[40px]">
-                        <div class="w-full h-full flex items-center">
-                            <img src="/wp-content/themes/nutridog2/img/local/img1.png" alt="" class="w-auto h-[325px] lg:h-[360px] xl:h-[432px] ml-[40px]">
+    <section class="overflow-hidden">
+        <div class="bg-[#fff]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1437.006" height="15.442" viewBox="0 0 1437.006 15.442">
+                <g id="Group_345" data-name="Group 345" transform="translate(7305.506 -4291.558)">
+                    <path id="Path_650" data-name="Path 650" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7305.506 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_640" data-name="Path 640" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6868.35 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_634" data-name="Path 634" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6431.193 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_629" data-name="Path 629" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-5994.037 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_651" data-name="Path 651" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7242.737 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_641" data-name="Path 641" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6805.581 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_635" data-name="Path 635" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6368.425 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_630" data-name="Path 630" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-5931.268 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_645" data-name="Path 645" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7179.97 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_642" data-name="Path 642" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6742.813 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_636" data-name="Path 636" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6305.656 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_646" data-name="Path 646" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7117.201 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_643" data-name="Path 643" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6680.045 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_637" data-name="Path 637" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6242.888 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_647" data-name="Path 647" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7056.654 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_644" data-name="Path 644" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6619.498 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_631" data-name="Path 631" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6182.341 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_648" data-name="Path 648" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6993.886 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_638" data-name="Path 638" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6556.729 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_632" data-name="Path 632" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6119.573 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_649" data-name="Path 649" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6931.118 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_639" data-name="Path 639" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6493.961 4286.5)" fill="#cdeeff"/>
+                    <path id="Path_633" data-name="Path 633" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6056.805 4286.5)" fill="#cdeeff"/>
+                </g>
+            </svg>
+        </div>
+        <div class="bg-[#CDEEFF] ">
+            <div class="container grid grid-cols-1 md:grid-cols-2 pt-[85px] lg:pt-[90px] xl:pt-[90px] pb-[75px] lg:pb-[80px] xl:pb-[80px] items-center">
+                <div class="flex justify-center md:justify-end">
+                    <div class="w-full lg:max-w-[376px] xl:max-w-[405px] lg:mr-[65px] xl:mr-[35px] relative">
+                        <div class="h-[343px] lg:h-[427px] xl:h-[458px] rotate-[15deg] md:rotate-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 386.04 458.646">
+                                <path id="Path_600" data-name="Path 600" d="M317.171,23.059c23.622,3.384,55.8,11.8,74.075,27.684,51.129,44.441,64.379,134.247,27.634,232.078C369.09,415.383,271.021,493.977,164.446,478.836S33.67,354.5,68.77,238.676,227.01,10.143,317.171,23.059Z" transform="translate(-53.74 -22.045)" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-0 right-[30px] lg:right-0 lg:left-0 bottom-[40px]">
+                            <div class="w-full h-full flex items-center">
+                                <img src="/wp-content/themes/nutridog2/img/local/img2.png" alt="" class="w-auto h-[325px] lg:h-[360px] xl:h-[432px] ml-[40px]">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex lg:justify-center mt-[50px] lg:mt-[unset]">
-                <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
-                    <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In de spotlight</h3>
-                    <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Traditional <span class="text-[#2A813B]">colour combination</span></h2>
-                    <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Lorem ipsum dolor sit amet, consetetur </p>
-                    <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
+                <div class="flex lg:justify-center mt-[50px] lg:mt-[unset]">
+                    <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
+                        <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In de spotlight</h3>
+                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
+                        <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Super premium droogvoeding</p>
+                        <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Shop nu</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="bg-[#FDF3E4]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="auto" viewBox="0 0 1437.006 15.442">
+                <g id="Group_324" data-name="Group 324" transform="translate(-5868.5 4307) rotate(180)">
+                    <path id="Path_650" data-name="Path 650" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7305.506 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_640" data-name="Path 640" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6868.35 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_634" data-name="Path 634" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6431.193 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_629" data-name="Path 629" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-5994.037 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_651" data-name="Path 651" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7242.737 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_641" data-name="Path 641" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6805.581 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_635" data-name="Path 635" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6368.425 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_630" data-name="Path 630" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-5931.268 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_645" data-name="Path 645" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7179.97 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_642" data-name="Path 642" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6742.813 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_636" data-name="Path 636" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6305.656 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_646" data-name="Path 646" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7117.201 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_643" data-name="Path 643" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6680.045 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_637" data-name="Path 637" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6242.888 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_647" data-name="Path 647" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7056.654 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_644" data-name="Path 644" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6619.498 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_631" data-name="Path 631" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6182.341 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_648" data-name="Path 648" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6993.886 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_638" data-name="Path 638" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6556.729 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_632" data-name="Path 632" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6119.573 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_649" data-name="Path 649" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6931.118 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_639" data-name="Path 639" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6493.961 4286.5)" fill="#CDEEFF"/>
+                    <path id="Path_633" data-name="Path 633" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6056.805 4286.5)" fill="#CDEEFF"/>
+                </g>
+            </svg>
         </div>
     </section>
 
@@ -445,7 +520,7 @@
     <section class="bg-[#FDF3E4]">
         <div class="py-[40px] lg:py-[50px] xl:py-[80px]">
             <div class="w-full max-w-[335px] md:max-w-[624px] lg:max-w-[460px] xl:max-w-[460px] mx-auto">
-                <h2 class="font-wedges text-52 leading-31 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-51 leading-51 lowercase text-[#2A813B]">jouw hond</span></h2>
+                <h2 class="font-wedges text-33 leading-13 lg:text-52 lg:leading-31 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-31 leading-31 lg:text-51 lg:leading-51 lowercase text-[#2A813B]">jouw hond</span></h2>
             </div>
             <div class="container md:px-[30px] lg:px-[unset] grid grid-cols-2 lg:grid-cols-4 gap-[15px] md:gap-[40px] lg:gap-[30px] mt-[40px] md:mt-[40px] lg:mt-[45px] xl:mt-[45px]">
                 <a href="" class="col-span-1">
@@ -472,8 +547,8 @@
                  <div class="col-span-1 h-full">
                     <div class="w-full aspect-[1/1] flex items-center justify-center">
                          <div class="w-fit text-left">
-                            <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212]">Kennisbank</h3>
-                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Bekijk <br>meer <br><span class="font-syne">artikelen</span></h2>
+                            <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212] hidden md:block">Kennisbank</h3>
+                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Bekijk <br>meer <br><span class="font-syne">blogs</span></h2>
                             <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
                         </div> 
                     </div>

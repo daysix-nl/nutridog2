@@ -22,8 +22,26 @@ if ( post_password_required() ) {
 } ?>
 
 <main>
-    <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto mt-[30px]">
-
+    <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto lg:mt-[10px]">
+    <?php
+        // Controleren of er een HTTP-referer is ingesteld
+        if(isset($_SERVER['HTTP_REFERER'])) {
+            // URL van de vorige pagina ophalen
+            $referer_url = $_SERVER['HTTP_REFERER'];
+            
+            // Controleren of de vorige pagina een interne pagina is
+            if(strpos($referer_url, home_url()) !== false) {
+                // Als het een interne pagina is, weergeef de stap-terugknop
+                ?>
+                <a href="javascript:history.back()" class="back-button mb-[20px] text-13 leading-13 font-medium font-jakarta border-[1px] w-fit rounded-full px-[15px] h-[30px] flex justify-between items-center">Stap terug</a>
+                <?php
+            }
+        }
+        else { ?>
+            <div class="pt-[20px]"></div>
+            <?php
+        }
+    ?>
     <div class="w-full flex flex-col md:flex-row justify-between">
         <div class="w-full max-w-[354px] md:max-w-[334px] lg:max-w-[565px] xl:max-w-[640px]">
             <!-- PRODUCT AFBEELDING -->

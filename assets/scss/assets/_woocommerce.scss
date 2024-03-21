@@ -540,3 +540,12 @@ p.out-of-stock {
 .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).disabled:hover .variable-item-contents:before {
     display: none !important;
 }
+
+del {
+    font-weight: 300 !important;
+}
+
+ins {
+    text-decoration: none !important;
+    margin-left: 8px !important;
+}
