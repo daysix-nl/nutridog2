@@ -21,11 +21,16 @@ if ( ! wp_doing_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<div id="payment" class="woocommerce-checkout-payment  paybox">
+<div id="payment" class="woocommerce-checkout-payment paybox mt-[45px] bg-white p-[0px] md:p-[27px] lg:p-[45px]">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		
 		<ul class="wc_payment_methods payment_methods methods">
-			<h2 class="text-22 leading-22 lg:text-32 lg:leading-22 font-semibold mb-3">Betaling</h2>
+			<h2 class="font-jakatra font-extrabold text-20 leading-30 xl:text-22 xl:leading-30 flex items-center"> 
+			<span class="h-[30px] w-[30px] border-[2px] border-[#000] rounded-full flex justify-center items-center font-jakarta font-extrabold text-15 mr-[15px]">
+				2
+			</span>
+			Betaling</h2>
+			<hr class="border-[#DDDDDD] my-[10px]">
 			<?php
 			if ( ! empty( $available_gateways ) ) {
 				foreach ( $available_gateways as $gateway ) {
@@ -37,15 +42,15 @@ if ( ! wp_doing_ajax() ) {
 				echo '</li>';
 			}
 			?>
-			<hr class="border-[#B5BBB8] border-1 mt-[30px] mb-[30px]">
-			<div class="max-w-[523px]">
+			
+			<div class="max-w-[523px] mt-[20px]">
 			<?php wc_get_template( 'checkout/terms.php' ); ?>
 			</div>
-			<hr class="border-[#B5BBB8] border-1 mt-[30px] mb-[0px]">
+			
 		</ul>
 	<?php endif; ?>
 	<div class="w-full lg:max-w-[448px] block lg:hidden">
-            <?php include get_template_directory() . '/componenten/side-cart-checkout.php'; ?>
+            
             </div>
 		<div class="form-row place-order">
 		<noscript>
@@ -59,8 +64,10 @@ if ( ! wp_doing_ajax() ) {
 		
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
-		<h2 class="text-22 leading-22 lg:text-32 lg:leading-22 font-semibold mb-3">Afronden</h2>
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+		<!-- <h2 class="font-jost font-semibold text-15 leading-25 xl:text-17 xl:leading-25 tracking-[0.05em] uppercase mt-[45px]">Complete order</h2>
+		<hr class="border-[#DDDDDD] my-[10px]"> -->
+		<div class="mt-[40px]"></div>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="h-[55px] md:h-[47px] xl:h-[52px] bg-[#2E2E2E] rounded-[2px] xl:rounded-[3px] font-jost font-normal text-white text-15 xl:text-16 tracking-[0.02em] xl:tracking-[0.025em] w-full flex items-center justify-center md:hover:opacity-80 duration-300' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">Complete order</button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

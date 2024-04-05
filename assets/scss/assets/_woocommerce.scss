@@ -549,3 +549,481 @@ ins {
     text-decoration: none !important;
     margin-left: 8px !important;
 }
+
+
+
+
+
+
+
+// CHECKOUT
+
+.custom-checkout {
+
+    .woocommerce-billing-fields {
+
+
+        #billing_first_name_field,
+        #shipping_first_name_field {
+            width: 100% !important;
+            order: 1 !important;
+        }
+
+        #billing_last_name_field,
+        #shipping_last_name_field {
+            width: 100% !important;
+            order: 2 !important;
+        }
+
+        #billing_phone_field,
+        #shipping_phone_field {
+            width: 100% !important;
+            order: 3 !important;
+        }
+
+        #billing_email_field,
+        #shipping_email_field {
+            width: 100% !important;
+            order: 4 !important;
+        }
+
+        #billing_country_field,
+        #shipping_country_field {
+            width: 100% !important;
+            order: 5 !important;
+            display: none !important;
+        }
+
+
+        #billing_address_1_field,
+        #shipping_address_1_field {
+            width: 100% !important;
+            order: 6 !important;
+        }
+
+        #billing_postcode_field,
+        #shipping_postcode_field {
+            width: 100% !important;
+            order: 7 !important;
+        }
+
+        #billing_city_field,
+        #shipping_city_field {
+            width: 100% !important;
+            order: 8 !important;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 768px) {
+
+            #billing_first_name_field,
+            #shipping_first_name_field {
+                width: 35% !important;
+                order: 1 !important;
+            }
+
+            #billing_last_name_field,
+            #shipping_last_name_field {
+                width: 65% !important;
+                order: 2 !important;
+            }
+
+            #billing_phone_field,
+            #shipping_phone_field {
+                width: 35% !important;
+                order: 3 !important;
+            }
+
+            #billing_email_field,
+            #shipping_email_field {
+                width: 65% !important;
+                order: 4 !important;
+            }
+
+            #billing_country_field,
+            #shipping_country_field {
+                width: 35% !important;
+                order: 5 !important;
+                display: none !important;
+            }
+
+
+            #billing_address_1_field,
+            #shipping_address_1_field {
+                width: 100% !important;
+                order: 6 !important;
+            }
+
+            #billing_postcode_field,
+            #shipping_postcode_field {
+                width: 20% !important;
+                order: 7 !important;
+            }
+
+            #billing_city_field,
+            #shipping_city_field {
+                width: 80% !important;
+                order: 8 !important;
+            }
+        }
+
+
+        #billing_company_field,
+        #billing_address_2_field,
+        #shipping_company_field,
+        #shipping_address_2_field {
+            display: none !important;
+        }
+
+        .woocommerce-billing-fields__field-wrapper,
+        .woocommerce-shipping-fields__field-wrapper {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+        }
+
+        input {
+            border: 1px solid #DEDEDE !important;
+            height: 53px !important;
+            padding-left: 10px !important;
+        }
+
+        h3 {
+            display: none !important;
+        }
+
+
+
+    }
+
+    .woocommerce-form__label-for-checkbox {
+        width: 100% !important;
+        cursor: pointer;
+    }
+
+    .wc_payment_method label img {
+        display: none !important;
+    }
+
+    li.wc_payment_method {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #add_payment_method #payment div.payment_box,
+    .woocommerce-cart #payment div.payment_box,
+    .woocommerce-checkout #payment div.payment_box {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1em;
+        margin-top: 0px !important;
+        margin-bottom: 15px !important;
+        font-size: .92em;
+        border-radius: 2px;
+        line-height: 1.5;
+        background-color: #fff !important;
+        color: #000 !important;
+        margin-left: 13px !important;
+    }
+
+    #add_payment_method #payment ul.payment_methods li,
+    .woocommerce-cart #payment ul.payment_methods li,
+    .woocommerce-checkout #payment ul.payment_methods li {
+        line-height: 2.2 !important;
+        text-align: left;
+        margin: 0;
+        font-family: Plus Jakarta Sans, sans-serif;
+        font-weight: 400
+    }
+
+    .payment_box select {
+        height: 52px !important;
+        border: 1px solid #DEDEDE !important;
+        min-width: 306px !important;
+        margin-top: 10px !important;
+    }
+
+    #add_payment_method #payment div.payment_box::before,
+    .woocommerce-cart #payment div.payment_box::before,
+    .woocommerce-checkout #payment div.payment_box::before {
+        display: none !important;
+    }
+
+    #billing_address_1::placeholder,
+    #shipping_address_1::placeholder {
+        font-size: 0 !important;
+    }
+
+    .woocommerce-form-coupon-toggle {
+        display: none !important;
+    }
+
+    .korting .woocommerce-form-coupon-toggle {
+        display: flex !important;
+    }
+
+    .notice .woocommerce-notices-wrapper {
+        display: none !important;
+    }
+
+    .notice .woocommerce-form-coupon {
+        display: none !important;
+    }
+
+    .korting {
+
+        .woocommerce-error,
+        .woocommerce-info,
+        .woocommerce-message {
+            padding: 0px !important;
+            margin: 0px !important;
+            position: relative;
+            background-color: #fff !important;
+            color: #2B2828 !important;
+            border-top: 0px solid #7f54b3 !important;
+            list-style: none outside;
+            width: auto;
+            word-wrap: break-word;
+        }
+
+        .woocommerce-error::before,
+        .woocommerce-info::before,
+        .woocommerce-message::before {
+            display: none !important;
+        }
+
+        .woocommerce form.checkout_coupon,
+        .woocommerce form.login,
+        .woocommerce form.register {
+            border: 0px solid #cfc8d8 !important;
+            padding: 0px 0px !important;
+            margin: 0px !important;
+            text-align: left;
+            border-radius: 0px !important;
+        }
+    }
+
+    .woocommerce-error {
+        display: none !important;
+    }
+
+    * {
+        font-family: Plus Jakarta Sans, sans-serif;
+    }
+
+    label {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+    }
+
+    .woocommerce-checkout-review-order-table {
+        display: none !important;
+    }
+
+    #add_payment_method #payment,
+    .woocommerce-cart #payment,
+    .woocommerce-checkout #payment {
+        background: #fff !important;
+        border-radius: 0px !important;
+    }
+
+    #add_payment_method #payment ul.payment_methods,
+    .woocommerce-cart #payment ul.payment_methods,
+    .woocommerce-checkout #payment ul.payment_methods {
+        padding: 0px !important;
+        border-bottom: 0px solid #cfc8d8 !important;
+    }
+
+    #add_payment_method #payment div.form-row,
+    .woocommerce-cart #payment div.form-row,
+    .woocommerce-checkout #payment div.form-row {
+        padding: 0px !important;
+    }
+
+    .woocommerce-additional-fields {
+        display: none !important;
+    }
+
+    #ship-to-different-address-checkbox {
+        display: none !important;
+    }
+
+    #ship-to-different-address {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &::after {
+            content: "+";
+        }
+    }
+
+    .woocommerce-shipping-fields {
+
+        #billing_first_name_field,
+        #shipping_first_name_field {
+            width: 100% !important;
+            order: 1 !important;
+        }
+
+        #billing_last_name_field,
+        #shipping_last_name_field {
+            width: 100% !important;
+            order: 2 !important;
+        }
+
+        #billing_phone_field,
+        #shipping_phone_field {
+            width: 100% !important;
+            order: 3 !important;
+        }
+
+        #billing_email_field,
+        #shipping_email_field {
+            width: 100% !important;
+            order: 4 !important;
+        }
+
+        #billing_country_field,
+        #shipping_country_field {
+            width: 100% !important;
+            order: 5 !important;
+            display: none !important;
+        }
+
+
+        #billing_address_1_field,
+        #shipping_address_1_field {
+            width: 100% !important;
+            order: 6 !important;
+        }
+
+        #billing_postcode_field,
+        #shipping_postcode_field {
+            width: 100% !important;
+            order: 7 !important;
+        }
+
+        #billing_city_field,
+        #shipping_city_field {
+            width: 100% !important;
+            order: 8 !important;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 768px) {
+
+            #billing_first_name_field,
+            #shipping_first_name_field {
+                width: 35% !important;
+                order: 1 !important;
+            }
+
+            #billing_last_name_field,
+            #shipping_last_name_field {
+                width: 65% !important;
+                order: 2 !important;
+            }
+
+            #billing_phone_field,
+            #shipping_phone_field {
+                width: 35% !important;
+                order: 3 !important;
+            }
+
+            #billing_email_field,
+            #shipping_email_field {
+                width: 65% !important;
+                order: 4 !important;
+            }
+
+            #billing_country_field,
+            #shipping_country_field {
+                width: 35% !important;
+                order: 5 !important;
+                display: none !important;
+            }
+
+
+            #billing_address_1_field,
+            #shipping_address_1_field {
+                width: 100% !important;
+                order: 6 !important;
+            }
+
+            #billing_postcode_field,
+            #shipping_postcode_field {
+                width: 20% !important;
+                order: 7 !important;
+            }
+
+            #billing_city_field,
+            #shipping_city_field {
+                width: 80% !important;
+                order: 8 !important;
+            }
+        }
+
+
+
+
+        #billing_company_field,
+        #billing_address_2_field,
+        #shipping_company_field,
+        #shipping_address_2_field {
+            display: none !important;
+        }
+
+        .woocommerce-billing-fields__field-wrapper,
+        .woocommerce-shipping-fields__field-wrapper {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+        }
+
+        input {
+            border: 1px solid #DEDEDE !important;
+            height: 53px !important;
+            padding-left: 10px !important;
+        }
+
+        .shipping_address {
+            margin-top: 10px;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+    }
+}
+
+.stock {
+    display: none !important;
+}
+
+.woocommerce-privacy-policy-text {
+    color: #121212 !important;
+}
+
+.woocommerce-checkout .custom-checkout {
+    .custom-afrekenen {
+        display: block !important;
+    }
+
+    .custom-bedankt {
+        display: none !important;
+    }
+}
+
+.woocommerce-checkout.woocommerce-order-received .custom-checkout {
+    .custom-afrekenen {
+        display: none !important;
+    }
+
+    .custom-bedankt {
+        display: block !important;
+    }
+}

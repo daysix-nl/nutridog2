@@ -119,12 +119,13 @@
             <span></span>
             <span></span>
         </button>
-        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center hide-in-menu">
+        <!-- <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex navbar-dropdown-btn space-x-2 items-center hide-in-menu">
             <span>Assortiment</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="8.716" height="5.26" viewBox="0 0 8.716 5.26">
                 <path id="Down_Arrow_3_" d="M23.858,44.208a.35.35,0,0,1-.248-.1L20.1,40.6a.351.351,0,0,1,.5-.5l3.259,3.259L27.117,40.1a.351.351,0,0,1,.5.5l-3.507,3.507a.35.35,0,0,1-.248.1Z" transform="translate(-19.5 -39.448)" fill="#fff" stroke="#000" stroke-width="1"/>
             </svg>
-        </a>
+        </a> -->
+        <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex items-center hide-in-menu">Assortiment</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Voorjaar</a>
         <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
     </div>

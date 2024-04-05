@@ -39,15 +39,22 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="">
-			<div class="bg-white px-3 py-[50px] no-title">
-				<h1 class="text-22 leading-22 lg:text-32 lg:leading-22 font-semibold mb-2">Vul je gegevens in</h1>
+		<div class="bg-white p-[0px] md:p-[27px] lg:p-[45px]">
+			<div class="no-title">
+				<h2 class="font-jakatra font-extrabold text-20 leading-30 xl:text-22 xl:leading-30 flex items-center"> 
+				<span class="h-[30px] w-[30px] border-[2px] border-[#000] rounded-full flex justify-center items-center font-jakarta font-extrabold text-15 mr-[15px]">
+					1
+				</span>
+				Vul je gegevens in</h2>
+				<hr class="border-[#DDDDDD] my-[10px]">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
 
-			<div class="bg-white px-3 py-3 mt-2">
+			<div class="mt-[20px]">
 				<div class="paybox">
+				<hr class="border-[#DDDDDD] my-[10px]">
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				<hr class="border-[#DDDDDD] my-[10px]">
 				</div>
 			</div>
 		</div>
@@ -57,12 +64,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<?php endif; ?>
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-	
-	
-	
+
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-	<div id="order_review" class="woocommerce-checkout-review-order mt-2">
+	<div id="order_review" class="woocommerce-checkout-review-order p-0">
 		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 	</div>
 
