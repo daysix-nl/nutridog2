@@ -33,7 +33,7 @@ if ( post_password_required() ) {
             if(strpos($referer_url, home_url()) !== false) {
                 // Als het een interne pagina is, weergeef de stap-terugknop
                 ?>
-                <a href="javascript:history.back()" class="back-button mb-[20px] text-13 leading-13 font-medium font-jakarta border-[1px] w-fit rounded-full px-[15px] h-[30px] flex justify-between items-center">Stap terug</a>
+                <a href="javascript:history.back()" class="back-button mb-[20px] text-13 leading-30 font-medium font-jakarta border-[1px] w-fit rounded-full px-[15px] h-[30px] flex justify-between items-center">Stap terug</a>
                 <?php
             }
         }
@@ -102,80 +102,139 @@ if ( post_password_required() ) {
                 <div class="">
                     <p class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
                 </div>
+                <div class="">
+                    <a href="#info" class="preview-info nohtml line-clamp-6 md:line-clamp-3 text-[#525252] text-14 leading-25 font-jakarta"><?php echo get_the_content();?></a>
+                    <a href="#info" class="text-[#525252] text-14 leading-14 font-jakarta underline">Lees meer</a>
+                </div>
             </div>
             <div class="">
-            <!-- INFORMATIE -->
-            <div class="w-full grid gap-[15px] mt-4">
-                <!-- USP'S -->
-              
-                <div class="flex items-start">
-                    <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
-                        <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </svg>
-                    <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Gratis verzending vanaf 50 euro</p>
-                </div>
-                <div class="flex items-start">
-                    <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
-                        <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </svg>
-                    <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Voor 15:00 besteld de volgende werkdag in huis</p>
-                </div>
-            </div>
-            <!-- PRODUCT TOEVOEGEN -->
+                <?php
+                // Controleer of WooCommerce actief is
+                if (class_exists('WooCommerce')) {
+                    // Haal de product-ID op
+                    $product_id = get_the_ID(); // Haal de ID van het huidige product op
 
-            <div class="pt-3">
-                 <?php
-                    global $product;
-                    if ($product->is_type('variable')) { ?>
-                        <div class="product-add-single">
-                            <?php woocommerce_template_single_add_to_cart(); ?>
-                        </div>
-                    <?php
-                    } else { ?>
-                        <div class="simple">
-                            <?php woocommerce_template_single_add_to_cart(); ?>
-                        </div>
-                    <?php
-                    }
-                    ?>
-            </div>
-            </div>
-            
-            <!-- PRODUCT BESCHRIJVING
-            <div class="border-accordion mt-0"></div>
-            <div class="accordion-item"> 
-                <button class="accordion text-14 leading-32 font-jakarta font-normal text-[#2B2828] py-[25px] flex">Product informatie</button>
-                <div class="panel">
-                    <div class="px-1.5 flex flex-col pb-4">
-                        <div class="text-14 leading-30 font-jakarta text-black w-fit text-editor">
-                            <?php
-                            $content = get_the_content(); // De content ophalen
+                    // Haal het productobject op
+                    $product = wc_get_product($product_id);
 
-                            if (empty($content)) {
-                                // Als de content leeg is
-                                echo 'Er is geen beschrijving beschikbaar voor dit artikel.';
-                            } else {
-                                // Als de content niet leeg is
-                                the_content(); // Toon de content
+                    // Controleer of het product een variabel product is
+                    if ($product->is_type('variable')) {
+                        // Haal alle variaties van het product op
+                        $variations = $product->get_available_variations();
+
+                        // Controleer de voorraad van elke variatie
+                        $out_of_stock = true;
+                        foreach ($variations as $variation) {
+                            // Haal de voorraad van de variatie op
+                            $variation_id = $variation['variation_id'];
+                            $variation_product = new WC_Product_Variation($variation_id);
+                            $variation_stock = $variation_product->get_stock_quantity();
+
+                            // Als een van de variaties voorraad heeft, markeer dan niet als uit voorraad
+                            if ($variation_stock > 0) {
+                                $out_of_stock = false;
+                                break;
                             }
-                            ?>
+                        }
+
+                        // Als alle variaties uit voorraad zijn, toon dan een bericht
+                        if ($out_of_stock) { ?>
+                           <div class="mt-4 pb-[40px]">
+                            <p class="text-[#FF6248] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
                         </div>
+                        <?php
+                        } else { ?>
+                           <!-- INFORMATIE -->
+                        
+                        <!-- PRODUCT TOEVOEGEN -->
+
+                        <div class="pt-3">
+                            <?php
+                                global $product;
+                                if ($product->is_type('variable')) { ?>
+                                    <div class="product-add-single">
+                                        <?php woocommerce_template_single_add_to_cart(); ?>
+                                    </div>
+                                <?php
+                                } else { ?>
+                                    <div class="simple">
+                                        <?php woocommerce_template_single_add_to_cart(); ?>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                        </div>
+                           
+                            <?php
+                        }
+                    } else {
+                        // Voor niet-variabele producten, controleer voorraad op dezelfde manier als eerder
+                        $voorraad = $product->get_stock_quantity();
+                        if ($voorraad <= 0) {?>
+                        <div class="mt-4 pb-[40px]">
+                            <p class="text-[#FF6248] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                        </div>
+                    <?php
+                        } else { ?>
+                            <!-- INFORMATIE -->
+                        <div class="w-full grid gap-[15px] mt-4">
+                            <!-- USP'S -->
+                            <div class="flex items-start">
+                                <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
+                                    <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <?php // Haal de product-ID op
+                                $product_id = get_the_ID(); // Haal de ID van het huidige product op
+
+                                // Haal de verkoopprijs op van het product met de ID
+                                $product = wc_get_product($product_id);
+                                $verkoopprijs = $product->get_price(); // Prijs ophalen
+
+                                // Rond de verkoopprijs af
+                                $resultaat = floor($verkoopprijs / 1); ?>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij dit product ontvangt u <?php if ($product->is_type('variable')) { echo "minimaal"; }?> <?php echo $resultaat ?> <a href="/spaarbrokjes" class="underline">spaarbrokjes</a></p>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
+                                    <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Voor 15:00 besteld de volgende werkdag in huis</p>
+                            </div>
+                        </div>
+                        <!-- PRODUCT TOEVOEGEN -->
+
+                        <div class="pt-3">
+                            <?php
+                                global $product;
+                                if ($product->is_type('variable')) { ?>
+                                    <div class="product-add-single">
+                                        <?php woocommerce_template_single_add_to_cart(); ?>
+                                    </div>
+                                <?php
+                                } else { ?>
+                                    <div class="simple">
+                                        <?php woocommerce_template_single_add_to_cart(); ?>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                        </div>
+                            <?php
+                        }
+                    }
+                } else { ?>
+                   <div class="mt-4 pb-[4]">
+                        <p class="text-[#FF6248] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
                     </div>
-                </div>
-            </div> -->
-         
-          
-            <!-- <div class="accordion-item"> 
-                <button class="accordion text-16 leading-32 font-jakarta font-normal text-black py-[25px] flex">xxxx</button>
-                <div class="panel">
-                    <div class="px-1.5 flex flex-col pb-4">
-                        <div class="text-16 leading-30 font-jakarta text-black w-fit text-editor">cccc</div>
-                    </div>
-                </div>
-            </div> -->
-          
+                    <?php
+                }
+                ?>
+            </div>
         </div>
     </div>
+
+    
+    
 
     <!-- GERELATEERDE PRODUCTEN -->
     <div class="w-full mt-8 lg:px-5">
@@ -274,10 +333,33 @@ if ( post_password_required() ) {
                     }
                     ?>
         </div>
-    </div>
 
-    </div>
+         <!-- GERELATEERDE PRODUCTEN -->
+        <div id="info"></div>
+        <div class="w-full mt-2 lg:px-5">
+            <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#039C47] pb-4 text-center">Meer informatie</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-[50px]">
+                <div class="">
+                    
+                </div>
+                <div class="text-14 leading-30 font-jakarta text-black w-fit text-editor">
+                    <h2>Product details</h2>
+                    <?php
+                    $content = get_the_content(); // De content ophalen
 
+                    if (empty($content)) {
+                        // Als de content leeg is
+                        echo 'Er is geen beschrijving beschikbaar voor dit artikel.';
+                    } else {
+                        // Als de content niet leeg is
+                        the_content(); // Toon de content
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </main>
 
 
