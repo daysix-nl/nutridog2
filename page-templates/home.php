@@ -189,7 +189,7 @@
     <section class="mt-[80px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 relative">
             <div class="h-[500px] w-full overflow-hidden">
-                <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full min-h-full object-cover object-center">
+                <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full min-h-[500px] object-cover object-center">
             </div>
             <div class="bg-[#FF91C8]">
                 
