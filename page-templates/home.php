@@ -430,7 +430,7 @@
      <!-- IN THE SPOTLIGHT -->
     <section class="overflow-hidden">
         <div class="bg-[#fff]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1437.006" height="15.442" viewBox="0 0 1437.006 15.442">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="auto" viewBox="0 0 1437.006 15.442">
                 <g id="Group_345" data-name="Group 345" transform="translate(7305.506 -4291.558)">
                     <path id="Path_650" data-name="Path 650" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-7305.506 4286.5)" fill="#cdeeff"/>
                     <path id="Path_640" data-name="Path 640" d="M31.723,5.058C49.056,5.058,62.768,20.5,62.768,20.5H0S14.39,5.058,31.723,5.058Z" transform="translate(-6868.35 4286.5)" fill="#cdeeff"/>
