@@ -1468,6 +1468,9 @@ video {
 .pt-\[15px\] {
   padding-top: 15px;
 }
+.pb-\[25px\] {
+  padding-bottom: 25px;
+}
 .text-left {
   text-align: left;
 }
