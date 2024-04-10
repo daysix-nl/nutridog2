@@ -192,7 +192,7 @@ if ( post_password_required() ) {
 
                                 // Rond de verkoopprijs af
                                 $resultaat = floor($verkoopprijs / 1); ?>
-                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij dit product ontvangt u <?php if ($product->is_type('variable')) { echo "minimaal"; }?> <?php echo $resultaat ?> <a href="/spaarbrokjes" class="underline">spaarbrokjes</a></p>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij dit product ontvangt u <?php if ($product->is_type('variable')) { echo "minimaal"; }?> <?php echo $resultaat ?> <a href="/spaarbotjes" class="underline">spaarbotjes</a></p>
                             </div>
                             <div class="flex items-start">
                                 <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
