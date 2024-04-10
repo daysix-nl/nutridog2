@@ -139,13 +139,13 @@ get_header( 'shop' ); ?>
                             </a>
                         </div>
                     </div>
-                    
+                     </div>
                 </div>
                 <?php
             }
             ?>
           
-           </div>
+          
             <!-- FILTER SIDEBAR -->
             <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden lg:flex justify-between items-center">
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
