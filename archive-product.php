@@ -174,7 +174,7 @@ get_header( 'shop' ); ?>
     </div>
 </div>
 <!-- FILTER SIDEBAR -->
-<div id="filterbar-on-scroll" class="w-full justify-between items-center fixed bottom-0 left-0 right-0 hide bg-white px-2 py-[15px] lg:hidden">
+<div id="filterbar-on-scroll" class="w-full justify-between items-center fixed bottom-0 left-0 right-0 hide bg-white px-2 pt-[15px] pb-[20px] lg:hidden">
         <div class="filtermobile flex lg:hidden justify-end">
         <?php echo do_shortcode('[fe_open_button]'); ?>
     </div>
