@@ -37,21 +37,14 @@ get_header( 'shop' ); ?>
     <div class="flex justify-between">
         <!-- FILTER -->
         <div class="hidden lg:block lg:w-[214px] filter mt-[45px]">
-         
             <?php echo do_shortcode('[fe_widget]'); ?>
         </div>
-
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
-     
             <?php
             // Haal de huidige slug op
             $current_slug = $_SERVER['REQUEST_URI'];
-
             // Controleren of "categorie" in de slug voorkomt
             if (strpos($current_slug, 'categorie') !== false) { ?>
-                <div class="col-span-2 md:col-span-3 lg:col-span-4">
-                    Het woord 'categorie' komt voor in de slug.
-                </div>
                 <?php
             } else { ?>
             <!-- CATEGORIE SLIDER -->
