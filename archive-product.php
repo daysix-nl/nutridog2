@@ -48,9 +48,11 @@ get_header( 'shop' ); ?>
             $current_slug = $_SERVER['REQUEST_URI'];
 
             // Controleren of "categorie" in de slug voorkomt
-            if (strpos($current_slug, 'categorie') !== false) {
-                // Als "categorie" in de slug voorkomt
-                echo "Het woord 'categorie' komt voor in de slug.";
+            if (strpos($current_slug, 'categorie') !== false) { ?>
+                <div class="col-span-2 md:col-span-3 lg:col-span-4">
+                    Het woord 'categorie' komt voor in de slug.
+                </div>
+                <?php
             } else { ?>
             <!-- CATEGORIE SLIDER -->
            <div class="col-span-2 md:col-span-3 lg:col-span-4">
