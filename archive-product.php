@@ -42,8 +42,18 @@ get_header( 'shop' ); ?>
         </div>
 
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
-           <!-- CATEGORIE SLIDER -->
+            <?php
+            // Haal de huidige slug op
+            $current_slug = basename(get_permalink());
+
+            // Controleren of "categorie" in de slug voorkomt
+            if (strpos($current_slug, 'categorie') !== false) {
+                // Als "categorie" in de slug voorkomt
+                echo "Het woord 'categorie' komt voor in de slug.";
+            } else { ?>
+            <!-- CATEGORIE SLIDER -->
            <div class="col-span-2 md:col-span-3 lg:col-span-4">
+              
                 <div class="swiper mySwiper-categorie">
                     <div class="flex items-center mb-[30px]">
                         <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000] w-[283px] md:w-[auto]">Selecteer een categorie</h2>
@@ -128,6 +138,10 @@ get_header( 'shop' ); ?>
                     </div>
                     
                 </div>
+                <?php
+            }
+            ?>
+          
            </div>
             <!-- FILTER SIDEBAR -->
             <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden lg:flex justify-between items-center">
