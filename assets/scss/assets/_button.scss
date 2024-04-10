@@ -30,13 +30,53 @@
 }
 
 .wpc-filters-open-button-container {
-    position: fixed !important;
-    bottom: 15px !important;
-    left: 15px !important;
-    margin-bottom: 0px !important;
-    background-color: #fff !important;
-    border: 1px solid #dddddd !important;
-    z-index: 998 !important;
-    padding: 8px 15px !important;
-    border-radius: 99px !important;
+    // position: fixed !important;
+    // bottom: 15px !important;
+    // left: 15px !important;
+    // margin-bottom: 0px !important;
+    // background-color: #fff !important;
+    // border: 1px solid #dddddd !important;
+    // z-index: 998 !important;
+    // padding: 8px 15px !important;
+    // border-radius: 99px !important;
+    // width: 100% !important;
+
+
+
+    .wpc-filters-button-text {
+        color: #000 !important;
+        font-size: 13px !important;
+        font-family: Plus Jakarta Sans, important;
+    }
+}
+
+.wpc-filters-open-button-container {
+    display: none !important;
+}
+
+.filtermobile .wpc-filters-open-button-container {
+    display: flex !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .wpc_show_bottom_widget .wpc-filters-open-button-container {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+}
+
+.wpc-icon-html-wrapper {
+    scale: 0.8 !important;
+}
+
+@media screen and (max-width: 1200px) {
+    #filterbar-on-scroll {
+        &.hide {
+            display: none !important;
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
 }

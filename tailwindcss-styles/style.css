@@ -802,6 +802,12 @@ video {
 .mt-\[8px\] {
   margin-top: 8px;
 }
+.mb-\[-20px\] {
+  margin-bottom: -20px;
+}
+.mb-\[-10px\] {
+  margin-bottom: -10px;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1366,6 +1372,14 @@ video {
 .py-\[40px\] {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.py-3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .pb-2 {
   padding-bottom: 20px;

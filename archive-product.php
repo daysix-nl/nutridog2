@@ -29,10 +29,7 @@ get_header( 'shop' ); ?>
 <div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1330px] mx-auto pb-[85px] xl:pb-[105px] mt-[30px]">
 
 
-    <!-- <div class="flex justify-end">
-        <?php echo do_shortcode('[fe_open_button]'); ?>
-    </div> -->
-
+   
 
     <div class="flex justify-between">
         <!-- FILTER -->
@@ -140,7 +137,11 @@ get_header( 'shop' ); ?>
           
           
             <!-- FILTER SIDEBAR -->
-            <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full hidden lg:flex justify-between items-center">
+            <div id="filterbar" class="col-span-2 md:col-span-3 lg:col-span-4 w-full flex justify-between items-center mb-[-10px] lg:mb-[unset] show">
+                 <div class="filtermobile flex lg:hidden justify-end">
+                    <?php echo do_shortcode('[fe_open_button]'); ?>
+                </div>
+
               <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
@@ -172,6 +173,16 @@ get_header( 'shop' ); ?>
         </div>
     </div>
 </div>
+<!-- FILTER SIDEBAR -->
+<div id="filterbar-on-scroll" class="w-full justify-between items-center fixed bottom-0 left-0 right-0 hide bg-white px-2 py-[15px] lg:hidden">
+        <div class="filtermobile flex lg:hidden justify-end">
+        <?php echo do_shortcode('[fe_open_button]'); ?>
+    </div>
+
+    <?php if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
+        <?php dynamic_sidebar( 'filter-sidebar' ); ?>
+    <?php } ?>
+</div>
 </main>
 
 <script>
@@ -187,6 +198,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // deleteItem.textContent = ' ';
 });
 </script>
+
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Functie om classes te toggelen
+            function toggleClasses() {
+                var addToCartButton = document.getElementById('filterbar');
+                var offScreenAddToCartButton = document.getElementById('filterbar-on-scroll');
+
+                // Controleer of de add-to-cart button buiten het scherm is
+                var isOffScreen = (addToCartButton.getBoundingClientRect().top < 60);
+
+                // Toggle de classes based op de positie van de add-to-cart button
+                if (isOffScreen) {
+                    offScreenAddToCartButton.classList.add('show');
+                    offScreenAddToCartButton.classList.remove('hide');
+                } else {
+                    offScreenAddToCartButton.classList.remove('show');
+                    offScreenAddToCartButton.classList.add('hide');
+                }
+            }
+
+            // Voeg een event listener toe voor het scrollen om de classes te updaten
+            window.addEventListener('scroll', toggleClasses);
+
+            // Roep de functie ook een keer aan bij het laden van de pagina
+            toggleClasses();
+        });
+    </script>
 
 <?php
 get_footer( 'shop' ); ?>

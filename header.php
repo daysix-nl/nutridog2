@@ -40,7 +40,7 @@
     */ -->
 
 </head>
-<body <?php body_class( 'page-block menu-non-active' ); ?>>
+<body <?php body_class( 'page-block menu-non-active filter-scroll-notactive' ); ?>>
 <header class="fixed w-screen z-[9999]">
 
 <section class="h-[34px] w-full bg-[#C2F0A0] justify-between hidden lg:flex">
