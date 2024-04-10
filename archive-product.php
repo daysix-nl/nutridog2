@@ -33,7 +33,7 @@ get_header( 'shop' ); ?>
 
     <div class="flex justify-between">
         <!-- FILTER -->
-        <div class="hidden lg:block lg:w-[214px] filter">
+        <div class="hidden lg:block lg:w-[214px] filter mt-[-24px]">
             <?php echo do_shortcode('[fe_widget]'); ?>
         </div>
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
