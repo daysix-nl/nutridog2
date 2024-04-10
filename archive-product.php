@@ -42,9 +42,10 @@ get_header( 'shop' ); ?>
         </div>
 
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
+     
             <?php
             // Haal de huidige slug op
-            $current_slug = basename(get_permalink());
+            $current_slug = $_SERVER['REQUEST_URI'];
 
             // Controleren of "categorie" in de slug voorkomt
             if (strpos($current_slug, 'categorie') !== false) {
