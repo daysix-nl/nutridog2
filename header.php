@@ -126,8 +126,8 @@
             </svg>
         </a> -->
         <a href="/shop" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex items-center hide-in-menu">Assortiment</a>
-        <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Voorjaar</a>
-        <a href="" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
+        <a href="/shop/seizoen-voorjaar/" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Voorjaar</a>
+        <a href="/shop/aanbieding-yes/" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
     </div>
     <a href="/" class="flex justify-center w-[143.448px] mx-auto">
        <svg xmlns="http://www.w3.org/2000/svg" width="143.448" height="27.813" viewBox="0 0 143.448 27.813">
@@ -199,9 +199,9 @@
         </form>
         <div class="flex flex-col justify-center text-center pb-[111px]">
             <a href="/shop" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Assortiment</a>
-            <a href="/shop" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Speciaal voor het voorjaar</a>
-            <a href="/aanbiedingen" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Aanbiedingen</a>
-            <a href="/aanbiedingen" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Veelgestelde vragen</a>
+            <a href="/shop/seizoen-voorjaar/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Speciaal voor het voorjaar</a>
+            <a href="/shop/aanbieding-yes/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Aanbiedingen</a>
+            <a href="/faq" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Veelgestelde vragen</a>
             <a href="" class="flex items-center space-x-[15px] w-fit mx-auto mt-[45px] md:mt-[45px]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                     <path id="user" d="M17.925,3.075a10.5,10.5,0,0,0-14.849,0A10.679,10.679,0,0,0,.27,8.118,9.979,9.979,0,0,0,0,10.5a10.5,10.5,0,0,0,17.925,7.425,10.5,10.5,0,0,0,0-14.849ZM4.557,17.608A6.007,6.007,0,0,1,10.5,12.321a5.985,5.985,0,0,1,5.943,5.286,9.25,9.25,0,0,1-11.886,0ZM10.5,11.054a3.189,3.189,0,1,1,3.189-3.189A3.193,3.193,0,0,1,10.5,11.054Zm7,5.514a7.233,7.233,0,0,0-4.528-5.043,4.42,4.42,0,1,0-4.947,0,7.227,7.227,0,0,0-4.53,5.04,9.27,9.27,0,1,1,14.005,0Zm0,0"/>

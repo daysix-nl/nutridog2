@@ -409,7 +409,7 @@
         <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[40px] lg:mt-[70px]">
             <div class="md:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Heb je al een voorkeur?</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct op merk</span></h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
             </div>
             <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
                 <div class="w-full h-[50px] bg-[#f3f3f3]"></div>
