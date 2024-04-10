@@ -117,7 +117,7 @@ get_header( 'shop' ); ?>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="/shop/categorie-aanbiedingen">
+                            <a href="/shop/aanbieding-yes/">
                                 <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                                 <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Aanbiedingen</p>
                             </a>
