@@ -41,7 +41,7 @@ get_header( 'shop' ); ?>
             // Haal de huidige slug op
             $current_slug = $_SERVER['REQUEST_URI'];
             // Controleren of "categorie" in de slug voorkomt
-            if (strpos($current_slug, 'categorie') !== false) { ?>
+            if (strpos($current_slug, '/categorie-') !== false) { ?>
                 <?php
             } else { ?>
             <!-- CATEGORIE SLIDER -->
