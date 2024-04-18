@@ -562,7 +562,7 @@
 
 
     <!-- FOLLOW US -->
-    <section class="h-full lg:h-[418px] xl:h-[470px] bg-[#FFC3DF] grid lg:flex justify-end relative overflow-hidden">
+    <section class="h-full lg:h-[418px] xl:h-[470px] bg-[#FDF3E4] grid lg:flex justify-end relative overflow-hidden">
         <div class="h-full w-screen lg:w-[calc(50%-345px)] xl:w-[calc(50%-390px)] bg-black relative overflow-hidden order-2">
             <img src="https://images.unsplash.com/photo-1575859431774-2e57ed632664?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center-top">
         </div>
@@ -572,9 +572,9 @@
                     <div class="w-full lg:max-w-[956px] xl:max-w-[1080px] h-full lg:ml-[45px] xl:ml-[50px] flex flex-col lg:flex-row items-center justify-between">
                         <div class="h-full w-full lg:w-[288px] xl:w-[329px] flex items-center order-2 lg:order-1">
                             <div class="">
-                                <h3 class="font-jost italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
-                                <h2 class="text-white font-jost font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
-                                <a href="" class="text-white font-jost font-normal text-15 leading-26 xl:text-16 xl:leading-28 tracking-[0.1em] mt-[15px] lg:mt-[25px] underline hover:no-underline block">Instagram</a>
+                                <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
+                                <h2 class="text-white font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
+                                <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow</a>
                             </div>
                         </div>
                         <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
@@ -591,6 +591,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="absolute top-[0px] right-0 lg:right-[calc(50%-345px)] xl:right-[calc(50%-390px)]">
+            <div class="w-[120vw] lg:w-[100vw]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1333.569 468.209">
+                    <path id="Path_760" data-name="Path 760" d="M-66.785,99.312C293.315-17.065,1122.4,2.016,1122.4,2.016V469.062L.059,465.5S-426.885,215.689-66.785,99.312Z" transform="translate(211.165 -0.852)" fill="#ffc3df"/>
+                </svg>
+            </div>
+            <div class="bg-[#FFC3DF] h-[100dvh] mt-[-10px]"></div>
         </div>
     </section>
 
