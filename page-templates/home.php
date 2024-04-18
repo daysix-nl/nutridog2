@@ -592,7 +592,7 @@
                 </div>
             </div>
         </div>
-        <div class="absolute top-[0px] right-0 lg:right-[calc(50%-345px)] xl:right-[calc(50%-390px)] z-[2]">
+        <div class="absolute top-[0px] right-0 lg:right-[calc(50%-345px)] xl:right-[calc(50%-390px)] z-[1]">
             <div class="w-[120vw] lg:w-[100vw]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1333.569 468.209">
                     <path id="Path_760" data-name="Path 760" d="M-66.785,99.312C293.315-17.065,1122.4,2.016,1122.4,2.016V469.062L.059,465.5S-426.885,215.689-66.785,99.312Z" transform="translate(211.165 -0.852)" fill="#ffc3df"/>
