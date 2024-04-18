@@ -187,11 +187,11 @@
 }
 
 .menu-active .aws-search-result {
-    max-height: calc(100dvh - 265px) !important;
+    max-height: calc(100dvh - 235px) !important;
     overflow-y: auto !important;
 
     // MD
     @media (min-width: 768px) {
-        max-height: calc(100dvh - 245px) !important;
+        max-height: calc(100dvh - 215px) !important;
     }
 }
