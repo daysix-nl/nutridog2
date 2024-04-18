@@ -85,11 +85,11 @@
 
 .aws-search-result {
     padding-top: 20px !important;
-    margin-top: 10px !important;
+    margin-top: 1px !important;
 
     @media (min-width: 768px) {
         padding-top: 50px !important;
-        margin-top: 10px !important;
+        margin-top: 1px !important;
     }
 
     border: 0px solid #ccc !important;
@@ -187,11 +187,11 @@
 }
 
 .menu-active .aws-search-result {
-    max-height: calc(100dvh - 235px) !important;
+    max-height: calc(100dvh - 195px) !important;
     overflow-y: auto !important;
 
     // MD
     @media (min-width: 768px) {
-        max-height: calc(100dvh - 215px) !important;
+        max-height: calc(100dvh - 188px) !important;
     }
 }
