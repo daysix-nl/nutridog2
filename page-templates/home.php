@@ -563,10 +563,10 @@
 
     <!-- FOLLOW US -->
     <section class="h-full lg:h-[418px] xl:h-[470px] bg-[#FDF3E4] grid lg:flex justify-end relative overflow-hidden">
-        <div class="h-full w-screen lg:w-[calc(50%-345px)] xl:w-[calc(50%-390px)] bg-black relative overflow-hidden order-2 z-[3]">
+        <div class="h-full w-screen lg:w-[calc(50%-345px)] xl:w-[calc(50%-390px)] bg-black relative overflow-hidden order-2 z-[2]">
             <img src="https://images.unsplash.com/photo-1575859431774-2e57ed632664?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center-top">
         </div>
-        <div class="lg:absolute top-0 left-0 right-0 bottom-0 order-1 z-[2]">
+        <div class="lg:absolute top-0 left-0 right-0 bottom-0 order-1 z-[3]">
             <div class="w-full h-full flex items-center">
                 <div class="container h-[592px] lg:h-[202px] xl:h-[228px]">
                     <div class="w-full lg:max-w-[956px] xl:max-w-[1080px] h-full lg:ml-[45px] xl:ml-[50px] flex flex-col lg:flex-row items-center justify-between">
