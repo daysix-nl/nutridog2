@@ -84,7 +84,14 @@
 }
 
 .aws-search-result {
-    margin-top: 60px !important;
+    padding-top: 20px !important;
+    margin-top: 10px !important;
+
+    @media (min-width: 768px) {
+        padding-top: 50px !important;
+        margin-top: 10px !important;
+    }
+
     border: 0px solid #ccc !important;
     z-index: 999 !important;
 
