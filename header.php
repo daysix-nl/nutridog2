@@ -191,12 +191,16 @@
 
 <div class="menu fixed h-[calc(100dvh-111px)] w-full top-[111px] bottom-0 bg-white z-[999] lg:hidden min-h-[650px] overflow-y-auto">
     <div class="h-full flex flex-col justify-between w-[390px] px-[20px] md:w-[768px] md:px-[40px] mx-auto">
-         <form action="/" method="get" class="pt-[40px] md:pt-[15px]">
+        <div class="pt-[40px] md:pt-[15px]">
+            <?php aws_get_search_form( true ); ?>
+        </div>
+        
+         <!-- <form action="/" method="get" class="pt-[40px] md:pt-[15px]">
             <div class="border-b-[1px] border-[#1F1F1F] w-full flex pb-[10px]">
                 <input class="w-full font-jakarta font-normal text-15 text-[#38241B]" type="text" name="s" id="search" placeholder="Waar ben je naar opzoek?" value="<?php the_search_query(); ?>" />
                 <button class="font-jakarta font-bold text-[#000000]" type="image" alt="Search">Zoeken</button>
             </div>
-        </form>
+        </form> -->
         <div class="flex flex-col justify-center text-center pb-[111px]">
             <a href="/shop" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Assortiment</a>
             <a href="/shop/seizoen-voorjaar/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Speciaal voor het voorjaar</a>

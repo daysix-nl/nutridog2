@@ -10,13 +10,14 @@ get_header(); ?>
 
 <main>
     <div class="container pt-[40px] md:pt-[80px] min-h-[calc(100dvh-111px)] pb-[80px]">
-         <form action="/" method="get">
+        <?php aws_get_search_form( true ); ?>
+         <!-- <form action="/" method="get">
             <div class="border-b-[1px] border-[#1F1F1F] w-full flex pb-[10px] md:pb-[15px]">
                 
                 <input class="w-full font-jakarta font-normal text-15 md:text-20 text-[#38241B]" type="text" name="s" id="search" placeholder="Waar ben je naar opzoek?" value="<?php the_search_query(); ?>" />
                 <button class="md:bg-[#C2F0A0] font-jakarta font-bold text-[#000000] md:flex items-center justify-center md:h-[45px] md:px-[30px] md:rounded-full" type="image" alt="Search">Zoeken</button>
             </div>
-        </form>
+        </form> -->
 
        
         <!-- PRODUCTEN -->

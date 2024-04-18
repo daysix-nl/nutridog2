@@ -1,0 +1,190 @@
+.aws-search-btn_icon {
+    display: none !important;
+}
+
+.aws-search-btn.aws-form-btn:after {
+    content: "Zoeken" !important;
+    height: 40px !important;
+    background: transparent !important;
+    width: 65px !important;
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+    font-weight: 700 !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+
+    @media (min-width: 768px) {
+        content: "Zoeken" !important;
+        height: 45px !important;
+        background: #C2F0A0 !important;
+        width: 118px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 99px !important;
+        font-weight: 700 !important;
+        font-family: Plus Jakarta Sans, sans-serif !important;
+    }
+}
+
+.aws-container .aws-search-form .aws-form-btn {
+    background: transparent !important;
+    border: 0px !important;
+    width: 65px !important;
+    height: 40px !important;
+    margin-left: 10px !important;
+
+    @media (min-width: 768px) {
+        width: 120px !important;
+        height: 45px !important;
+    }
+
+}
+
+.aws-search-field {
+    border: 0px !important;
+    border-bottom: 1px !important;
+    font-size: 15px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    padding: 0px !important;
+
+    @media (min-width: 768px) {
+        font-size: 20px !important;
+    }
+}
+
+.aws-search-form {
+    border-bottom: 1px solid #1F1F1F !important;
+    height: auto !important;
+    padding-bottom: 10px !important;
+
+    @media (min-width: 768px) {
+        padding-bottom: 15px !important;
+    }
+}
+
+.aws_result_image {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: center !important;
+    aspect-ratio: 1 / 1 !important;
+    display: flex !important;
+    position: relative !important;
+    background: #F2FBFF !important;
+    width: 100% !important;
+
+
+    img {
+        width: 80% !important;
+        aspect-ratio: 3 / 2 !important;
+        object-fit: contain !important;
+        mix-blend-mode: multiply;
+    }
+}
+
+.aws-search-result {
+    margin-top: 60px !important;
+    border: 0px solid #ccc !important;
+    z-index: 999 !important;
+
+
+    ul {
+        max-height: 100% !important;
+        height: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        // MD
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            height: 100% !important;
+        }
+
+        // LG
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        }
+
+        // XL
+        @media (min-width: 1352px) {
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        }
+
+        align-items: start !important;
+
+        li {
+            border-bottom: 0px !important;
+        }
+    }
+}
+
+.aws_result_link {
+    display: grid !important;
+}
+
+.aws-search-result .aws_result_item.hovered,
+.aws-search-result .aws_result_item:hover,
+.aws-search-result .aws_search_more a:hover {
+    background: transparent !important;
+}
+
+.aws_result_content {
+    display: grid !important;
+}
+
+.aws_result_title {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 500 !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    padding-top: 8px !important;
+    color: #2B2828 !important;
+    order: 2 !important;
+}
+
+.aws_result_price {
+    font-size: 15px !important;
+    line-height: 16px !important;
+    font-weight: 800 !important;
+    margin-bottom: 3px !important;
+    color: #000 !important;
+    order: 1 !important;
+    margin-top: 15px !important;
+    margin-bottom: 0px !important;
+}
+
+.aws_search_more {
+    grid-column: span 2 !important;
+    font-size: 15px !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+
+    a {
+        color: #000 !important;
+    }
+
+    // MD
+    @media (min-width: 768px) {
+        grid-column: span 4 !important;
+    }
+
+    // LG
+    @media (min-width: 1200px) {
+        grid-column: span 4 !important;
+    }
+
+    // XL
+    @media (min-width: 1352px) {
+        grid-column: span 4 !important;
+    }
+}
+
+.menu-active .aws-search-result {
+    max-height: calc(100dvh - 265px) !important;
+    overflow-y: auto !important;
+
+    // MD
+    @media (min-width: 768px) {
+        max-height: calc(100dvh - 245px) !important;
+    }
+}
