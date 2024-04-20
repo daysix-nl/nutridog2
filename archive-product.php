@@ -284,55 +284,28 @@ get_header( 'shop' ); ?>
            </div>
             <?php
 
-                // Controleer of de sessie al is gestart
-                if ( ! session_id() ) {
-                    session_start();
-                }
+            $args = array(
+                'post_type' => 'product',
+                'posts_per_page' => -1, 
+            );
 
-                // Controleer of de willekeurige volgorde al is opgeslagen in de sessie
-                if ( ! isset( $_SESSION['random_order'] ) ) {
-                    // Genereer een nieuwe willekeurige volgorde
-                    $args = array(
-                        'post_type' => 'product',
-                        'posts_per_page' => -1, // Hiermee worden alle producten opgehaald. Verander dit naar het gewenste aantal.
-                        'orderby' => 'rand', // Stelt de volgorde in op willekeurig
-                    );
+            $products_query = new WP_Query($args);
 
-                    $random_products = new WP_Query( $args );
+            if ($products_query->have_posts()) :
+                while ($products_query->have_posts()) : $products_query->the_post();
 
-                    if ( $random_products->have_posts() ) :
-                        $random_order = array(); // Array om de willekeurige volgorde op te slaan
-                        while ( $random_products->have_posts() ) : $random_products->the_post();
-                            $random_order[] = get_the_ID(); // Voeg het ID van elk product toe aan de array
-                        endwhile;
-                        $_SESSION['random_order'] = $random_order; // Sla de willekeurige volgorde op in de sessie
-                        wp_reset_postdata(); // Reset de query om conflicten te voorkomen
-                    else :
-                        echo 'Geen producten gevonden.';
-                    endif;
-                }
+            $product = wc_get_product(get_the_ID());
+            
+            ?>
+            <?php include get_template_directory() . '/componenten/product-item.php'; ?>
 
-                // Gebruik de opgeslagen willekeurige volgorde om producten weer te geven
-                $args = array(
-                    'post_type' => 'product',
-                    'post__in' => $_SESSION['random_order'], // Gebruik de opgeslagen willekeurige volgorde
-                    'orderby' => 'post__in', // Behoud de volgorde van de opgeslagen willekeurige volgorde
-                    'posts_per_page' => -1, // Hiermee worden alle producten opgehaald. Verander dit naar het gewenste aantal.
-                );
+            <?php
+            endwhile;
 
-                $random_products = new WP_Query( $args );
-
-                if ( $random_products->have_posts() ) :
-                    while ( $random_products->have_posts() ) : $random_products->the_post();
-                    $product = wc_get_product(get_the_ID());
-                       ?>
-                        <?php include get_template_directory() . '/componenten/product-item.php'; ?>
-                        <?php
-                    endwhile;
-                    wp_reset_postdata(); // Reset de query om conflicten te voorkomen
-                else :
-                    echo 'Geen producten gevonden.';
-                endif;
+            wp_reset_postdata();
+        else :
+            echo 'Geen producten gevonden';
+        endif;
         ?>
         </div>
     </div>
