@@ -1,120 +1,121 @@
-<div id="sidecart-menu" class="sidecart-hidden fixed top-0 right-0 bottom-0 w-full md:w-[436px] xl:w-[436px] bg-white z-[99999]">
-    <div class="w-full mx-auto px-[20px] lg:px-[25px] h-[100dvh] flex flex-col justify-between">
-        <!-- HEADER -->
-        <div class="">
-            <div class="flex items-center justify-between w-full pt-[30px]">
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19.995" height="19.315" viewBox="0 0 19.995 19.315">
-                        <path id="shopping-bag" d="M22.294,10.058a.649.649,0,0,0-.514-.262H18.373A5.222,5.222,0,0,0,13.387,5H12.044A5.222,5.222,0,0,0,7.059,9.8H3.651a.647.647,0,0,0-.522.26.791.791,0,0,0-.15.607l1.8,11.178a2.253,2.253,0,0,0,2.152,1.974H18.5a2.254,2.254,0,0,0,2.152-1.977l1.8-11.175A.789.789,0,0,0,22.294,10.058ZM12.044,6.476h1.343A3.806,3.806,0,0,1,17.017,9.8h-8.6A3.806,3.806,0,0,1,12.044,6.476Zm7.289,15.1a.868.868,0,0,1-.833.76H6.931a.868.868,0,0,1-.829-.756L4.45,11.272H20.982Z" transform="translate(-2.717 -4.75)" stroke="#000" stroke-width="0.5"/>
-                    </svg>
-                    <h3 class="font-jakarta font-extrabold text-20 leading-30 xl:text-22 xl:leading-30 text-[#000000] ml-[15px]">Winkelwagen</h3>
-                </div>
-                <button id="sidecart-close" class="z-[9999]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13.999" height="13.999" viewBox="0 0 13.999 13.999">
-                        <g id="close-svgrepo-com" transform="translate(-6.439 -6.439)">
-                            <path id="Path_18" data-name="Path 18" d="M7.5,7.5,19.378,19.378" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                            <path id="Path_19" data-name="Path 19" d="M19.378,7.5,7.5,19.378" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-            <hr class="border-[#DDDDDD] mt-[20px]">
-        </div>
-        <!-- PRODUCTS -->
-        <div class="w-full h-full overflow-y-auto">
-            <div class="w-full mb-[20px]">
-                <!-- WINKELWAGEN ITEM -->
-                <?php
-                // Haal de inhoud van de winkelwagen op
-                $cart = WC()->cart->get_cart();
-                if (!empty($cart)) {
-                    foreach ($cart as $cart_item_key => $cart_item) {
-                        $product = $cart_item['data'];
-                        $product_id = $product->is_type('variation') ? $product->get_parent_id() : $product->get_id();
-                        // Haal de productafbeelding op
-                        $product_image = wp_get_attachment_image_src(get_post_thumbnail_id($product_id), 'full'); ?>
-                        <div class="flex items-center w-full justify-between mt-[20px]">
-                            <!-- AFBEELDING -->
-                            <a href="<?php the_permalink($product->get_id());?>" class="bg-[#F2FBFF] flex justify-center items-center rounded-[10px] w-[81px] h-[81px] lg:w-[90px] lg:h-[90px] overflow-hidden">
-                                <?php
-                                if ($product_image) {
-                                echo '<img class="packshot mix-blend-multiply" src="' . esc_url($product_image[0]) . '" alt="' . esc_attr($product->get_name()) . '"/>';
-                                }
-                                ?>
-                            </a>
-                            <!-- INFORMATIE -->
-                            <div class="w-[calc(100%-100px)] md:w-[calc(100%-120px)] xl:w-[calc(100%-120px)]">
-                                <div class="flex flex-col justify-between h-full"> 
-                                    <div class="w-full">
-                                        <div class="flex justify-between items-start">
-                                            <div class="w-auto mr-[20px]">
-                                                <a href="<?php the_permalink($product->get_id());?>" class="font-jakarta font-bold text-15 leading-15"><?php echo esc_html($product->get_name()); ?></a>
-                                                <p class="font-jakarta font-medium text-13 leading-24 text-[#888888] tracking-[0.02em]"><?php echo $cart_item['quantity'];?> x <?php echo wc_price($product->get_price());?></p>
-                                            </div>
-                                            <?php echo '<a class="remove-item mr-[15px] scale-90" href="' . esc_url(WC()->cart->get_remove_url($cart_item_key)) . '">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16.1" viewBox="0 0 14 16.1">
-                                                <g id="bin-delete-recycle-svgrepo-com" transform="translate(-4 -1)">
-                                                    <path id="Path_496" data-name="Path 496" d="M17.3,1.7H12.4a.7.7,0,0,0-.7-.7H10.3a.7.7,0,0,0-.7.7H4.7a.7.7,0,0,0,0,1.4H17.3a.7.7,0,1,0,0-1.4Z" fill="#acacac"/>
-                                                    <path id="Path_497" data-name="Path 497" d="M17.5,9.7V20.9H8.4V9.7H7V21.6a.7.7,0,0,0,.7.7H18.2a.7.7,0,0,0,.7-.7V9.7Z" transform="translate(-1.95 -5.2)" fill="#acacac"/>
-                                                    <path id="Path_498" data-name="Path 498" d="M18.4,24.7v-7H17v7Z" transform="translate(-8.45 -11.1)" fill="#acacac"/>
-                                                    <path id="Path_499" data-name="Path 499" d="M28.4,24.7v-7H27v7Z" transform="translate(-14.95 -11.1)" fill="#acacac"/>
-                                                </g>
-                                            </svg>
-                                            </a>';?>
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                } else { ?>
-                    <p class="font-jost font-normal text-15 leading-25 tracking-[0.025em] text-[#000] mt-[20px]">Jouw winkelwagen is leeg</p>
-                    <?php
-                }
-                ?>
-            </div>
-        </div>
-        <?php
-        if (WC()->cart->get_cart_contents_count() > 0) { ?>
-        <!-- FOOTER -->
-        <div class="w-full mb-4">
-            <hr class="border-[#DDDDDD] mb-[20px]">
-            <div class="">
-                <div class="flex justify-between">
-                    <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Subtotaal</h4>
-                    <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
-                        <?php $total = WC()->cart->get_cart_total();
-                        echo '' . $total;
-                        ?>
-                    </p>
-                </div>
-                <div class="flex justify-between lg:mt-[8px]">
-                    <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Verzendkosten</h4>
-                    <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
-                        <?php
-                        $verzendkosten = WC()->cart->shipping_total;
+<?php
+/**
+ * Cart totals
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-totals.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://woo.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 2.3.6
+ */
 
-                        if ($verzendkosten >= 1) {
-                            echo '' . wc_price($verzendkosten);
-                        } else {
-                            echo '<span class="text-[#000]">Gratis</span>';
-                        }
-                        ?>
-                    </p>
-                </div>
-                <div class="flex justify-between lg:mt-[8px]">
-                    <h4 class="font-jakarta font-bold text-15 leading-25 xl:text-16 xl:leading-25 text-[#000]">Totaal</h4>
-                    <p class="font-jakarta font-bold text-15 leading-25 xl:text-16 xl:leading-25 text-[#000]">
-                        <?php
-                        $total_bedrag = WC()->cart->total;
-                        echo '' . wc_price($total_bedrag);
-                        ?>
-                    </p>
-                </div>
-            </div>
-            <hr class="border-[#DDDDDD] my-[20px]">
-            <div class="w-full mx-auto flex justify-between max-w-[360px] md:max-w-[unset]">
+defined( 'ABSPATH' ) || exit;
+
+?>
+<div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+
+	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
+
+	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
+
+	<table cellspacing="0" class="shop_table shop_table_responsive">
+
+		<tr class="cart-subtotal">
+			<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+		</tr>
+
+		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+				<td data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+			</tr>
+		<?php endforeach; ?>
+
+		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
+
+			<?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
+
+			<tr class="woocommerce-shipping-totals shipping">
+				<th>Verzendkosten</th>
+				<td><?php
+				$verzendkosten = WC()->cart->shipping_total;
+
+				if ($verzendkosten >= 1) {
+					echo '' . wc_price($verzendkosten);
+				} else {
+					echo '<span class="text-[#000]">Gratis</span>';
+				}
+				?></td>
+
+				</tr>
+
+			<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
+
+		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
+
+			<tr class="shipping">
+				<th><?php esc_html_e( 'Shipping', 'woocommerce' ); ?></th>
+				<td data-title="<?php esc_attr_e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
+			</tr>
+
+		<?php endif; ?>
+
+		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
+			<tr class="fee">
+				<th><?php echo esc_html( $fee->name ); ?></th>
+				<td data-title="<?php echo esc_attr( $fee->name ); ?>"><?php wc_cart_totals_fee_html( $fee ); ?></td>
+			</tr>
+		<?php endforeach; ?>
+
+		<?php
+		if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) {
+			$taxable_address = WC()->customer->get_taxable_address();
+			$estimated_text  = '';
+
+			if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) {
+				/* translators: %s location. */
+				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+			}
+
+			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) {
+				foreach ( WC()->cart->get_tax_totals() as $code => $tax ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					?>
+					<tr class="tax-rate tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+						<th><?php echo esc_html( $tax->label ) . $estimated_text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></th>
+						<td data-title="<?php echo esc_attr( $tax->label ); ?>"><?php echo wp_kses_post( $tax->formatted_amount ); ?></td>
+					</tr>
+					<?php
+				}
+			} else {
+				?>
+				<tr class="tax-total">
+					<th><?php echo esc_html( WC()->countries->tax_or_vat() ) . $estimated_text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></th>
+					<td data-title="<?php echo esc_attr( WC()->countries->tax_or_vat() ); ?>"><?php wc_cart_totals_taxes_total_html(); ?></td>
+				</tr>
+				<?php
+			}
+		}
+		?>
+
+		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
+
+		<tr class="order-total">
+			<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+		</tr>
+
+		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+
+	</table>
+	<hr class="border-[#DDDDDD] my-[20px]">
+	<div class="w-full mx-auto flex justify-between max-w-[360px] md:max-w-[unset]">
                 <div class="border-[#EDEDED] border-[1px] rounded-[4px] h-[23px] w-[36.64px] overflow-hidden flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19.474" height="6.247" viewBox="0 0 19.474 6.247">
                         <g id="Group_75" data-name="Group 75" transform="translate(0 0)">
@@ -191,20 +192,36 @@
                 </div>
                 <div class="border-[#EDEDED] border-[1px] rounded-[4px] h-[23px] w-[36.64px] overflow-hidden flex justify-center items-center bg-[#FEB3C7]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25.052" height="5.579" viewBox="0 0 25.052 5.579">
-                    <path id="Path_54" data-name="Path 54" d="M28.751,12.531a.72.72,0,0,0-.506.21.712.712,0,0,0,0,1,.714.714,0,0,0,1.219-.5.7.7,0,0,0-.207-.5.72.72,0,0,0-.506-.21Zm-2.347-.55a1.031,1.031,0,1,0-1.029.974,1,1,0,0,0,1.029-.974Zm0-1.894h1.136v3.787H26.409v-.242a2,2,0,1,1,0-3.3Zm-9.093.493v-.493H16.152v3.786h1.166V12.107c0-.6.648-.917,1.1-.917h.013v-1.1A1.418,1.418,0,0,0,17.316,10.581Zm-2.9,1.4a1.031,1.031,0,1,0-1.029.974A1,1,0,0,0,14.418,11.982Zm0-1.894h1.137v3.787H14.422v-.242a2,2,0,1,1,0-3.3Zm6.839-.1a1.383,1.383,0,0,0-1.171.528v-.426H18.959v3.786H20.1v-1.99a.8.8,0,0,1,.853-.858.741.741,0,0,1,.787.85v2h1.135V11.467A1.5,1.5,0,0,0,21.261,9.987ZM9.638,13.875h1.189V8.4H9.638Zm-5.225,0h1.26V8.4H4.414ZM8.819,8.4A4.35,4.35,0,0,1,7.53,11.508l1.741,2.368H7.716L5.825,11.3l.488-.365A3.142,3.142,0,0,0,7.585,8.4H8.818Z" transform="translate(-4.413 -8.4)" fill="#0a0b09"/>
+                    <path id="Path_54" data-name="Path 54" d="M28.751,12.531a.72.72,0,0,0-.506.21.712.712,0,0,0,0,1,.714.714,0,0,0,1.219-.5.7.7,0,0,0-.207-.5.72.72,0,0,0-.506-.21Zm-2.347-.55a1.031,1.031,0,1,0-1.029.974,1,1,0,0,0,1.029-.974Zm0-1.894h1.136v3.787H26.409v-.242a2,2,0,1,1,0-3.3Zm-9.093.493v-.493H16.152v3.786h1.166V12.107c0-.6.648-.917,1.1-.917h.013v-1.1A1.418,1.418,0,0,0,17.316,10.581Zm-2.9,1.4a1.031,1.031,0,1,0-1.029.974A1,1,0,0,0,14.418,11.982Zm0-1.894h1.137v3.787H14.422v-.242a2,2,0,1,1,0-3.3Zm6.839-.1a1.383,1.383,0,0,0-1.171.528v-.426H18.959v3.786H20.1v-1.99a.8.8,0,0,1,.853-.858.741.741,0,0,1,.787.85v2h1.135V11.467A1.5,1.5,0,0,0,21.261,9.987ZM9.638,13.875h1.189V8.4H9.638Zm-5.225,0h1.26V8.4H4.414ZM8.819,8.4A4.35,4.35,0,0,1,7.53,11.508l1.741,2.368H7.716L5.825,11.3l.488-.365A3.142,3.142,0,0,0,7.585,8.4H8.818Z" transform="translate(-4.413 -8.4)" fill="#5D7365"/>
                     </svg>
                 </div>
             </div>
-            <hr class="border-[#DDDDDD] my-[20px]">
-       
-            <?php $checkout_url = wc_get_checkout_url();?>
-            <a href="<?php echo esc_url($checkout_url);?>" class="h-[45px] bg-[#C2F0A0] rounded-[29px] font-jakarta font-bold text-[#000000] text-15 xl:text-16 w-full flex items-center justify-center">Rond bestelling af</a>
-            <a href="/winkelwagen" class="text-center underline font-jakarta font-semibold text-[#626262] text-15 xl:text-16 w-full flex items-center justify-center mt-[8px]">Bekijk winkelwagen</a>
-        </div>
-        <?php
-        } else {
-        }
-        ?>
-    </div>
+            <hr class="border-[#DDDDDD] mt-[20px] mb-[30px]">
+			<div class="w-full grid gap-[15px] mt-4">
+                            <!-- USP'S -->
+                            <div class="flex items-start">
+                                <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
+                                    <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <?php // Haal de product-ID op
+                               $cart_subtotal = WC()->cart->get_cart_subtotal(); // Haal de winkelwagensubtotaal op
+								$verkoopprijs = wc_format_decimal($cart_subtotal, 2); // Formatteer de prijs
+								$resultaat = floor($verkoopprijs / 1); // Rond de prijs af ?>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij deze order ontvangt u <?php echo $resultaat ?> <a href="/spaarbotjes" class="underline">spaarbotjes</a></p>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
+                                    <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Voor 15:00 besteld de volgende werkdag in huis</p>
+                            </div>
+                        </div>
+			<hr class="border-[#DDDDDD] my-[30px]">
+
+	
+		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+
+
+	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
+
 </div>
-<div class="sidecart-overlay"></div>

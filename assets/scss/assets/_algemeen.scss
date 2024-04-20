@@ -11,6 +11,15 @@ main {
   padding-top: 111px;
 }
 
+// div,
+// section {
+//   border: 0.5px solid #C400FF;
+// }
+
+hr {
+  border-color: #DDDDDD !important;
+}
+
 @font-face {
   font-family: 'Grotesk';
   src: url('/wp-content/themes/nutridog2/fonts/CyGroteskGrandDark.woff2') format('woff2'), url('/wp-content/themes/nutridog2/fonts/CyGroteskGrandDark.woff') format('woff');

@@ -40,7 +40,7 @@
                                         <div class="w-[calc(100%-100px)] md:w-[calc(100%-120px)] xl:w-[calc(100%-120px)]">
                                             <div class="flex flex-col justify-between h-full"> 
                                                 <div class="w-full">
-                                                    <div class="flex justify-between items-start">
+                                                    <div class="flex justify-between items-center">
                                                         <div class="w-auto mr-[20px]">
                                                             <a href="<?php the_permalink($product->get_id());?>" class="font-jakarta font-bold text-15 leading-15"><?php echo esc_html($product->get_name()); ?></a>
                                                             <p class="font-jakarta font-medium text-13 leading-24 text-[#888888] tracking-[0.02em]"><?php echo $cart_item['quantity'];?> x <?php echo wc_price($product->get_price());?></p>
@@ -111,30 +111,7 @@
                                 </p>
                             </div>
                            <hr class="border-[#DDDDDD] my-[20px]">
-                            <!-- <div class="korting">
-                                <div class="woocommerce-form-coupon-toggle flex justify-between items-center">
-                                    <?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( '', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Add discount or gift card code', 'woocommerce' ) . '</a>' ), 'notice' ); ?>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14.733" height="8.139" viewBox="0 0 14.733 8.139">
-                                        <g id="Select" transform="translate(0.772 0.773)">
-                                            <g id="Group_370" data-name="Group 370" transform="translate(13.188 -11.708) rotate(90)">
-                                            <line id="Line_36" data-name="Line 36" x2="8.496" y2="0.83" transform="translate(12.294 0) rotate(45)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
-                                            <line id="Line_37" data-name="Line 37" y1="0.83" x2="8.496" transform="translate(18.302 7.181) rotate(135)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <form class="checkout_coupon woocommerce-form-coupon grid gap-[15px]" method="post" style="display:none">
-                                    <p class="w-full mt-2">
-                                        <label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
-                                        <input class="w-full" type="text" name="coupon_code" class="input-text" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
-                                    </p>
-                                    <p class="w-full">
-                                        <button type="submit" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" onclick="refreshPage()"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
-                                    </p>
-                                    <div class="clear"></div>
-                                </form>
-                            </div> -->
+                                <a href="/winkelwagen" class="text-center underline font-jakarta font-semibold text-[#626262] text-15 xl:text-16 w-full flex items-center justify-center mt-[8px]">Wijzig bestelling</a>
 
                             <?php
                             } else {

@@ -112,7 +112,7 @@
     </div>
 </section>
 
-<section class="h-[77px] w-full bg-white flex justify-between items-center px-[15px] md:px-[25px] lg:px-5">
+<section class="h-[77px] w-full bg-white flex justify-between items-center px-[15px] md:px-[25px] lg:px-5 border-b-[1px] border-[#DDDDDD]">
     <div class="flex justify-between w-[65px] md:w-[167px] lg:w-[320px]">
         <button id="menu" class="h-[40px] w-[42px] lg:hidden flex flex-col justify-center items-center relative md:mr-[25px]">
             <span></span>

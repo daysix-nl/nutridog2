@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 } ?>
 
 <main>
-    <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto lg:mt-[10px]">
+    <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px]">
     <?php
         // Controleren of er een HTTP-referer is ingesteld
         if(isset($_SERVER['HTTP_REFERER'])) {
@@ -33,12 +33,12 @@ if ( post_password_required() ) {
             if(strpos($referer_url, home_url()) !== false) {
                 // Als het een interne pagina is, weergeef de stap-terugknop
                 ?>
-                <a href="javascript:history.back()" class="back-button mb-[20px] text-13 leading-30 font-medium font-jakarta border-[1px] w-fit rounded-full px-[15px] h-[30px] flex justify-between items-center">Stap terug</a>
+                <a href="javascript:history.back()" class="back-button mb-[20px] text-12 leading-30 font-jakarta border-[0px] bg-[#029C46] text-[#fff] font-bold w-fit rounded-full px-[15px] h-[30px] flex justify-between items-center">Stap terug</a>
                 <?php
             }
         }
         else { ?>
-            <div class="pt-[20px]"></div>
+            
             <?php
         }
     ?>
@@ -335,27 +335,27 @@ if ( post_password_required() ) {
         </div>
 
          <!-- GERELATEERDE PRODUCTEN -->
-        <div id="info"></div>
+         <div id="info"></div>
+        <hr class="mt-[20px]">
         <div class="w-full mt-2 lg:px-5">
-            <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#039C47] pb-4 text-center">Meer informatie</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-[50px]">
-                <div class="">
-                    
-                </div>
+            
+            <div class="w-full max-w-[800px] lg:gap-[50px] my-[70px]">
+               
+                <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#039C47] mb-[30px]">Product details</h2>
                 <div class="text-14 leading-30 font-jakarta text-black w-fit text-editor">
-                    <h2>Product details</h2>
-                    <?php
-                    $content = get_the_content(); // De content ophalen
+                <?php
+                $content = get_the_content(); // De content ophalen
 
-                    if (empty($content)) {
-                        // Als de content leeg is
-                        echo 'Er is geen beschrijving beschikbaar voor dit artikel.';
-                    } else {
-                        // Als de content niet leeg is
-                        the_content(); // Toon de content
-                    }
-                    ?>
+                if (empty($content)) {
+                    // Als de content leeg is
+                    echo 'Er is geen beschrijving beschikbaar voor dit artikel.';
+                } else {
+                    // Als de content niet leeg is
+                    the_content(); // Toon de content
+                }
+                ?>
                 </div>
+            
             </div>
         </div>
     </div>

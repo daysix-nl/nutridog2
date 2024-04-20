@@ -9,6 +9,7 @@ module.exports = {
     "./wc-templates/*.{html,js,php}",
     "./woocommerce/*.{html,js,php}",
     "./woocommerce/checkout/*.{html,js,php}",
+    "./woocommerce/cart/*.{html,js,php}",
     "./woocommerce/global/*.{html,js,php}",
     "./woocommerce/single-product/add-to-cart/*.{html,js,php}",
   ],
@@ -419,8 +420,8 @@ module.exports = {
             paddingRight: "0px",
           },
           "@screen xl": {
-            maxWidth: "1332px",
-            width: "1332px",
+            maxWidth: "1280px",
+            width: "1280px",
             paddingLeft: "0px",
             paddingRight: "0px",
           },

@@ -67,7 +67,7 @@ if ( ! wp_doing_ajax() ) {
 		<!-- <h2 class="font-jost font-semibold text-15 leading-25 xl:text-17 xl:leading-25 tracking-[0.05em] uppercase mt-[45px]">Complete order</h2>
 		<hr class="border-[#DDDDDD] my-[10px]"> -->
 		<div class="mt-[40px]"></div>
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="h-[55px] md:h-[47px] xl:h-[52px] bg-[#2E2E2E] rounded-[2px] xl:rounded-[3px] font-jost font-normal text-white text-15 xl:text-16 tracking-[0.02em] xl:tracking-[0.025em] w-full flex items-center justify-center md:hover:opacity-80 duration-300' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">Complete order</button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="checkout-button button ' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) . '" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">Complete order</button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

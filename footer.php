@@ -122,8 +122,8 @@
             </div>
             <!-- LATAST NEWS -->
             <div class="w-full md:w-[447px] lg:w-[282px] xl:w-[346px] order-2 md:order-3 lg:order-4 md:mt-[42px] lg:mt-[unset]">
-                <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Bedrijfsgegevens</h3>
-                <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] md:max-w-[300px] lg:max-w-[unset]">Nutridog is onderdeel van NedEcom B.V. <br>Energieweg 4<br>3641 RT Mijdrecht<br>KvK: 90837118<br>BTW: NL865470042B01</p>
+                <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Nieuwsbrief</h3>
+                <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] md:max-w-[300px] lg:max-w-[unset]">Meld je aan voor onze nieuwsbrief, blijf op de hoogte en ontvang 5% korting op je eerstvolgende bestelling.</p>
             </div>
         </div>
     </section>

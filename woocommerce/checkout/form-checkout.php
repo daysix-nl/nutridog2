@@ -51,10 +51,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			</div>
 
 			<div class="mt-[20px]">
-				<div class="paybox">
-				<hr class="border-[#DDDDDD] my-[10px]">
+				<div class="paybox border-[1px] border-[#DDDDDD] py-[15px]">
+				
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-				<hr class="border-[#DDDDDD] my-[10px]">
+			
 				</div>
 			</div>
 		</div>

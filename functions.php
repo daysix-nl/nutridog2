@@ -895,3 +895,10 @@ function na_toevoegen_aan_winkelwagen($cart_item_key, $product_id, $quantity, $v
 }
 
 add_action('woocommerce_add_to_cart', 'na_toevoegen_aan_winkelwagen', 10, 6);
+
+
+
+
+
+
+

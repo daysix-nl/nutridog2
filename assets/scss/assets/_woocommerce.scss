@@ -284,16 +284,16 @@ body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
     font-weight: 400;
     transition: none;
     position: relative;
-    font-family: Karlsen, sans-serif !important;
+    font-family: Plus Jakarta Sans, sans-serif;
     font-size: 16px !important;
 }
 
 .wpc-filters-apply-button {
     width: 100% !important;
-    background: #8CC63F !important;
+    background: #C2F0A0 !important;
     z-index: 1 !important;
-    font-family: Tanker, sans-serif !important;
-    font-size: 19px !important;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: 17px !important;
     line-height: 25px !important;
     display: flex !important;
     justify-content: center !important;
@@ -301,11 +301,32 @@ body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
     border-radius: 0px !important;
-    font-weight: 400 !important;
-    color: #fff !important;
-    border: 1px solid #8CC63F !important;
+    font-weight: 600 !important;
+    color: #000 !important;
+    border: 1px solid #C2F0A0 !important;
 }
 
+.wpc-filters-close-button {
+    width: 100% !important;
+    background: #fff !important;
+    z-index: 1 !important;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: 17px !important;
+    line-height: 25px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 0px !important;
+    font-weight: 600 !important;
+    color: #000 !important;
+    border: 1px solid #DDDDDD !important;
+}
+
+.wpc-filters-widget-controls-item {
+    width: 48% !important;
+}
 
 .wpc-filter-chips-list {
     display: flex !important;
@@ -364,6 +385,9 @@ li.wpc-filter-chip {
 .wpc-filter-layout-dropdown .widget-title {
     display: none !important;
 }
+
+
+
 
 .wpc-sorting-form select {
     font-size: 13px !important;
@@ -523,12 +547,27 @@ p.out-of-stock {
     width: 100% !important;
 
     li {
-        width: 30% !important;
+        width: 45% !important;
         font-size: 13px !important;
         font-family: Plus Jakarta Sans, sans-serif !important;
         color: #000000 !important;
         font-weight: 400 !important;
         height: fit-content !important;
+
+        // MD
+        @media (min-width: 768px) {
+            width: 45% !important;
+        }
+
+        // LG
+        @media (min-width: 1200px) {
+            width: 30% !important;
+        }
+
+        // XL
+        @media (min-width: 1352px) {
+            width: 30% !important;
+        }
     }
 }
 
@@ -578,19 +617,19 @@ ins {
         #billing_phone_field,
         #shipping_phone_field {
             width: 100% !important;
-            order: 3 !important;
+            order: 7 !important;
         }
 
         #billing_email_field,
         #shipping_email_field {
             width: 100% !important;
-            order: 4 !important;
+            order: 8 !important;
         }
 
         #billing_country_field,
         #shipping_country_field {
             width: 100% !important;
-            order: 5 !important;
+            order: 3 !important;
             display: none !important;
         }
 
@@ -598,19 +637,19 @@ ins {
         #billing_address_1_field,
         #shipping_address_1_field {
             width: 100% !important;
-            order: 6 !important;
+            order: 4 !important;
         }
 
         #billing_postcode_field,
         #shipping_postcode_field {
             width: 100% !important;
-            order: 7 !important;
+            order: 5 !important;
         }
 
         #billing_city_field,
         #shipping_city_field {
             width: 100% !important;
-            order: 8 !important;
+            order: 6 !important;
         }
 
         /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -631,19 +670,19 @@ ins {
             #billing_phone_field,
             #shipping_phone_field {
                 width: 35% !important;
-                order: 3 !important;
+                order: 7 !important;
             }
 
             #billing_email_field,
             #shipping_email_field {
                 width: 65% !important;
-                order: 4 !important;
+                order: 8 !important;
             }
 
             #billing_country_field,
             #shipping_country_field {
                 width: 35% !important;
-                order: 5 !important;
+                order: 3 !important;
                 display: none !important;
             }
 
@@ -651,19 +690,19 @@ ins {
             #billing_address_1_field,
             #shipping_address_1_field {
                 width: 100% !important;
-                order: 6 !important;
+                order: 4 !important;
             }
 
             #billing_postcode_field,
             #shipping_postcode_field {
                 width: 20% !important;
-                order: 7 !important;
+                order: 5 !important;
             }
 
             #billing_city_field,
             #shipping_city_field {
                 width: 80% !important;
-                order: 8 !important;
+                order: 6 !important;
             }
         }
 
@@ -880,19 +919,19 @@ ins {
         #billing_phone_field,
         #shipping_phone_field {
             width: 100% !important;
-            order: 3 !important;
+            order: 7 !important;
         }
 
         #billing_email_field,
         #shipping_email_field {
             width: 100% !important;
-            order: 4 !important;
+            order: 8 !important;
         }
 
         #billing_country_field,
         #shipping_country_field {
             width: 100% !important;
-            order: 5 !important;
+            order: 3 !important;
             display: none !important;
         }
 
@@ -900,19 +939,19 @@ ins {
         #billing_address_1_field,
         #shipping_address_1_field {
             width: 100% !important;
-            order: 6 !important;
+            order: 4 !important;
         }
 
         #billing_postcode_field,
         #shipping_postcode_field {
             width: 100% !important;
-            order: 7 !important;
+            order: 5 !important;
         }
 
         #billing_city_field,
         #shipping_city_field {
             width: 100% !important;
-            order: 8 !important;
+            order: 6 !important;
         }
 
         /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -933,19 +972,19 @@ ins {
             #billing_phone_field,
             #shipping_phone_field {
                 width: 35% !important;
-                order: 3 !important;
+                order: 7 !important;
             }
 
             #billing_email_field,
             #shipping_email_field {
                 width: 65% !important;
-                order: 4 !important;
+                order: 8 !important;
             }
 
             #billing_country_field,
             #shipping_country_field {
                 width: 35% !important;
-                order: 5 !important;
+                order: 3 !important;
                 display: none !important;
             }
 
@@ -953,19 +992,19 @@ ins {
             #billing_address_1_field,
             #shipping_address_1_field {
                 width: 100% !important;
-                order: 6 !important;
+                order: 4 !important;
             }
 
             #billing_postcode_field,
             #shipping_postcode_field {
                 width: 20% !important;
-                order: 7 !important;
+                order: 5 !important;
             }
 
             #billing_city_field,
             #shipping_city_field {
                 width: 80% !important;
-                order: 8 !important;
+                order: 6 !important;
             }
         }
 
@@ -1042,5 +1081,111 @@ ins {
 }
 
 .wpc-filter-_sale_price.wpc-filter-post_meta_exists {
+    display: none !important;
+}
+
+
+
+// CART
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+    width: 100% !important;
+}
+
+button.update-cart {
+    position: absolute !important;
+    font-size: 15px !important;
+    line-height: 29px !important;
+    padding: 0px !important;
+    font-weight: 400 !important;
+    border-radius: 0px !important;
+    color: #525252 !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    display: flex !important;
+
+}
+
+.woocommerce .quantity .qty {
+    width: 50px !important;
+    margin-left: 10px !important;
+}
+
+.woocommerce-remove-coupon {
+    display: none !important;
+}
+
+.woocommerce table.shop_table {
+    border: 0px solid rgba(0, 0, 0, .1) !important;
+    margin: 0 -1px 24px 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 5px;
+
+    tr {
+        border: 0px !important;
+    }
+
+    th,
+    td {
+        border-top: 0px !important;
+        padding: 0px !important;
+        font-weight: 400 !important;
+        font-size: 15px !important;
+        line-height: 30px !important;
+        color: #000000 !important;
+        font-weight: 500 !important;
+    }
+
+    td {
+        text-align: right !important;
+    }
+
+    .order-total td,
+    .order-total th,
+    .order-total td::before {
+        font-weight: 700 !important;
+    }
+
+    strong {
+        font-weight: 700 !important;
+    }
+
+
+}
+
+.cart_totals h2 {
+    display: none !important;
+}
+
+.woocommerce table.shop_table_responsive tr:nth-child(2n) td,
+.woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
+    background-color: transparent !important;
+}
+
+.woocommerce table.shop_table_responsive tr td::before,
+.woocommerce-page table.shop_table_responsive tr td::before {
+    font-weight: 400 !important;
+}
+
+.checkout-button {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    height: 52px !important;
+    position: relative !important;
+    align-content: center !important;
+    align-items: center !important;
+    border-radius: 20px !important;
+    background-color: #5D7365 !important;
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    -webkit-font-smoothing: unset !important;
+}
+
+.includes_tax {
     display: none !important;
 }
