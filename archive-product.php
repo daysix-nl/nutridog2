@@ -286,6 +286,7 @@ get_header( 'shop' ); ?>
             $args = array(
                 'post_type' => 'product',
                 'posts_per_page' => -1, 
+                'orderby' => 'rand', // Stelt de volgorde in op willekeurig
             );
 
             $products_query = new WP_Query($args);
