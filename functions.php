@@ -919,3 +919,8 @@ function custom_login_logo_url() {
     return home_url(); // Vervang 'home_url()' door de gewenste URL
 }
 add_filter( 'login_headerurl', 'custom_login_logo_url' );
+
+function custom_lost_password_url( $lostpassword_url, $redirect ) {
+    return site_url( '/wp-login.php?action=lostpassword', 'login' ); // Standaard WordPress wachtwoord reset URL
+}
+add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
