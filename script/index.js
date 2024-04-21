@@ -253,4 +253,24 @@ try {
 } catch (error) { }
 
 
-// 
+let labels = ["Al een account? Je kan hier inloggen", "Nog geen account? Registreer hier"];
+var swiper = new Swiper(".mySwiperAccount", {
+  effect: "cube",
+  grabCursor: true,
+  cubeEffect: {
+    shadow: false,
+    slideShadows: false,
+    shadowOffset: 20,
+    shadowScale: 0.94,
+  },
+  pagination: {
+    el: ".swiper-pagination-account",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"><span class="tab-text">' + labels[index] + "</span></span>";
+    },
+  },
+});
+
+
+

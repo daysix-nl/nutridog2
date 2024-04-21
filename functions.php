@@ -41,14 +41,27 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 */
 
 function load_custom_wp_admin_style(){
+     $version = file_exists(get_template_directory() . '/version.txt') ? file_get_contents(get_template_directory() . '/version.txt') : '1.0';
     wp_enqueue_style( 'gutenberg',  'https://hostdashboard.nl/devdocs/css/gutenberg.css');
+     wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), $version, 'all');
     // wp_enqueue_style( 'swiper',  'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), '1.2', 'all');
+    // wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), '1.2', 'all');
     // wp_enqueue_script( 'swiper', get_template_directory_uri() . '/script/swiper.js', array(), 1.1, true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/script/index.js', array(), '1.2', true);
  
 }
 add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style');
+
+
+function remove_default_login_styles() {
+    wp_dequeue_style( 'login' ); // Uitschakelen van de standaard login styles
+    wp_dequeue_style( 'login-rtl' ); // Uitschakelen van de standaard login styles voor RTL (Right to Left) talen
+}
+add_action( 'login_enqueue_scripts', 'remove_default_login_styles' );
+function add_custom_login_css() {
+    wp_enqueue_style( 'custom-login-css', get_stylesheet_directory_uri() . '/style.css' ); // Voeg je eigen CSS-bestand toe
+}
+add_action( 'login_enqueue_scripts', 'add_custom_login_css' );
 
 /*
 |--------------------------------------------------------------------------
@@ -902,4 +915,7 @@ add_action('woocommerce_add_to_cart', 'na_toevoegen_aan_winkelwagen', 10, 6);
 
 
 
-
+function custom_login_logo_url() {
+    return home_url(); // Vervang 'home_url()' door de gewenste URL
+}
+add_filter( 'login_headerurl', 'custom_login_logo_url' );
