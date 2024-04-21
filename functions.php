@@ -23,12 +23,13 @@
 |
 */
 function add_theme_scripts() {
-    // wp_enqueue_style( 'swiper',  'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), '1.2', 'all');
-    // wp_enqueue_script( 'swiper', get_template_directory_uri() . '/script/swiper.js', array(), 1.1, true);
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/script/index.js', array(), '1.2', true);
-  }
-  add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+    // Lees de versie uit het bestand
+    $version = file_exists(get_template_directory() . '/version.txt') ? file_get_contents(get_template_directory() . '/version.txt') : '1.0';
+
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), $version, 'all');
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/script/index.js', array(), $version, true);
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 /*
 |--------------------------------------------------------------------------
 | Back-end styles en scripts
