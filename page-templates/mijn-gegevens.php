@@ -24,6 +24,7 @@
             </div>
             <div class="w-full lg:w-[776px]">
                 <div class="">
+                    <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000]"><?php the_title();?></h2>
                     
                 </div>
             </div>
