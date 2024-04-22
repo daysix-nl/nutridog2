@@ -218,9 +218,6 @@
 
 </footer>
 
-<div class="fixed top-0 left-0 right-0 bottom-0 z-[9998] bg-black">
-    <div class="w-[90dvw] lg:w-[67dvw] h-[500px] mx-auto mt-[200px]"></div>
-</div>
 
 <?php include get_template_directory() . '/componenten/side-cart.php'; ?>
 <?php wp_footer(); ?>
