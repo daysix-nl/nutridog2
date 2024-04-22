@@ -28,6 +28,11 @@ function add_theme_scripts() {
 
     wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), $version, 'all');
     wp_enqueue_script( 'script', get_template_directory_uri() . '/script/index.js', array(), $version, true);
+
+    // Voeg CSS-bestanden toe aan de queue met een versienummer
+    wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css', array(), $version);
+    wp_enqueue_style('tailwind', get_template_directory_uri() . '/tailwindcss-styles/style.css', array(), $version);
+    wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', array(), $version);
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 /*
