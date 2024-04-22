@@ -926,7 +926,7 @@ function custom_lost_password_url( $lostpassword_url, $redirect ) {
 add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
 
 
-<?php
+
 // Functie om de versie uit version.txt te halen
 function get_theme_version_from_file() {
     // Pad naar version.txt-bestand
@@ -952,36 +952,5 @@ function add_theme_version_to_stylesheet_header($headers) {
     return $headers;
 }
 add_filter('extra_theme_headers', 'add_theme_version_to_stylesheet_header');
-?>
 
 
-function purge_browser_cache_on_version_change($new_version) {
-    $old_version = get_option('theme_version');
-
-    // Als de versie is veranderd
-    if ($new_version !== $old_version) {
-        global $nginx_purger;
-
-        if (isset($nginx_purger)) {
-            $nginx_purger->purge_all();
-        }
-
-        // Update de opgeslagen versie
-        update_option('theme_version', $new_version);
-    }
-}
-
-// Voeg actie toe om browsercache te legen wanneer de versie van het thema wordt gewijzigd
-add_action('after_switch_theme', 'purge_browser_cache_on_version_change');
-
-function add_theme_scripts() {
-    // Lees de versie uit het bestand
-    $version = file_exists(get_template_directory() . '/version.txt') ? file_get_contents(get_template_directory() . '/version.txt') : '1.0';
-
-    // Registreer een nieuwe optie om de huidige versie op te slaan
-    add_option('theme_version', $version);
-
-    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', array(), $version, 'all');
-    wp_enqueue_script('script', get_template_directory_uri() . '/script/index.js', array(), $version, true);
-}
-add_action('wp_enqueue_scripts', 'add_theme_scripts');
