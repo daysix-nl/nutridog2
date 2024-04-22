@@ -666,27 +666,29 @@
                 <h2 class="font-wedges text-33 leading-13 lg:text-52 lg:leading-31 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-31 leading-31 lg:text-51 lg:leading-51 lowercase text-[#2A813B]">jouw hond</span></h2>
             </div>
             <div class="container md:px-[30px] lg:px-[unset] grid grid-cols-2 lg:grid-cols-4 gap-[15px] md:gap-[40px] lg:gap-[30px] mt-[40px] md:mt-[40px] lg:mt-[45px] xl:mt-[45px]">
-                <a href="" class="col-span-1">
+                <?php
+                    $loop = new WP_Query( array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                        'orderby' => 'date',
+                        'order' => 'ASC'
+                    )
+                    );
+                    ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post();   
+                $post_id = get_the_ID();
+                $thumbnail_url = get_the_post_thumbnail_url();
+                $thumbnail_alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>
+                 <a href="<?php echo get_permalink();?>" class="col-span-1">
                     <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="https://plus.unsplash.com/premium_photo-1669277330818-c5cc14e5dfea?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-center object-cover">
+                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="min-h-full min-w-full object-center object-cover">
                     </div>
-                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
-                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
+                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
+                    <?php if (get_field('subtitel', $post_id)): ?>   
+                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2"><?php echo get_field('subtitel', $post_id);?></p>
+                    <?php endif; ?>
                 </a>
-                <a href="" class="col-span-1">
-                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1601880348117-25c1127a95df?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-center object-cover">
-                    </div>
-                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
-                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
-                </a>
-                <a href="" class="col-span-1">
-                    <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1618173745201-8e3bf8978acc?q=80&w=2730&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-center object-cover">
-                    </div>
-                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex">Lorem ipsum <span class="mt-[1px] arrow-link">→</span></h3>
-                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2">Lorem ipsum dolor sit amet, consetetur</p>
-                </a>
+                <?php endwhile; wp_reset_query(); ?>
                  <div class="col-span-1 h-full">
                     <div class="w-full aspect-[1/1] flex items-center justify-center">
                          <div class="w-fit text-left">

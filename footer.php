@@ -73,23 +73,23 @@
                 <hr class="my-[35px] border-[#DDDDDD] md:hidden"></hr> 
             </div>
             <!-- SUPPORT -->
-            <div class="md:w-[243px] lg:w-[224px] xl:w-[238px] md:order-2 lg:order-2 hidden md:block">
+            <div class="md:w-[243px] lg:w-[224px] xl:w-[238px] order-2 md:order-2 lg:order-2 block">
                 <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Informatie</h3>
                 <div class="grid">
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veelgestelde vragen</a>
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Bestellen & Versturen</a>
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Ruilen & Retourneren</a>
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veilig betalen</a>
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Klantenservice</a>
+                    <a href="/veelgestelde-vragen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veelgestelde vragen</a>
+                    <a href="/bestellen-en-versturen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Bestellen & Versturen</a>
+                    <a href="/ruilen-en-routeren" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Ruilen & Retourneren</a>
+                    <a href="/veilig-betalen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veilig betalen</a>
+                    <a href="/klantenservice" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Klantenservice</a>
                 </div>
             </div>
             <!-- LEGAL -->
-            <div class="md:w-[243px] lg:w-[236px] xl:w-[257px] md:order-4 lg:order-3 hidden md:block md:mt-[50px] lg:mt-[unset]">
+            <div class="md:w-[243px] lg:w-[236px] xl:w-[257px] order-3 md:order-4 lg:order-3 block md:mt-[50px] lg:mt-[unset]">
                 <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Legal</h3>
                 <div class="grid">
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Privacy Policy</a>
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Cookie beleid</a>
-                    <a href="" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Algemene voorwaarden</a>
+                    <a href="/privacy-policy" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Privacy Policy</a>
+                    <a href="/cookie-beleid" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Cookie beleid</a>
+                    <a href="/algemene-voorwaarden" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Algemene voorwaarden</a>
                 </div>
                 <div class="w-[101px] justify-between items-center md:mt-[40px] hidden md:flex lg:hidden">
                         <a href="" class="h-[15px] xl:h-[17px]">
@@ -121,7 +121,7 @@
                     </div>
             </div>
             <!-- LATAST NEWS -->
-            <div class="w-full md:w-[447px] lg:w-[282px] xl:w-[346px] order-2 md:order-3 lg:order-4 md:mt-[42px] lg:mt-[unset]">
+            <div class="w-full md:w-[447px] lg:w-[282px] xl:w-[346px] order-4 md:order-3 lg:order-4 mt-[30px] md:mt-[42px] lg:mt-[unset]">
                 <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Nieuwsbrief</h3>
                 <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] md:max-w-[300px] lg:max-w-[unset]">Meld je aan voor onze nieuwsbrief, blijf op de hoogte en ontvang 5% korting op je eerstvolgende bestelling.</p>
             </div>

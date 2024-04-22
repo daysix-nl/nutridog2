@@ -558,7 +558,7 @@ add_action('admin_head', 'add_custom_admin_bar_styles');
 
 
 function vervang_dashboard_footer_tekst() {
-    echo 'Bedrijsnaam';
+    echo 'Day Six Digitale Communicatie B.V.';
 }
 
 add_filter('admin_footer_text', 'vervang_dashboard_footer_tekst');
@@ -930,6 +930,7 @@ function custom_lost_password_url( $lostpassword_url, $redirect ) {
     return site_url( '/wp-login.php?action=lostpassword', 'login' ); // Standaard WordPress wachtwoord reset URL
 }
 add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
+
 
 
 

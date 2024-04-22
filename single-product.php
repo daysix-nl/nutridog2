@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 
 <main>
     <div id="single-product" class="w-full max-w-[360px] md:max-w-[718px] lg:max-w-[1170px] xl:max-w-[1330px] mx-auto pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px]">
-    <?php
+           <?php
         // Controleren of er een HTTP-referer is ingesteld
         if(isset($_SERVER['HTTP_REFERER'])) {
             // URL van de vorige pagina ophalen
@@ -33,7 +33,7 @@ if ( post_password_required() ) {
             if(strpos($referer_url, home_url()) !== false) {
                 // Als het een interne pagina is, weergeef de stap-terugknop
                 ?>
-                <a href="javascript:history.back()" class="back-button mb-[20px] text-12 leading-30 font-jakarta border-[0px] bg-[#029C46] text-[#fff] font-bold w-fit rounded-full px-[15px] h-[30px] flex justify-between items-center">Stap terug</a>
+                <a href="javascript:history.back()" class="back-button mb-[20px] block underline font-jakarta font-semibold text-[#626262] text-15 xl:text-16">Stap terug</a>
                 <?php
             }
         }
@@ -337,27 +337,36 @@ if ( post_password_required() ) {
          <!-- GERELATEERDE PRODUCTEN -->
          <div id="info"></div>
         <hr class="mt-[20px]">
-        <div class="w-full mt-2 lg:px-5">
-            
-            <div class="w-full max-w-[800px] lg:gap-[50px] my-[70px]">
-               
-                <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#039C47] mb-[30px]">Product details</h2>
-                <div class="text-14 leading-30 font-jakarta text-black w-fit text-editor">
-                <?php
-                $content = get_the_content(); // De content ophalen
 
-                if (empty($content)) {
-                    // Als de content leeg is
-                    echo 'Er is geen beschrijving beschikbaar voor dit artikel.';
-                } else {
-                    // Als de content niet leeg is
-                    the_content(); // Toon de content
-                }
-                ?>
+        <div class="lg:flex justify-between mt-[70px] pb-[70px]">
+            <div class="w-full lg:w-[322px] lg:ml-[50px]">
+                <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#039C47]">Product details</h1>
+                <?php if (get_field('afbeelding')): ?>   
+                <div class="w-[360px] h-[219px] md:w-[718px] md:h-[437px] lg:w-[322px] lg:h-[322px] overflow-hidden mt-[30px] lg:mt-[45px]">
+                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="min-h-full min-w-full object-cover object-center">
                 </div>
-            
+                <?php endif; ?>
+            </div>
+            <div class="w-full lg:w-[721px] xl:w-[826px] lg:mr-[50px] xl:mr-[60px] mt-[25px] lg:mt-[unset]">
+                <div class="text-15 leading-30 font-jakarta text-black w-fit text-editor">
+                    <?php
+                        $content = get_the_content(); // De content ophalen
+
+                        if (empty($content)) {
+                            // Als de content leeg is
+                            echo 'Er is geen beschrijving beschikbaar voor dit artikel.';
+                        } else {
+                            // Als de content niet leeg is
+                            the_content(); // Toon de content
+                        }
+                        ?>
+                </div>
             </div>
         </div>
+
+
+
+
     </div>
     </div>
 </main>
