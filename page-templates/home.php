@@ -327,8 +327,16 @@
             <div class="h-[500px] w-full overflow-hidden">
                 <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full min-h-[500px] object-cover object-center">
             </div>
-            <div class="bg-[#FF91C8]">
-                
+            <div class="bg-[#FF91C8] flex justify-center items-center">
+                <div class="w-[70%] grid gap-[30px] py-[40px]">
+                    <h3 class="font-jakatra font-extrabold text-[#fff] text-20 leading-30 xl:text-22 xl:leading-30 flex items-center w-full"> 
+				    Maak een account aan en ontvang je eerste 50 spaarbotjes cadeau</h3>
+                    <h3 class="font-jakatra font-extrabold text-[#fff] text-20 leading-30 xl:text-22 xl:leading-30 flex items-center"> 
+				    Bestel en ontvang 1 spaarbotje per elke uitgegeven euro</h3>
+                    <h3 class="font-jakatra font-extrabold text-[#fff] text-20 leading-30 xl:text-22 xl:leading-30 flex items-center"> 
+				   Heb je 200 spaarbotjes gespaart? Dan ontvang je € 10,00 korting op je eerstvolgende bestelling</h3>
+                    
+                </div>
             </div>
             <div class="absolute left-0 top-0 right-0 bottom-[unset]">
                 <div class="h-[500px] container flex items-end">
