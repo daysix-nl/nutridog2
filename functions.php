@@ -28,11 +28,12 @@ function add_theme_scripts() {
 
     wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', array(), $version, 'all');
     wp_enqueue_script( 'script', get_template_directory_uri() . '/script/index.js', array(), $version, true);
-
+    
     // Voeg CSS-bestanden toe aan de queue met een versienummer
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css', array(), $version);
     wp_enqueue_style('tailwind', get_template_directory_uri() . '/tailwindcss-styles/style.css', array(), $version);
     wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', array(), $version);
+    
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 /*
@@ -932,30 +933,5 @@ add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
 
 
 
-// Functie om de versie uit version.txt te halen
-function get_theme_version_from_file() {
-    // Pad naar version.txt-bestand
-    $version_file_path = get_template_directory() . '/version.txt';
-
-    // Controleer of het bestand bestaat
-    if (file_exists($version_file_path)) {
-        // Lees de versie uit het bestand
-        $version = file_get_contents($version_file_path);
-        return $version;
-    } else {
-        // Als het bestand niet bestaat, geef standaardversie terug
-        return '1.0.0';
-    }
-}
-
-// Voeg dynamisch de versie toe aan de style.css-header
-function add_theme_version_to_stylesheet_header($headers) {
-    $theme_version = get_theme_version_from_file();
-    if ($theme_version) {
-        $headers['Version'] = $theme_version;
-    }
-    return $headers;
-}
-add_filter('extra_theme_headers', 'add_theme_version_to_stylesheet_header');
 
 
