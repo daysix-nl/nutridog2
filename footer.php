@@ -40,9 +40,10 @@
                             </g>
                         </svg>
                     </div>
-                    <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 text-[#000]">De webwinkel voor een gezonde blije hond. Van smakelijke voeding tot verantwoord speelgoed, en van handige producten tot onmisbare tips & tricks.</p>
+                    <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 text-[#000]">De webwinkel voor een gezonde blije hond. Van smakelijke voeding, verantwoord speelgoed tot handige producten en onmisbare tips & tricks.</p>
                     <div class="w-[101px] justify-between items-center mt-[35px] md:mt-[75px] flex md:hidden lg:flex">
-                        <a href="" class="h-[15px] xl:h-[17px]">
+                        <a href="https://www.webwinkelkeur.nl/webshop/Nutridog_1219885" class="webwinkelkeurPopup" title="Webshop Trustmark" target="_blank"><img src="https://dashboard.webwinkelkeur.nl/banners/70/1219885/1699359462.svg" width="90" height="34" alt="Webshop Trustmark"></a>
+                        <!-- <a href="" class="h-[15px] xl:h-[17px]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 17.053 17.053">
                                 <g id="instagram-svgrepo-com" transform="translate(-1 -1)">
                                     <path id="Path_587" data-name="Path 587" d="M10.651,15.3A4.651,4.651,0,1,0,6,10.651,4.651,4.651,0,0,0,10.651,15.3Zm0-1.55a3.1,3.1,0,1,0-3.1-3.1A3.1,3.1,0,0,0,10.651,13.751Z" transform="translate(-1.124 -1.124)" fill="#121212" fill-rule="evenodd"/>
@@ -67,7 +68,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 14.773 17">
                                 <path id="tiktok-svgrepo-com" d="M10.729,1.018C11.657,1,12.578,1.011,13.5,1A4.4,4.4,0,0,0,14.74,3.959h0a4.972,4.972,0,0,0,2.988,1.267h.016V8.082a7.555,7.555,0,0,1-3.022-.707l.046.019a8.722,8.722,0,0,1-1.178-.678l.029.019c-.007,2.069.007,4.137-.014,6.2a5.393,5.393,0,0,1-.968,2.809l.011-.018A5.281,5.281,0,0,1,8.47,18H8.462c-.07,0-.152.005-.235.005a5.143,5.143,0,0,1-2.679-.748l.023.013a5.355,5.355,0,0,1-2.584-4.022l0-.023c-.014-.354-.021-.709-.007-1.056A5.339,5.339,0,0,1,8.285,7.363a5.4,5.4,0,0,1,.909.077l-.032,0c.014,1.048-.028,2.1-.028,3.145a2.388,2.388,0,0,0-.805-.137,2.432,2.432,0,0,0-2.293,1.622l-.005.017a2.751,2.751,0,0,0-.119.808,2.9,2.9,0,0,0,.021.346v-.014a2.415,2.415,0,0,0,2.382,2.035l.1,0H8.411a2.38,2.38,0,0,0,1.956-1.13l.006-.01a1.62,1.62,0,0,0,.29-.743v-.008c.071-1.268.043-2.529.049-3.8.007-2.855-.007-5.7.014-8.551Z" transform="translate(-2.97 -1.004)" fill="#121212"/>
                             </svg>
-                        </a>
+                        </a> -->
                     </div>
                 </div> 
                 <hr class="my-[35px] border-[#DDDDDD] md:hidden"></hr> 
