@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Verlanglijst
+ * Template name: Favoriete producten
  */
 
 
