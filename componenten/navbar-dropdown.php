@@ -47,7 +47,7 @@
             <div class="column-menu-inner active" id="div-submenu-1">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Voeding</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-voeding">
+                    <a href="/producten/categorie-voeding">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -57,7 +57,7 @@
             <div class="column-menu-inner" id="div-submenu-2">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Snacks</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-snacks">
+                    <a href="/producten/categorie-snacks">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -67,7 +67,7 @@
              <div class="column-menu-inner" id="div-submenu-3">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Geneesmiddelen</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-geneesmiddelen">
+                    <a href="/producten/categorie-geneesmiddelen">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -77,7 +77,7 @@
             <div class="column-menu-inner" id="div-submenu-4">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Spelen</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-spelen">
+                    <a href="/producten/categorie-spelen">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -87,7 +87,7 @@
             <div class="column-menu-inner" id="div-submenu-5">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Slapen</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-slapen">
+                    <a href="/producten/categorie-slapen">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -97,7 +97,7 @@
             <div class="column-menu-inner" id="div-submenu-6">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Verzorging</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-verzorging">
+                    <a href="/producten/categorie-verzorging">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -107,7 +107,7 @@
             <div class="column-menu-inner" id="div-submenu-7">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Uitlaten</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-uitlaten">
+                    <a href="/producten/categorie-uitlaten">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -117,7 +117,7 @@
             <div class="column-menu-inner" id="div-submenu-8">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Musthaves</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-musthaves">
+                    <a href="/producten/categorie-musthaves">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -127,7 +127,7 @@
             <div class="column-menu-inner" id="div-submenu-9">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Aanbiedingen</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-aanbiedingen">
+                    <a href="/producten/categorie-aanbiedingen">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>
@@ -137,7 +137,7 @@
             <div class="column-menu-inner" id="div-submenu-10">
                 <p class="font-grotesk text-12 leading-29 text-[#FF6248]">Cadeaus</p>
                 <div class="w-full grid grid-cols-3 lg:grid-cols-7 gap-[17px] mt-2">
-                    <a href="/shop/categorie-cadeaus">
+                    <a href="/producten/categorie-cadeaus">
                         <div class="w-full aspect-square bg-[#F6FAFC] rounded-[10px]"></div>
                         <p class="font-jakarta text-12 leading-22 text-[#000] font-bold mt-[10px]">Bekijk alles</p>
                     </a>

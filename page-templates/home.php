@@ -18,22 +18,22 @@
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/test7.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <a href="/shop/categorie-snacks" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Snacks</a>
+                    <a href="/producten/categorie-snacks" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Snacks</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/test3.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <a href="/shop/categorie-spelen" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Spelen</a>
+                    <a href="/producten/categorie-spelen" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Spelen</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/test9.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <a href="/shop/categorie-voeding" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Voeding</a>
+                    <a href="/producten/categorie-voeding" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Voeding</a>
                 </div>
                 <div class="relative h-full w-full flex items-end">
                     <img src="/wp-content/themes/nutridog2/img/local/test4.png" alt="" class="w-full mx-auto h-auto z-[4]">
                     <div class="w-full aspect-square rounded-full absolute bottom-0 left-0 right-0 bg-[#FFC9B5] z-[3]"></div>
-                    <a href="/shop/categorie-verzorging" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Verzorging</a>
+                    <a href="/producten/categorie-verzorging" class="btn w-full font-jakarta text-15 lg:text-20 h-[38px] lg:h-[50px] mt-[-25px] z-[5] absolute bottom-0">Verzorging</a>
                 </div>
             </div>
             <div class="absolute left-0 right-0 top-[-80px] bottom-[-30px] overflow-hidden">
@@ -122,7 +122,7 @@
         <div class="swiper mySwiper-categorie mt-[40px]">
             <div class="swiper-wrapper max-h-[calc(113px+30px)] md:max-h-[calc(175px+30px)] lg:max-h-[calc(104px+30px)] xl:max-h-[calc(113px+30px)]">
                 <div class="swiper-slide ml-[25px] md:ml-[30px]">
-                    <a href="/shop/categorie-voeding">
+                    <a href="/producten/categorie-voeding">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="99.84" height="83.096" viewBox="0 0 99.84 83.096">
                                 <g id="Group_9" data-name="Group 9" transform="translate(-30.08 -46.578)">
@@ -139,7 +139,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-snacks">
+                    <a href="/producten/categorie-snacks">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="97" viewBox="0 0 100 97">
                             <g id="Group_446" data-name="Group 446" transform="translate(-334 -43)">
@@ -161,7 +161,7 @@
                     </a>
                 </div>
                     <div class="swiper-slide">
-                    <a href="/shop/categorie-geneesmiddelen">
+                    <a href="/producten/categorie-geneesmiddelen">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="97.502" height="99.84" viewBox="0 0 97.502 99.84">
                             <g id="Group_1" data-name="Group 1" transform="translate(-271.27 -38.08)">
@@ -176,7 +176,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-spelen">
+                    <a href="/producten/categorie-spelen">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="99.838" height="71.676" viewBox="0 0 99.838 71.676">
                                 <g id="Group_6" data-name="Group 6" transform="translate(-390.081 -52.904)">
@@ -198,7 +198,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-slapen">
+                    <a href="/producten/categorie-slapen">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="98.7" height="59.76" viewBox="0 0 98.7 59.76">
                             <g id="Group_11" data-name="Group 11" transform="translate(-30.65 -217.978)">
@@ -233,7 +233,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-verzorging">
+                    <a href="/producten/categorie-verzorging">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="88.524" height="97.75" viewBox="0 0 88.524 97.75">
                             <g id="Group_10" data-name="Group 10" transform="translate(-156.049 -198.926)">
@@ -254,7 +254,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-uitlaten">
+                    <a href="/producten/categorie-uitlaten">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="99.84" height="90.683" viewBox="0 0 99.84 90.683">
                                 <g id="Group_7" data-name="Group 7" transform="translate(-270.08 -202.658)">
@@ -274,7 +274,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-musthaves">
+                    <a href="/producten/categorie-musthaves">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="99.84" height="95.073" viewBox="0 0 99.84 95.073">
                             <g id="Group_12" data-name="Group 12" transform="translate(-390.08 -200.322)">
@@ -290,7 +290,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/aanbieding-yes/">
+                    <a href="/producten/aanbieding-yes/">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="99.22" height="99.218" viewBox="0 0 99.22 99.218">
                             <g id="Group_13" data-name="Group 13" transform="translate(-30.43 -358.395)">
@@ -308,7 +308,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="/shop/categorie-cadeaus">
+                    <a href="/producten/categorie-cadeaus">
                         <div class="w-full h-full max-w-[113px] md:max-w-[175px] lg:max-w-[104px] xl:max-w-[113px] max-h-[113px] md:max-h-[175px] lg:max-h-[104px] xl:max-h-[113px] aspect-square bg-[#F6FAFC] rounded-[10px] icoon flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="97.98" height="97.978" viewBox="0 0 97.98 97.978">
                             <path id="Path_33" data-name="Path 33" d="M245.9,374.311H209.1a12.027,12.027,0,0,0,2.71-1.944c2.495-2.5,5.116-7.818,1.531-11.417a6.135,6.135,0,0,0-4.454-1.939h0c-3.021,0-5.642,2.177-6.936,3.475A9.238,9.238,0,0,0,200,365.842a9.233,9.233,0,0,0-1.955-3.355c-1.293-1.3-3.914-3.476-6.936-3.476a6.138,6.138,0,0,0-4.455,1.94c-3.585,3.6-.964,8.913,1.531,11.418a12.007,12.007,0,0,0,2.708,1.942H154.1a3.092,3.092,0,0,0-3.09,3.088V389.64a3.092,3.092,0,0,0,3.09,3.089h39.75v61.158l-33.6.012v-3.03h30.57V447.75H160.25V396.76a1.56,1.56,0,1,0-3.12,0V453.9a3.093,3.093,0,0,0,3.09,3.09h79.56a3.093,3.093,0,0,0,3.09-3.09V396.76a1.56,1.56,0,0,0-3.12,0l.027,50.99h-30.6v3.119h30.6l0,3-33.63.013V392.729H245.9a3.092,3.092,0,0,0,3.09-3.089V377.4A3.092,3.092,0,0,0,245.9,374.311Zm-51.99,15.3V377.43h4.518l0,.361,1.575-.328,1.575.327,0-.36h4.518v12.18Zm10.255-24.922c1.62-1.625,3.343-2.558,4.727-2.558a3.091,3.091,0,0,1,2.243,1.021c2.265,2.275-.631,6.112-1.53,7.015-1.659,1.665-5.387,2.976-7.959,3.69C201.889,370.511,202.654,366.2,204.165,364.688Zm-15.3-1.536a3.087,3.087,0,0,1,2.244-1.021c1.384,0,3.106.932,4.726,2.557h0c1.513,1.518,2.277,5.824,2.519,9.169-2.57-.712-6.295-2.021-7.959-3.691C189.5,369.264,186.6,365.427,188.865,363.152ZM154.13,389.64l-.03-12.21,36.69-.012v12.21Zm48.9,64.23h-6.06V392.729h6.06Zm42.84-64.26-36.66.012V377.411l36.66-.012Z" transform="translate(-151.01 -359.011)" fill="#4c4c4c"/>
@@ -556,16 +556,16 @@
                 <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
             </div>
             <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
-                <a href="/shop/merk-renske/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-renske.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-royal-canin/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-royalcanin.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-trixie/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-trixie.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-hov-hov/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-hovhov.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-kong/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-kong.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-vets-best/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-vetsbest.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-beaphar/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-beaphar.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-beloved/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-beloved.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-lilys-kitchen/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-lilys.png" alt="" class="merklogo"></a>
-                <a href="/shop/merk-puur-natuur/" class="w-full h-[50px] justify-center items-center hidden lg:flex"><img src="/wp-content/themes/nutridog2/img/local/logo-puur.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-renske/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-renske.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-royal-canin/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-royalcanin.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-trixie/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-trixie.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-hov-hov/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-hovhov.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-kong/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-kong.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-vets-best/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-vetsbest.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-beaphar/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-beaphar.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-beloved/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-beloved.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-lilys-kitchen/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-lilys.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-puur-natuur/" class="w-full h-[50px] justify-center items-center hidden lg:flex"><img src="/wp-content/themes/nutridog2/img/local/logo-puur.png" alt="" class="merklogo"></a>
             </div>
         </div>
     </section>
