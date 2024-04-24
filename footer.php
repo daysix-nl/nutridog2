@@ -79,7 +79,7 @@
                 <div class="grid">
                     <a href="/veelgestelde-vragen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veelgestelde vragen</a>
                     <a href="/bestellen-en-versturen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Bestellen & Versturen</a>
-                    <a href="/ruilen-en-routeren" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Ruilen & Retourneren</a>
+                    <a href="/ruilen-en-retourneren" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Ruilen & Retourneren</a>
                     <a href="/veilig-betalen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veilig betalen</a>
                     <a href="/klantenservice" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Klantenservice</a>
                 </div>

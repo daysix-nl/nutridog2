@@ -49,7 +49,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
                 <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
             </svg>
-            <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 15:00 besteld de volgende werkdag in huis</p>
+            <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 17:00 besteld de volgende werkdag in huis</p>
         </div>
         <div class="flex items-center pr-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
@@ -76,7 +76,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
                     <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
                 </svg>
-                <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 15:00 besteld de volgende werkdag in huis</p>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 17:00 besteld de volgende werkdag in huis</p>
             </div>
             <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
@@ -94,7 +94,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
                     <path id="Path_354" data-name="Path 354" d="M50,1299.839l2.627,2.715,5.486-5.878" transform="translate(-48.229 -1294.909)" fill="none" stroke="#18af18" stroke-linecap="round" stroke-width="2.5"/>
                 </svg>
-                <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 15:00 besteld de volgende werkdag in huis</p>
+                <p class="font-jakarta text-12 leading-12 ml-[15px]">Voor 17:00 besteld de volgende werkdag in huis</p>
             </div>
             <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11.646" height="9.459" viewBox="0 0 11.646 9.459">
