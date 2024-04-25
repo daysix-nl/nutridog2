@@ -760,9 +760,6 @@ video {
 .ml-\[-55px\] {
   margin-left: -55px;
 }
-.ml-\[12px\] {
-  margin-left: 12px;
-}
 .ml-\[15px\] {
   margin-left: 15px;
 }
@@ -1924,6 +1921,10 @@ video {
     margin-left: -25px;
   }
 
+  .md\:ml-\[12px\] {
+    margin-left: 12px;
+  }
+
   .md\:ml-\[30px\] {
     margin-left: 30px;
   }
@@ -1974,10 +1975,6 @@ video {
 
   .md\:mt-\[unset\] {
     margin-top: unset;
-  }
-
-  .md\:ml-\[12px\] {
-    margin-left: 12px;
   }
 
   .md\:line-clamp-3 {
