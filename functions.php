@@ -539,6 +539,7 @@ function add_custom_admin_bar_styles() {
             #toplevel_page_password-protected { display: none !important; }
             #menu-posts-viwec_template { display: none !important; }
             #toplevel_page_admin-page-wc-settings-tab-buckaroo_settings { display: none !important; }
+            #toplevel_page_aws-options { display: none !important; }
             /* Voeg hier meer CSS-styling toe indien nodig */
         ";
 
