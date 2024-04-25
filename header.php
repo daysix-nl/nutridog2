@@ -8,13 +8,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5QPZBT6G');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/CyGroteskGrandDark.woff2" type="font/woff2" crossorigin="anonymous">
@@ -48,10 +41,6 @@
 
 </head>
 <body <?php body_class( 'page-block menu-non-active filter-scroll-notactive' ); ?>>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QPZBT6G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <header class="fixed w-screen z-[9999]">
 
 <section class="h-[34px] w-full bg-[#C2F0A0] justify-between hidden lg:flex">
