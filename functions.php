@@ -456,10 +456,10 @@ function customize_dashboard_menu() {
             'edit.php?post_type=acf-field-group',
             'edit-comments.php',
             'themes.php',
-            'plugins.php',
+            // 'plugins.php',
             // 'users.php',
-            'options-general.php',
-            'tools.php',
+            // 'options-general.php',
+            // 'tools.php',
             'admin.php?page=ai1wm_export'
             // Voeg hier andere URL's/querystrings toe van de items die je wilt verbergen op basis van de URL.
         );
