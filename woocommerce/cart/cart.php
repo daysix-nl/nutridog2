@@ -215,7 +215,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="19.995" height="19.315" viewBox="0 0 19.995 19.315">
 					<path id="shopping-bag" d="M22.294,10.058a.649.649,0,0,0-.514-.262H18.373A5.222,5.222,0,0,0,13.387,5H12.044A5.222,5.222,0,0,0,7.059,9.8H3.651a.647.647,0,0,0-.522.26.791.791,0,0,0-.15.607l1.8,11.178a2.253,2.253,0,0,0,2.152,1.974H18.5a2.254,2.254,0,0,0,2.152-1.977l1.8-11.175A.789.789,0,0,0,22.294,10.058ZM12.044,6.476h1.343A3.806,3.806,0,0,1,17.017,9.8h-8.6A3.806,3.806,0,0,1,12.044,6.476Zm7.289,15.1a.868.868,0,0,1-.833.76H6.931a.868.868,0,0,1-.829-.756L4.45,11.272H20.982Z" transform="translate(-2.717 -4.75)" stroke="#000" stroke-width="0.5"/>
 				</svg>
-				<h3 class="font-jakarta font-extrabold text-20 leading-30 xl:text-22 xl:leading-30 text-[#000000] ml-[15px]">Jouw bestelling</h3>
+				<h3 class="font-jakarta font-extrabold text-20 leading-30 xl:text-22 xl:leading-30 text-[#000000] ml-[15px]">Overzicht</h3>
 			</div>
 			<hr class="my-[12px] border-[#DDDDDD]">
 			<?php

@@ -44,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<tr class="woocommerce-shipping-totals shipping">
 				<th>Verzendkosten</th>
-				<td><?php
+				<td data-title="Verzendkosten"><?php
 				$verzendkosten = WC()->cart->shipping_total;
 
 				if ($verzendkosten >= 1) {

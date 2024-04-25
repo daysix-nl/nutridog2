@@ -196,10 +196,8 @@
                 </div>
             </div>
             <hr class="border-[#DDDDDD] my-[20px]">
-       
-            <?php $checkout_url = wc_get_checkout_url();?>
-            <a href="<?php echo esc_url($checkout_url);?>" class="h-[45px] bg-[#C2F0A0] rounded-[29px] font-jakarta font-bold text-[#000000] text-15 xl:text-16 w-full flex items-center justify-center">Rond bestelling af</a>
-            <a href="/winkelwagen" class="text-center underline font-jakarta font-semibold text-[#626262] text-15 xl:text-16 w-full flex items-center justify-center mt-[8px]">Bekijk winkelwagen</a>
+            <a href="/winkelwagen" class="h-[45px] bg-[#C2F0A0] rounded-[29px] font-jakarta font-bold text-[#000000] text-15 xl:text-16 w-full flex items-center justify-center">Rond bestelling af</a>
+            <a href="/winkelwagen" class="text-center underline font-jakarta font-semibold text-[#626262] text-15 xl:text-16 w-full flex items-center justify-center mt-[8px]">Wijzig winkelwagen</a>
         </div>
         <?php
         } else {
