@@ -1976,6 +1976,10 @@ video {
     margin-top: unset;
   }
 
+  .md\:ml-\[12px\] {
+    margin-left: 12px;
+  }
+
   .md\:line-clamp-3 {
     overflow: hidden;
     display: -webkit-box;
