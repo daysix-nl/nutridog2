@@ -111,7 +111,7 @@ if ( post_password_required() ) {
                     <?php  $brand = $product->get_attribute('Brand');  echo '<p class="font-jakarta text-14 leading-25 mt-[5px] text-[#888888]">' . esc_html($brand) . '</p>'; ?>
                 </div>
                 <div class="">
-                    <p class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
+                    <p id="productprice" class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
                 </div>
                 <div class="">
                     <a href="#info" class="preview-info nohtml line-clamp-6 md:line-clamp-3 text-[#525252] text-14 leading-25 font-jakarta"><?php echo get_the_content();?></a>
@@ -419,7 +419,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
 
 
 <?php

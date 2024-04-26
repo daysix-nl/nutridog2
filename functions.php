@@ -941,5 +941,3 @@ add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
 
 
 
-
-

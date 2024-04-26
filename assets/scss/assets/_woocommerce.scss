@@ -1189,3 +1189,13 @@ button.update-cart {
 .includes_tax {
     display: none !important;
 }
+
+.woocommerce-cart-form__cart-item {
+    dl {
+        display: flex;
+
+        dt {
+            display: none !important;
+        }
+    }
+}
