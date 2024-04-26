@@ -31,6 +31,7 @@ if ( $product->is_in_stock() ) : ?>
 
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+		<div class="flex w-full justify-between">
 		<div class="mr-[15px]">
 		<?php
 		do_action( 'woocommerce_before_add_to_cart_quantity' );
@@ -46,7 +47,7 @@ if ( $product->is_in_stock() ) : ?>
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 		</div>
-        <div class="flex w-full justify-between">
+        
             <button id="add-to-cart" type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="h-[45px] bg-[#C2F0A0] rounded-[29px] font-jakarta font-bold text-[#000000] text-15 xl:text-16 w-full lg:w-[336px] xl:w-[401px] flex items-center justify-center">Voeg toe</button>
             <?php $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
             <button class="add-favorite h-[45px] w-[45px] border-[1px] border-[#000] rounded-full justify-center items-center hidden lg:flex <?php echo str_contains($actual_link, 'verlanglijst') ? "close-button-favorite" : "" ?> " id-data="<?php echo $product->get_id(); ?>">
