@@ -210,7 +210,10 @@ if ( post_password_required() ) {
                         $voorraad = $product->get_stock_quantity();
                         if ($voorraad <= 0) {?>
                         <div class="mt-4 pb-[40px]">
-                            <p class="text-[#FF6248] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                            <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                             <div class="nutriform mt-[15px] max-w-[350px]">
+                                <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
+                            </div>
                         </div>
                     <?php
                         } else { ?>
@@ -280,7 +283,10 @@ if ( post_password_required() ) {
                     }
                 } else { ?>
                    <div class="mt-4 pb-[4]">
-                        <p class="text-[#FF6248] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                        <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                         <div class="nutriform mt-[15px] max-w-[350px]">
+                            <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
+                        </div>
                     </div>
                     <?php
                 }
@@ -294,7 +300,7 @@ if ( post_password_required() ) {
 
     <!-- GERELATEERDE PRODUCTEN -->
     <div class="w-full mt-8 lg:px-5">
-        <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#FF6248] pb-4 text-center">Shop meer</h2>
+        <h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#FF6248] pb-4 text-center uppercase">Shop meer</h2>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px]">
             <?php
             global $post;
@@ -368,7 +374,7 @@ if ( post_password_required() ) {
                     $recently_viewed_products = new WP_Query($args);
 
                     if ($recently_viewed_products->have_posts()) : 
-                        echo '<h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#FF6248] pb-4 text-center">Bekeken door anderen</h2>';
+                        echo '<h2 class="text-25 leading-25 md:text-30 md:leading-30 font-grotesk text-[#FF6248] pb-4 text-center uppercase">Bekeken door anderen</h2>';
                         echo '<div class="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] pb-[60px]">';
           
                         while ($recently_viewed_products->have_posts()) : $recently_viewed_products->the_post(); 
@@ -396,7 +402,7 @@ if ( post_password_required() ) {
 
         <div class="lg:flex justify-between mt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px]">
             <div class="w-full lg:w-[322px] lg:ml-[50px]">
-                <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#039C47]">Product details</h1>
+                <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#039C47] uppercase">Product details</h1>
                 <?php if (get_field('afbeelding')): ?>   
                 <div class="w-[360px] h-[219px] md:w-[718px] md:h-[437px] lg:w-[322px] lg:h-[322px] overflow-hidden mt-[30px] lg:mt-[45px]">
                     <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="min-h-full min-w-full object-cover object-center">
