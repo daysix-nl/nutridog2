@@ -33,7 +33,7 @@ else: ?>
     </div>
     <div class="container pb-[70px] lg:pb-[90px] xl:pb-[100px]">
         <div class="w-full">
-            <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#FF6248] text-center"><?php the_title();?></h1>
+            <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#FF6248] text-center uppercase"><?php the_title();?></h1>
             <p class="text-center text-[#121212] font-medium font-jakarta text-14 leading-20 md:text-14 md:leading-28 lg:text-16 lg:leading-28 mt-[20px] max-w-[220px] mx-auto md:max-w-[unset]">Staat je vraag er niet tussen? Neem dan contact met ons op.</p>
         </div>
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-[15px] md:gap-[20px] mt-[40px]">

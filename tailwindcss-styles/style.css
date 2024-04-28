@@ -1698,17 +1698,11 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
-.lowercase {
-  text-transform: lowercase;
-}
 .italic {
   font-style: italic;
 }
 .leading-12 {
   line-height: 12px;
-}
-.leading-13 {
-  line-height: 13px;
 }
 .leading-14 {
   line-height: 14px;
@@ -1724,6 +1718,9 @@ video {
 }
 .leading-20 {
   line-height: 20px;
+}
+.leading-21 {
+  line-height: 21px;
 }
 .leading-22 {
   line-height: 22px;
@@ -1763,12 +1760,6 @@ video {
 }
 .leading-50 {
   line-height: 50px;
-}
-.leading-17 {
-  line-height: 17px;
-}
-.leading-21 {
-  line-height: 21px;
 }
 .tracking-\[0\.025em\] {
   letter-spacing: 0.025em;
@@ -1867,9 +1858,6 @@ video {
 }
 .underline {
   text-decoration-line: underline;
-}
-.opacity-20 {
-  opacity: 0.2;
 }
 .mix-blend-multiply {
   mix-blend-mode: multiply;
@@ -2382,6 +2370,10 @@ video {
     line-height: 22px;
   }
 
+  .md\:leading-24 {
+    line-height: 24px;
+  }
+
   .md\:leading-25 {
     line-height: 25px;
   }
@@ -2412,18 +2404,6 @@ video {
 
   .md\:leading-60 {
     line-height: 60px;
-  }
-
-  .md\:leading-15 {
-    line-height: 15px;
-  }
-
-  .md\:leading-17 {
-    line-height: 17px;
-  }
-
-  .md\:leading-24 {
-    line-height: 24px;
   }
 
   .md\:last-of-type\:hidden:last-of-type {
@@ -3041,8 +3021,8 @@ video {
     line-height: 30px;
   }
 
-  .lg\:leading-31 {
-    line-height: 31px;
+  .lg\:leading-34 {
+    line-height: 34px;
   }
 
   .lg\:leading-40 {
@@ -3053,20 +3033,16 @@ video {
     line-height: 42px;
   }
 
+  .lg\:leading-50 {
+    line-height: 50px;
+  }
+
   .lg\:leading-51 {
     line-height: 51px;
   }
 
   .lg\:leading-58 {
     line-height: 58px;
-  }
-
-  .lg\:leading-34 {
-    line-height: 34px;
-  }
-
-  .lg\:leading-50 {
-    line-height: 50px;
   }
 }
 @media (min-width: 1352px) {
@@ -3400,27 +3376,15 @@ video {
     line-height: 25px;
   }
 
+  .xl\:leading-26 {
+    line-height: 26px;
+  }
+
   .xl\:leading-30 {
     line-height: 30px;
   }
 
   .xl\:leading-\[20px\] {
     line-height: 20px;
-  }
-
-  .xl\:leading-16 {
-    line-height: 16px;
-  }
-
-  .xl\:leading-18 {
-    line-height: 18px;
-  }
-
-  .xl\:leading-24 {
-    line-height: 24px;
-  }
-
-  .xl\:leading-26 {
-    line-height: 26px;
   }
 }
