@@ -1,6 +1,6 @@
 {
-  "name": "acf-nieuws-slider-1",
-  "title": "Nieuws slider 1",
+  "name": "acf-faq",
+  "title": "FAQ",
   "description": "",
   "category": "bibliotheek",
   "icon": "slides",
@@ -13,7 +13,7 @@
   },
   "acf": {
     "mode": "preview",
-    "renderTemplate": "acf-nieuws-slider-1.php"
+    "renderTemplate": "acf-faq.php"
   },
   "example": {
     "attributes": {

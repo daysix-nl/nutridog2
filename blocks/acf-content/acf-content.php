@@ -8,7 +8,7 @@ $image = get_field('afbeelding');
 $image_url = isset($image['url']) ? esc_url($image['url']) : '';
 $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
 ?>
-<!-- HTML -->
+<!-- CONTENT -->
 <section class="bg-white">
     <div class="container pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px]">
         <?php

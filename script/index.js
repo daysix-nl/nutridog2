@@ -43,6 +43,43 @@ try {
 }
 
 try {
+  var swiperShop = new Swiper(".mySwiper-categorie-home", {
+    slidesPerView: 3.3,
+    loop: false,
+    spaceBetween: 10,
+    breakpoints: {
+      // when window width is >= 320px
+      500: {
+        slidesPerView: 4.5,
+        spaceBetween: 10,
+      },
+      // when window width is >= 320px
+      600: {
+        slidesPerView: 5.5,
+        spaceBetween: 10,
+      },
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 6.5,
+        spaceBetween: 10,
+      },
+      // when window width is >= 480px
+      1200: {
+        slidesPerView: 9,
+        spaceBetween: 10,
+      },
+      // when window width is >= 640px
+      1352: {
+        slidesPerView: 10,
+        spaceBetween: 10,
+      },
+    },
+  });
+} catch (error) {
+  console.error(error);
+}
+
+try {
   const navbarDropdown = document.querySelector(".navbar-dropdown");
   const closeNavbarDropdown = document.querySelector(".close-navbar-dropdown");
   const openNavbarDropdown = document.querySelector(".navbar-dropdown-btn");
@@ -274,3 +311,27 @@ var swiper = new Swiper(".mySwiperAccount", {
 
 
 
+/**********************/
+/**** accordion ***/
+/**********************/
+try {
+  const acc = document.getElementsByClassName("accordion");
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      const panel = this.nextElementSibling;
+      this.classList.toggle("active");
+      panel.style.height =
+        panel.style.height === panel.scrollHeight + "px"
+          ? "0"
+          : panel.scrollHeight + "px";
+
+      for (let j = 0; j < acc.length; j++) {
+        if (this !== acc[j]) {
+          acc[j].classList.remove("active");
+          acc[j].nextElementSibling.style.height = "0";
+        }
+      }
+    });
+  }
+} catch (error) { }
