@@ -73,7 +73,7 @@
         <div class="container lg:flex justify-between xl:px-[40px] mt-[50px] lg:mt-[90px]">
             <div class="lg:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Slim shoppen</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-34 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
                 <p class="text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px] xl:max-w-[230px]">Ondek onze week- en seizoensaanbiedingen.</p>
             </div>
             <div class="lg:w-[757px] xl:w-[892px] grid grid-cols-2 md:grid-cols-3 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
@@ -351,7 +351,7 @@
         <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[50px] lg:mt-[90px]">
             <div class="md:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Heb je al een voorkeur?</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-34 font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
             </div>
             <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit mt-[30px] md:mt-[unset]">
                 <a href="/producten/merk-renske/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-renske.png" alt="" class="merklogo"></a>
@@ -418,7 +418,7 @@
                 <div class="flex lg:justify-center mt-[30px] lg:mt-[unset]">
                     <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
                         <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In de spotlight</h3>
-                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
+                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-34 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
                         <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Super premium droogvoeding</p>
                         <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Shop nu</a>
                     </div>
@@ -461,7 +461,7 @@
     <section class="bg-[#FDF3E4]">
         <div class="py-[60px] lg:py-[90px] xl:py-[90px]">
             <div class="w-full max-w-[335px] md:max-w-[624px] lg:max-w-[460px] xl:max-w-[460px] mx-auto">
-                <h2 class="font-wedges text-33 leading-13 lg:text-52 lg:leading-31 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-31 leading-31 lg:text-51 lg:leading-51 lowercase text-[#2A813B]">jouw hond</span></h2>
+                <h2 class="font-wedges text-33 leading-30 lg:text-52 lg:leading-50 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-31 leading-31 lg:text-51 lg:leading-51 uppercase text-[#2A813B]">jouw hond</span></h2>
             </div>
             <div class="container md:px-[30px] lg:px-[unset] grid grid-cols-2 lg:grid-cols-4 gap-[15px] md:gap-[40px] lg:gap-[30px] mt-[40px] md:mt-[40px] lg:mt-[45px] xl:mt-[45px]">
                 <?php
@@ -481,9 +481,9 @@
                     <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
                         <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="h-full min-h-full min-w-full object-center object-cover">
                     </div>
-                    <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
+                    <h3 class="text-[#121212] font-jakarta text-15 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
                     <?php if (get_field('subtitel', $post_id)): ?>   
-                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2"><?php echo get_field('subtitel', $post_id);?></p>
+                    <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2 mt-[5px]"><?php echo get_field('subtitel', $post_id);?></p>
                     <?php endif; ?>
                 </a>
                 <?php endwhile; wp_reset_query(); ?>
@@ -491,7 +491,7 @@
                     <div class="w-full aspect-[1/1] flex items-center justify-center">
                          <div class="w-fit text-left">
                             <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212] hidden md:block">Kennisbank</h3>
-                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase mt-[8px]">Bekijk <br>meer <br><span class="font-syne">items</span></h2>
+                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-21 md:text-24 md:leading-24 xl:text-26 xl:leading-26 uppercase mt-[8px]">Bekijk <br>meer <br><span class="font-syne">items</span></h2>
                             <a href="/kennisbank" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Leer meer</a>
                         </div> 
                     </div>

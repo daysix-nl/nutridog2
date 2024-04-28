@@ -1764,6 +1764,12 @@ video {
 .leading-50 {
   line-height: 50px;
 }
+.leading-17 {
+  line-height: 17px;
+}
+.leading-21 {
+  line-height: 21px;
+}
 .tracking-\[0\.025em\] {
   letter-spacing: 0.025em;
 }
@@ -2408,6 +2414,18 @@ video {
     line-height: 60px;
   }
 
+  .md\:leading-15 {
+    line-height: 15px;
+  }
+
+  .md\:leading-17 {
+    line-height: 17px;
+  }
+
+  .md\:leading-24 {
+    line-height: 24px;
+  }
+
   .md\:last-of-type\:hidden:last-of-type {
     display: none;
   }
@@ -3042,6 +3060,14 @@ video {
   .lg\:leading-58 {
     line-height: 58px;
   }
+
+  .lg\:leading-34 {
+    line-height: 34px;
+  }
+
+  .lg\:leading-50 {
+    line-height: 50px;
+  }
 }
 @media (min-width: 1352px) {
 
@@ -3380,5 +3406,21 @@ video {
 
   .xl\:leading-\[20px\] {
     line-height: 20px;
+  }
+
+  .xl\:leading-16 {
+    line-height: 16px;
+  }
+
+  .xl\:leading-18 {
+    line-height: 18px;
+  }
+
+  .xl\:leading-24 {
+    line-height: 24px;
+  }
+
+  .xl\:leading-26 {
+    line-height: 26px;
   }
 }
