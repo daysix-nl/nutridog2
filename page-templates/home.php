@@ -129,21 +129,12 @@
     <!-- SPAARPROGRAMMA -->
     <section class="mt-[50px] lg:mt-[90px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 relative">
-            <div class="min-h-[500px] w-full overflow-hidden">
-                <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full min-h-[500px] object-cover object-center">
+            <div class="max-h-[495px] lg:max-h-[unset] w-full overflow-hidden">
+                <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full lg:min-h-[600px] object-cover object-center">
             </div>
             <div class="bg-[#FF91C8] flex justify-center lg:justify-start items-center">
-                <div class="w-[360px] md:w-[718px] lg:w-[500px] xl:w-[577px] ml-[unset] lg:ml-[75px] xl:ml-[95px] grid py-[50px]">
-                    <h3 class="text-white text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Spaarbotjes</h3>
-                    <h2 class="text-white text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk uppercase mt-[10px] md:mt-[15px]">Hoe werkt het?</h2>
-                    <p class="text-white text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal mt-[10px] md:mt-[15px] lg:mt-[25px]">Om te sparen heb je een account nodig. Bij het registreren van een account ontvang je van ons de eerste 50 Spaarbotjes cadeau. Bij elke bestelling krijg je vervolgens 1 Spaarbotje per uitgegeven euro. Heb je 200 Spaarbotjes verzemeld? Dan ontvang je €10,00 korting op je volgende bestelling.</p>
-                    <a href="/account" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px] mx-auto md:mx-[unset]">Account aanmaken</a>
-                </div>
-            </div>
-            <div class="absolute left-0 top-0 right-0 bottom-[unset]">
-                <div class="h-full min-h-[500px] container flex items-end">
-                    <div class="w-[500px] xl:w-[577px] h-[250px] mb-[60px] flex flex-col justify-end">
-                        <div class="ml-[-55px] md:ml-[-25px] scale-[0.8] md:scale-[1]">
+                <div class="w-[360px] md:w-[718px] lg:w-[500px] xl:w-[577px] ml-[unset] lg:ml-[75px] xl:ml-[95px] grid py-[50px] mt-[-25px] md:mt-[unset]">
+                     <div class="mx-auto lg:mx-[unset] md:ml-[-25px] lg:ml-[-25px] scale-[0.8] md:scale-[1] mb-[15px]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="169.385" height="142.551" viewBox="0 0 169.385 142.551">
                                 <g id="Group_446" data-name="Group 446" transform="translate(-54.866 -1693.062)">
                                     <path id="Path_762" data-name="Path 762" d="M31.3,1.8C37.584-.164,51.964-2.338,70.774,6.013S101.63,21.35,105.659,30.757s.33,28.024-7.376,46.752S76.9,108.309,70.774,110s-21.182-2.27-40.357-10.058S4.674,84.741,1.6,77.508-.373,50.8,7.222,30.757,25.01,3.772,31.3,1.8Z" transform="translate(54.866 1733.26) rotate(-22)" fill="#57dd04"/>
@@ -159,7 +150,17 @@
                                 </g>
                             </svg>
                         </div>
-                        <h2 class="font-wedges text-40 leading-40 md:text-51 md:leading-51 text-white uppercase mt-[15px]">Ontvang nu <span class="font-grotesk text-32 leading-32 lg:text-45 lg:leading-45 xl:text-51 xl:leading-51">Spaarbotjes</span></h2>
+                    <h3 class="text-white text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Spaarbotjes</h3>
+                    <h2 class="text-white text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk uppercase mt-[10px] md:mt-[15px]">Hoe werkt het?</h2>
+                    <p class="text-white text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal mt-[10px] md:mt-[15px] lg:mt-[25px] px-[10px] md:px-[unset]">Om te sparen heb je een account nodig. Bij het registreren van een account ontvang je van ons de eerste 50 Spaarbotjes cadeau. Bij elke bestelling krijg je vervolgens 1 Spaarbotje per uitgegeven euro. Heb je 200 Spaarbotjes verzemeld? Dan ontvang je €10,00 korting op je volgende bestelling.</p>
+                    <a href="/account" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px] mx-auto md:mx-[unset] mb-[15px] lg:mb-[unset]">Account aanmaken</a>
+                </div>
+            </div>
+            <div class="absolute left-0 top-0 right-0 bottom-[unset]">
+                <div class="h-full min-h-[600px] container flex items-end">
+                    <div class="w-[500px] xl:w-[577px] h-[250px] mb-[60px] flex flex-col justify-end">
+                       
+                        <!-- <h2 class="font-wedges text-40 leading-40 md:text-51 md:leading-51 text-white uppercase mt-[15px]">Ontvang nu <span class="font-grotesk text-32 leading-32 lg:text-45 lg:leading-45 xl:text-51 xl:leading-51">Spaarbotjes</span></h2> -->
                     </div>
                 </div>
             </div>
