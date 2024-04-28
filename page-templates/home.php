@@ -129,7 +129,7 @@
     <!-- SPAARPROGRAMMA -->
     <section class="mt-[50px] lg:mt-[90px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 relative">
-            <div class="max-h-[495px] lg:max-h-[unset] w-full overflow-hidden">
+            <div class="max-h-[495px] lg:max-h-[unset] w-full overflow-hidden hidden lg:block">
                 <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full lg:min-h-[600px] object-cover object-center">
             </div>
             <div class="bg-[#FF91C8] flex justify-center lg:justify-start items-center">
