@@ -472,7 +472,7 @@
                         'post_type' => 'post',
                         'posts_per_page' => 3,
                         'orderby' => 'date',
-                        'order' => 'ASC'
+                        'order' => 'DESC'
                     )
                     );
                     ?>
@@ -494,8 +494,8 @@
                     <div class="w-full aspect-[1/1] flex items-center justify-center">
                          <div class="w-fit text-left">
                             <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212] hidden md:block">Kennisbank</h3>
-                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Bekijk <br>meer <br><span class="font-syne">blogs</span></h2>
-                            <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
+                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Bekijk <br>meer <br><span class="font-syne">items</span></h2>
+                            <a href="/kennisbank" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Leer meer</a>
                         </div> 
                     </div>
                 </div>
