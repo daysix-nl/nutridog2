@@ -2286,6 +2286,10 @@ video {
     padding-top: 15px;
   }
 
+  .md\:pt-\[30px\] {
+    padding-top: 30px;
+  }
+
   .md\:pt-\[35px\] {
     padding-top: 35px;
   }
@@ -2300,10 +2304,6 @@ video {
 
   .md\:pt-\[unset\] {
     padding-top: unset;
-  }
-
-  .md\:pt-\[30px\] {
-    padding-top: 30px;
   }
 
   .md\:text-left {
@@ -2981,6 +2981,10 @@ video {
 
   .lg\:text-58 {
     font-size: 58px;
+  }
+
+  .lg\:text-15 {
+    font-size: 15px;
   }
 
   .lg\:leading-18 {
