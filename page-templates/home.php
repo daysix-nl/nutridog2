@@ -73,7 +73,7 @@
         <div class="container lg:flex justify-between xl:px-[40px] mt-[50px] lg:mt-[90px]">
             <div class="lg:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Slim shoppen</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
                 <p class="text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px] xl:max-w-[230px]">Ondek onze week- en seizoensaanbiedingen.</p>
             </div>
             <div class="lg:w-[757px] xl:w-[892px] grid grid-cols-2 md:grid-cols-3 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
@@ -149,13 +149,14 @@
                             </svg>
                         </div>
                     <h3 class="text-white text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Spaarbotjes</h3>
-                    <h2 class="text-white text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk uppercase mt-[10px] md:mt-[15px]">Hoe werkt het?</h2>
+                    <h2 class="text-white text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 lg:text-36 lg:leading-42 font-grotesk uppercase mt-[10px] md:mt-[15px]">Hoe werkt het?</h2>
                     <p class="text-white text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal mt-[10px] md:mt-[15px] lg:mt-[25px] px-[10px] md:px-[unset]">Om te sparen heb je een account nodig. Bij het registreren van een account ontvang je van ons de eerste 50 Spaarbotjes cadeau. Bij elke bestelling krijg je vervolgens 1 Spaarbotje per uitgegeven euro. Heb je 200 Spaarbotjes verzemeld? Dan ontvang je €10,00 korting op je volgende bestelling.</p>
                     <a href="/account" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px] mx-auto md:mx-[unset] mb-[15px] lg:mb-[unset]">Account aanmaken</a>
                 </div>
             </div>
                 <div class="max-h-[495px] lg:max-h-[unset] w-full hidden lg:block bg-[#FF91C8] relative">
                 <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full lg:min-h-[600px] object-cover object-center">
+
 
             </div>
            
@@ -350,7 +351,7 @@
         <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[50px] lg:mt-[90px]">
             <div class="md:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Heb je al een voorkeur?</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
+                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
             </div>
             <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit mt-[30px] md:mt-[unset]">
                 <a href="/producten/merk-renske/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-renske.png" alt="" class="merklogo"></a>
@@ -417,7 +418,7 @@
                 <div class="flex lg:justify-center mt-[30px] lg:mt-[unset]">
                     <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
                         <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In de spotlight</h3>
-                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
+                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
                         <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Super premium droogvoeding</p>
                         <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Shop nu</a>
                     </div>
@@ -490,7 +491,7 @@
                     <div class="w-full aspect-[1/1] flex items-center justify-center">
                          <div class="w-fit text-left">
                             <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-[#121212] hidden md:block">Kennisbank</h3>
-                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Bekijk <br>meer <br><span class="font-syne">items</span></h2>
+                            <h2 class="text-[#121212] font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase mt-[8px]">Bekijk <br>meer <br><span class="font-syne">items</span></h2>
                             <a href="/kennisbank" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Leer meer</a>
                         </div> 
                     </div>
@@ -515,7 +516,7 @@
                         <div class="h-full w-full lg:w-[288px] xl:w-[329px] flex items-center order-2 lg:order-1">
                             <div class="">
                                 <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
-                                <h2 class="text-white font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
+                                <h2 class="text-white font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
                                 <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow us</a>
                             </div>
                         </div>
