@@ -522,9 +522,9 @@ p.out-of-stock {
     line-height: 0 !important;
 }
 
-// .woocommerce-notices-wrapper {
-//     display: none !important;
-// }
+.woocommerce-notices-wrapper {
+    display: none !important;
+}
 
 .woocommerce-error,
 .woocommerce-info,
@@ -544,6 +544,7 @@ p.out-of-stock {
 
     &::before {
         color: #000 !important;
+        display: none !important;
     }
 }
 
