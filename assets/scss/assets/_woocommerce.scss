@@ -561,6 +561,16 @@ p.out-of-stock {
     }
 }
 
+.return-to-shop {
+    .button {
+        max-width: 250px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: unset !important;
+        margin-top: 15px !important;
+    }
+}
+
 .stock {
     display: none !important;
 }
