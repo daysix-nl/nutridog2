@@ -349,7 +349,7 @@ if ( post_password_required() ) {
          <div id="info"></div>
         <hr class="mt-[20px]">
 
-        <div class="lg:flex justify-between mt-[70px] pb-[70px]">
+        <div class="lg:flex justify-between mt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px]">
             <div class="w-full lg:w-[322px] lg:ml-[50px]">
                 <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#039C47]">Product details</h1>
                 <?php if (get_field('afbeelding')): ?>   
@@ -374,10 +374,6 @@ if ( post_password_required() ) {
                 </div>
             </div>
         </div>
-
-
-
-
     </div>
     </div>
 </main>

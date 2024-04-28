@@ -7,7 +7,7 @@
  get_header(); ?>
 
 <main>
-<div class="container pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px]  pb-[85px] xl:pb-[105px] md:flex justify-between">
+<div class="container pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px]  pb-[70px] lg:pb-[90px] xl:pb-[100px] md:flex justify-between">
     <div class="w-full md:w-[199px] lg:w-[340px] xl:w-[378px] relative">
         <div class="absolute top-[-20px] right-[-20px] md:top-0 md:right-0 md:left-[-10px] lg:left-[-14px] z-[2] md:relative scale-[0.7] lg:scale-100 orgin-top-right md:origin-top-left md:translate-y-2 lg:orgin-[unset] lg:translate-y-[unset]">
             <svg xmlns="http://www.w3.org/2000/svg" width="123.103" height="103.601" viewBox="0 0 123.103 103.601">

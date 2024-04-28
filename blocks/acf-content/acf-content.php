@@ -31,7 +31,7 @@ $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
         }
     ?>
     </div>
-    <div class="container lg:flex justify-between pb-[70px]">
+    <div class="container lg:flex justify-between pb-[70px] lg:pb-[90px] xl:pb-[100px]">
         <div class="w-full lg:w-[322px] xl:ml-[0px]">
             <h1 class="font-grotesk text-25 md:text-30 leading-30 text-[#FF6248]"><?php the_title();?></h1>
             <?php if (get_field('afbeelding')): ?>   

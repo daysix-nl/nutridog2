@@ -12,7 +12,7 @@
 <main class="custom-checkout bg-white md:bg-[#F6FAFC]">
 
     <!-- CHECKOUT -->
-    <div class="custom-afrekenen md:pt-[10px] lg:pt-[60px] xl:pt-[70px] pb-[60px] lg:pb-[200px] xl:pb-[132px]">
+    <div class="custom-afrekenen md:pt-[10px] lg:pt-[60px] xl:pt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px]">
         <div class="container lg:flex lg:justify-between lg:px-[0px] xl:px-[unset]">
             <div class="w-full lg:max-w-[651px] xl:max-w-[736px]">
                 <?php echo do_shortcode( '[woocommerce_checkout]' ); ?>
@@ -26,7 +26,7 @@
      <!-- THNKS -->
     <div class="custom-bedankt">
         <div class="md:bg-[#C2EAFF] relative overflow-hidden">
-            <div class="container md:pt-[10px] lg:pt-[60px] xl:pt-[70px] pb-[60px] lg:pb-[200px] xl:pb-[132px] flex justify-center items-center relative z-[2]">
+            <div class="container md:pt-[10px] lg:pt-[60px] xl:pt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px] flex justify-center items-center relative z-[2]">
                 <div class="w-full md:w-[686px] lg:w-[680px] xl:w-[715px] mx-auto bg-white">
                     <div class="w-[183px] h-[183px] rounded-full mx-auto overflow-hidden mt-[50px] relative">
                         <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/bzUwzbxcvJ3XQlcnoi" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/happy-dog-for-u-bzUwzbxcvJ3XQlcnoi">via GIPHY</a></p>

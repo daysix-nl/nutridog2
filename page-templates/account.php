@@ -8,18 +8,21 @@
 
 
  
-<main class="bg-white">
+
 
   
     <?php
     // Controleer of de gebruiker niet is ingelogd
     if (!is_user_logged_in()) {
         ?>
+        <main class="bg-[#C2EAFF]">
             <?php include get_template_directory() . '/componenten/login.php'; ?>
+            
+        </main>
         <?php
     } else { ?>
-        
-        <div class="container pb-[85px] xl:pb-[105px] pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px] flex justify-between xl:px-[60px]">
+         <main class="bg-white">
+        <div class="container pb-[70px] lg:pb-[90px] xl:pb-[100px] pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px] flex justify-between xl:px-[60px]">
             <div class="w-[322px] hidden lg:block">
                 <?php include get_template_directory() . '/componenten/account-navbar.php'; ?>
             </div>
@@ -49,9 +52,10 @@
                 </div>
             </div>
         </div>
+        </main>
 
         <?php
     }
     ?>
-</main>
+
 <?php get_footer(); ?>

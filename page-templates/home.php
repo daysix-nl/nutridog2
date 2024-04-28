@@ -82,20 +82,20 @@
                         'post_type' => 'product',
                         'posts_per_page' => 4, 
                         'meta_query'     => array(
-        'relation' => 'AND',
-        array(
-            'key'     => '_sale_price',
-            'value'   => '',
-            'compare' => '!=', // Check of er een verkoopprijs is ingesteld
-            'type'    => 'NUMERIC',
-        ),
-        array(
-            'key'     => '_regular_price',
-            'value'   => 0,
-            'compare' => '>',
-            'type'    => 'NUMERIC',
-        ),
-    ),
+                        'relation' => 'AND',
+                        array(
+                            'key'     => '_sale_price',
+                            'value'   => '',
+                            'compare' => '!=', // Check of er een verkoopprijs is ingesteld
+                            'type'    => 'NUMERIC',
+                        ),
+                        array(
+                            'key'     => '_regular_price',
+                            'value'   => 0,
+                            'compare' => '>',
+                            'type'    => 'NUMERIC',
+                        ),
+                    ),
                     );
                     $products_query = new WP_Query($args);
                     if ($products_query->have_posts()) :
@@ -118,7 +118,7 @@
 
     <!-- CATEGORIEN -->
     <section>
-        <h2 class="text-center text-32 leading-32 max-w-[304px] md:max-w-[unset] lg:text-40 lg:leading-40 font-grotesk text-[#FF6248] mt-[60px] lg:mt-[90px] mx-auto">Shop op categorie</h2>
+        <h2 class="text-center text-32 leading-32 max-w-[304px] md:max-w-[unset] lg:text-40 lg:leading-40 font-grotesk text-[#FF6248] mt-[50px] lg:mt-[90px] mx-auto uppercase">Shop op categorie</h2>
         <div class="swiper mySwiper-categorie mt-[40px]">
             <div class="swiper-wrapper max-h-[calc(113px+30px)] md:max-h-[calc(175px+30px)] lg:max-h-[calc(104px+30px)] xl:max-h-[calc(113px+30px)]">
                 <div class="swiper-slide ml-[25px] md:ml-[30px]">
@@ -322,24 +322,21 @@
     </section>
 
     <!-- SPAARPROGRAMMA -->
-    <section class="mt-[80px]">
+    <section class="mt-[50px] lg:mt-[90px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 relative">
-            <div class="h-[500px] w-full overflow-hidden">
+            <div class="min-h-[500px] w-full overflow-hidden">
                 <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full min-h-[500px] object-cover object-center">
             </div>
-            <div class="bg-[#FF91C8] flex justify-center items-center">
-                <div class="w-[70%] grid gap-[30px] py-[40px]">
-                    <h3 class="font-jakatra font-extrabold text-[#fff] text-20 leading-30 xl:text-22 xl:leading-30 flex items-center w-full"> 
-				    Maak een account aan en ontvang je eerste 50 spaarbotjes cadeau</h3>
-                    <h3 class="font-jakatra font-extrabold text-[#fff] text-20 leading-30 xl:text-22 xl:leading-30 flex items-center"> 
-				    Bestel en ontvang 1 spaarbotje per elke uitgegeven euro</h3>
-                    <h3 class="font-jakatra font-extrabold text-[#fff] text-20 leading-30 xl:text-22 xl:leading-30 flex items-center"> 
-				   Heb je 200 spaarbotjes gespaart? Dan ontvang je € 10,00 korting op je eerstvolgende bestelling</h3>
-                    
+            <div class="bg-[#FF91C8] flex justify-center lg:justify-start items-center">
+                <div class="w-[360px] md:w-[718px] lg:w-[500px] xl:w-[577px] ml-[unset] lg:ml-[75px] xl:ml-[95px] grid py-[50px]">
+                    <h3 class="text-white text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Spaarbotjes</h3>
+                    <h2 class="text-white text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk uppercase mt-[10px] md:mt-[15px]">Hoe werkt het?</h2>
+                    <p class="text-white text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Om te sparen heb je een account nodig. Bij het registreren van een account ontvang je van ons de eerste 50 Spaarbotjes cadeau. Bij elke bestelling krijg je vervolgens 1 Spaarbotje per uitgegeven euro. Heb je 200 Spaarbotjes verzemeld? Dan ontvang je €10,00 korting op je volgende bestelling.</p>
+                    <a href="/account" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px] mx-auto md:mx-[unset]">Account aanmaken</a>
                 </div>
             </div>
             <div class="absolute left-0 top-0 right-0 bottom-[unset]">
-                <div class="h-[500px] container flex items-end">
+                <div class="h-full min-h-[500px] container flex items-end">
                     <div class="w-[500px] xl:w-[577px] h-[250px] mb-[60px] flex flex-col justify-end">
                         <div class="ml-[-55px] md:ml-[-25px] scale-[0.8] md:scale-[1]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="169.385" height="142.551" viewBox="0 0 169.385 142.551">
@@ -358,7 +355,6 @@
                             </svg>
                         </div>
                         <h2 class="font-wedges text-40 leading-40 md:text-51 md:leading-51 text-white uppercase mt-[15px]">Ontvang nu <span class="font-grotesk text-32 leading-32 lg:text-45 lg:leading-45 xl:text-51 xl:leading-51">Spaarbotjes</span></h2>
-                        <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Lees meer</a>
                     </div>
                 </div>
             </div>
@@ -550,12 +546,12 @@
 
     <!-- MERKEN -->
     <section>
-        <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[40px] lg:mt-[70px]">
+        <div class="container md:flex items-center justify-between xl:px-[40px] mb-[50px] lg:mb-[90px] mt-[50px] lg:mt-[90px]">
             <div class="md:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
                 <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Heb je al een voorkeur?</h3>
                 <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[233px] lg:max-w-[255px] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#C2EAFF] uppercase mt-[10px] md:mt-[15px]">Shop <br><span class="text-[#3A4069]">direct <br>op merk</span></h2>
             </div>
-            <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
+            <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit mt-[30px] md:mt-[unset]">
                 <a href="/producten/merk-renske/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-renske.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-royal-canin/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-royalcanin.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-trixie/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-trixie.png" alt="" class="merklogo"></a>
@@ -602,7 +598,7 @@
             </svg>
         </div>
         <div class="bg-[#CDEEFF] ">
-            <div class="container grid grid-cols-1 md:grid-cols-2 pt-[85px] lg:pt-[90px] xl:pt-[90px] pb-[75px] lg:pb-[80px] xl:pb-[80px] items-center">
+            <div class="container grid grid-cols-1 md:grid-cols-2 pt-[60px] lg:pt-[90px] xl:pt-[90px] pb-[60px] lg:pb-[90px] xl:pb-[90px] items-center">
                 <div class="flex justify-center md:justify-end">
                     <div class="w-full lg:max-w-[376px] xl:max-w-[405px] lg:mr-[65px] xl:mr-[35px] relative">
                         <div class="h-[343px] lg:h-[427px] xl:h-[458px] rotate-[15deg] md:rotate-0">
@@ -617,7 +613,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex lg:justify-center mt-[50px] lg:mt-[unset]">
+                <div class="flex lg:justify-center mt-[30px] lg:mt-[unset]">
                     <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
                         <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In de spotlight</h3>
                         <h2 class="text-left text-26 leading-24 md:text-32 md:leading-37 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
@@ -661,7 +657,7 @@
 
     <!-- BLOGS -->
     <section class="bg-[#FDF3E4]">
-        <div class="py-[40px] lg:py-[50px] xl:py-[80px]">
+        <div class="py-[60px] lg:py-[90px] xl:py-[90px]">
             <div class="w-full max-w-[335px] md:max-w-[624px] lg:max-w-[460px] xl:max-w-[460px] mx-auto">
                 <h2 class="font-wedges text-33 leading-13 lg:text-52 lg:leading-31 uppercase text-center text-[#57DD04]">Alles over <br><span class="font-grotesk text-31 leading-31 lg:text-51 lg:leading-51 lowercase text-[#2A813B]">jouw hond</span></h2>
             </div>
@@ -719,7 +715,7 @@
                             <div class="">
                                 <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
                                 <h2 class="text-white font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase tracking-[0.07em] mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
-                                <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow</a>
+                                <a href="#" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow us</a>
                             </div>
                         </div>
                         <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
