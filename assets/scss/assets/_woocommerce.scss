@@ -562,12 +562,17 @@ p.out-of-stock {
 }
 
 .return-to-shop {
+    text-align: center !important;
+
     .button {
         max-width: 250px !important;
         margin-left: auto !important;
         margin-right: auto !important;
         float: unset !important;
         margin-top: 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
 
