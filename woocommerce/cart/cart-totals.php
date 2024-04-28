@@ -207,7 +207,7 @@ defined( 'ABSPATH' ) || exit;
                                $cart_subtotal = WC()->cart->get_cart_subtotal(); // Haal de winkelwagensubtotaal op
 								$verkoopprijs = wc_format_decimal($cart_subtotal, 2); // Formatteer de prijs
 								$resultaat = floor($verkoopprijs / 1); // Rond de prijs af ?>
-                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij deze order ontvangt u <?php echo $resultaat ?> <a href="/spaarbotjes" class="underline">spaarbotjes</a></p>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij deze order ontvang je <?php echo $resultaat ?> <a href="/spaarbotjes" class="underline">spaarbotjes</a></p>
                             </div>
                             <div class="flex items-start">
                                 <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">

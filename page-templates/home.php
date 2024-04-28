@@ -128,12 +128,10 @@
 
     <!-- SPAARPROGRAMMA -->
     <section class="mt-[50px] lg:mt-[90px]">
-        <div class="grid grid-cols-1 lg:grid-cols-2 relative">
-            <div class="max-h-[495px] lg:max-h-[unset] w-full overflow-hidden hidden lg:block">
-                <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full lg:min-h-[600px] object-cover object-center">
-            </div>
-            <div class="bg-[#FF91C8] flex justify-center lg:justify-start items-center">
-                <div class="w-[360px] md:w-[718px] lg:w-[500px] xl:w-[577px] ml-[unset] lg:ml-[75px] xl:ml-[95px] grid py-[50px] mt-[-25px] md:mt-[unset]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 relative bg-[#FF91C8] overflow-hidden">
+        
+            <div class="flex justify-center lg:justify-center items-center">
+                <div class="w-[360px] md:w-[718px] lg:w-[500px] xl:w-[577px] grid py-[60px] mt-[-25px] md:mt-[unset]">
                      <div class="mx-auto lg:mx-[unset] md:ml-[-25px] lg:ml-[-25px] scale-[0.8] md:scale-[1] mb-[15px]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="169.385" height="142.551" viewBox="0 0 169.385 142.551">
                                 <g id="Group_446" data-name="Group 446" transform="translate(-54.866 -1693.062)">
@@ -156,14 +154,11 @@
                     <a href="/account" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px] mx-auto md:mx-[unset] mb-[15px] lg:mb-[unset]">Account aanmaken</a>
                 </div>
             </div>
-            <div class="absolute left-0 top-0 right-0 bottom-[unset]">
-                <div class="h-full min-h-[600px] container flex items-end">
-                    <div class="w-[500px] xl:w-[577px] h-[250px] mb-[60px] flex flex-col justify-end">
-                       
-                        <!-- <h2 class="font-wedges text-40 leading-40 md:text-51 md:leading-51 text-white uppercase mt-[15px]">Ontvang nu <span class="font-grotesk text-32 leading-32 lg:text-45 lg:leading-45 xl:text-51 xl:leading-51">Spaarbotjes</span></h2> -->
-                    </div>
-                </div>
+                <div class="max-h-[495px] lg:max-h-[unset] w-full hidden lg:block bg-[#FF91C8] relative">
+                <img src="/wp-content/themes/nutridog2/img/local/okeykat-w6elADh_jww-unsplash.jpg" alt="" class="min-w-full lg:min-h-[600px] object-cover object-center">
+
             </div>
+           
         </div>
         <div class="h-[74px] bg-[#2A813B] w-full hidden lg:block">
             <div class="grid-cols-4 max-w-[1012px] mx-auto h-[74px] items-center grid">

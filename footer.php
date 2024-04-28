@@ -91,6 +91,7 @@
                     <a href="/privacy-policy" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Privacy Policy</a>
                     <a href="/cookie-beleid" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Cookie beleid</a>
                     <a href="/algemene-voorwaarden" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Algemene voorwaarden</a>
+                    <a href="/spaar-voorwaarden" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Spaar voorwaarden</a>
                 </div>
                 <div class="w-[101px] justify-between items-center md:mt-[40px] hidden md:flex lg:hidden">
                         <a href="" class="h-[15px] xl:h-[17px]">
@@ -124,7 +125,10 @@
             <!-- LATAST NEWS -->
             <div class="w-full md:w-[447px] lg:w-[282px] xl:w-[346px] order-4 md:order-3 lg:order-4 mt-[30px] md:mt-[42px] lg:mt-[unset]">
                 <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Nieuwsbrief</h3>
-                <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] md:max-w-[300px] lg:max-w-[unset]">Meld je aan voor onze nieuwsbrief, blijf op de hoogte en ontvang 5% korting op je eerstvolgende bestelling.</p>
+                <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] md:max-w-[300px] lg:max-w-[unset]">Meld je aan voor onze nieuwsbrief.</p>
+                <div class="nutriform mt-[15px] max-w-[350px]">
+                    <?php echo do_shortcode('[gravityform id="1" title="false"]'); ?>
+                </div>
             </div>
         </div>
     </section>
