@@ -482,7 +482,7 @@
                 $thumbnail_alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>
                  <a href="<?php echo get_permalink();?>" class="col-span-1">
                     <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="min-h-full min-w-full object-center object-cover">
+                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="h-full min-h-full min-w-full object-center object-cover">
                     </div>
                     <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
                     <?php if (get_field('subtitel', $post_id)): ?>   
@@ -524,13 +524,13 @@
                             </div>
                         </div>
                         <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
-                            <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
+                            <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
                                 <img src="https://images.unsplash.com/photo-1587463272361-565200f82b33?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center">
                             </div>
-                            <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
+                            <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
                                 <img src="https://images.unsplash.com/photo-1579807351146-e6dd49462635?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-bottom">
                             </div>
-                            <div class="h-full aspect-[1/1] w-[228px] lg:w-[202px] xl:w-[228px] bg-black overflow-hidden">
+                            <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden">
                                 <img src="https://plus.unsplash.com/premium_photo-1675881735301-5c9170e4793e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center">
                             </div>
                         </div>
