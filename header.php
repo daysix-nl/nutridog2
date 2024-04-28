@@ -222,7 +222,6 @@
         </form> -->
         <div class="flex flex-col justify-center text-center pb-[111px]">
             <a href="/producten" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Assortiment</a>
-            <a href="/producten/seizoen-voorjaar/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Speciaal voor het voorjaar</a>
             <a href="/producten/aanbieding-yes/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Aanbiedingen</a>
             <a href="/klantenservice" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Klantenservice</a>
             <a href="/veelgestelde-vragen" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Veelgestelde vragen</a>
