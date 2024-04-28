@@ -517,7 +517,7 @@
                             <div class="">
                                 <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
                                 <h2 class="text-white font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
-                                <a href="https://www.instagram.com/nutridog.nl/" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow us</a>
+                                <a href="https://www.instagram.com/nutridog.nl/" target="_blank" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow us</a>
                             </div>
                         </div>
                         <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
