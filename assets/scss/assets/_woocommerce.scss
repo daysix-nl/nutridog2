@@ -1208,3 +1208,28 @@ button.update-cart {
         }
     }
 }
+
+.next.page-numbers,
+.prev.page-numbers {
+    height: 30px;
+    width: 30px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #C2EAFF;
+}
+
+a.page-numbers {
+    font-family: Plus Jakarta Sans, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 15px !important;
+    color: #000 !important;
+    font-weight: 400 !important;
+
+
+}
+
+span.page-numbers.current {
+    color: #C2EAFF !important;
+}

@@ -282,31 +282,53 @@ get_header( 'shop' ); ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
            </div>
-            <?php
+            <div class="col-span-2 md:col-span-3 lg:col-span-4"></div>
+                <?php
+                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                $args = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => 60, // Toon 30 producten per pagina
+                    'paged' => $paged,
+                );
 
-            $args = array(
-                'post_type' => 'product',
-                'posts_per_page' => -1, 
-            );
+                $products_query = new WP_Query($args);
 
-            $products_query = new WP_Query($args);
+                if ($products_query->have_posts()) :
+                    while ($products_query->have_posts()) : $products_query->the_post();
 
-            if ($products_query->have_posts()) :
-                while ($products_query->have_posts()) : $products_query->the_post();
+                        // Laad de productdetails in
+                        $product = wc_get_product(get_the_ID());
+                        include get_template_directory() . '/componenten/product-item.php';
 
-            $product = wc_get_product(get_the_ID());
-            
-            ?>
-            <?php include get_template_directory() . '/componenten/product-item.php'; ?>
+                    endwhile;
 
-            <?php
-            endwhile;
+                    wp_reset_postdata();
 
-            wp_reset_postdata();
-        else :
-            echo 'Geen producten gevonden';
-        endif;
-        ?>
+                    // Toon de paginering van WooCommerce
+                    echo '<div class="col-span-2 md:col-span-3 lg:col-span-4"><div class="woocommerce-pagination w-fit mx-auto flex items-center space-x-[15px] mt-[30px]">';
+                    echo paginate_links( array(
+                        'total' => $products_query->max_num_pages,
+                        'current' => max( 1, $paged ),
+                        'format' => '?paged=%#%',
+                        'prev_text' => '<svg class="rotate-[-180deg]" xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
+                            <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
+                                <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"></line>
+                                <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"></line>
+                            </g>
+                            </svg>',
+                        'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
+                            <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
+                                <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"></line>
+                                <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"></line>
+                            </g>
+                            </svg>',
+                    ) );
+                    echo '</div></div>';
+                else :
+                    echo 'Geen producten gevonden';
+                endif;
+                ?>
+            </div>
         </div>
     </div>
 </div>

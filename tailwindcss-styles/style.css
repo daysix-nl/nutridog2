@@ -1153,6 +1153,9 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-\[163px\] {
+  width: 163px;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1298,6 +1301,21 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(15px * var(--tw-space-x-reverse));
   margin-left: calc(15px * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-\[8px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(8px * var(--tw-space-x-reverse));
+  margin-left: calc(8px * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-\[10px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(10px * var(--tw-space-x-reverse));
+  margin-left: calc(10px * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-\[13px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(13px * var(--tw-space-x-reverse));
+  margin-left: calc(13px * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1592,6 +1610,9 @@ video {
 .pt-\[8px\] {
   padding-top: 8px;
 }
+.pt-4 {
+  padding-top: 40px;
+}
 .text-left {
   text-align: left;
 }
@@ -1666,6 +1687,12 @@ video {
 }
 .text-8 {
   font-size: 8px;
+}
+.text-19 {
+  font-size: 19px;
+}
+.text-50 {
+  font-size: 50px;
 }
 .font-bold {
   font-weight: 700;
@@ -1862,6 +1889,13 @@ video {
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.hover\:bg-\[\#8CC63F\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(140 198 63 / var(--tw-bg-opacity));
 }
 @media (min-width: 768px) {
 
@@ -2556,6 +2590,10 @@ video {
     height: 90px;
   }
 
+  .lg\:h-\[58\.5px\] {
+    height: 58.5px;
+  }
+
   .lg\:max-h-\[104px\] {
     max-height: 104px;
   }
@@ -2686,6 +2724,10 @@ video {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[240px\] {
+    width: 240px;
   }
 
   .lg\:max-w-\[104px\] {
@@ -2936,6 +2978,10 @@ video {
 
   .lg\:text-58 {
     font-size: 58px;
+  }
+
+  .lg\:text-25 {
+    font-size: 25px;
   }
 
   .lg\:leading-18 {

@@ -26,3 +26,26 @@ img.merklogo {
         fill: #000 !important;
     }
 }
+
+.producten-section .archive-block.list-b-none .post {
+
+
+    @media only screen and (max-width: 768px) {
+        &:nth-of-type(n+4) {
+            display: none !important;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        &:nth-of-type(n+5) {
+            display: none !important;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        &:nth-of-type(n+100) {
+            display: none !important;
+        }
+    }
+
+}
