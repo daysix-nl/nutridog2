@@ -41,8 +41,8 @@
                         </svg>
                     </div>
                     <p class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 text-[#000]">De webwinkel voor een gezonde blije hond. Van smakelijke voeding, verantwoord speelgoed tot handige producten en onmisbare tips & tricks.</p>
-                    <div class="w-[180px] justify-between items-center mt-[35px] md:mt-[50px] flex">
-                        <a href="https://www.webwinkelkeur.nl/webshop/Nutridog_1219885" class="webwinkelkeurPopup bg-[#f3f3f3]" title="Webshop Trustmark" target="_blank"><img src="https://dashboard.webwinkelkeur.nl/banners/70/1219885/1699359462.svg" width="90" height="34" alt="Webshop Trustmark"></a>
+                    <div class="w-[230px] justify-between items-center mt-[35px] md:mt-[50px] flex">
+                        <a href="https://www.webwinkelkeur.nl/webshop/Nutridog_1219885" class="webwinkelkeurPopup" title="Webshop Trustmark and customer reviews" target="_blank"><img src="https://dashboard.webwinkelkeur.nl/banners/67/1219885/1699359798.svg" width="120" height="45.59" alt="Webshop Trustmark and customer reviews"></a>
                         <a href="https://www.cbg-meb.nl/onderwerpen/bd-internethandel-diergeneesmiddelen/documenten/publicaties/2023/01/01/bd-register-internethandel-diergeneesmiddelen" class="vet" target="_blank"><img src="/wp-content/themes/nutridog2/img/local/2209-logo-internethandel.jpg" alt="Register internethandel diegeneesmiddelen" width="74.45" height="60" class="h-[60px] w-[74.45px]"></a>
                     </div>
                 </div> 
