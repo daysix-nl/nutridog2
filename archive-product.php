@@ -89,7 +89,7 @@ get_header( 'shop' ); ?>
                     <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                 <?php } ?>
            </div>
-            <div class="col-span-2 md:col-span-3 lg:col-span-4"></div>
+           
                 <?php
                 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
                 $args = array(
