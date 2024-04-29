@@ -290,6 +290,12 @@
         -webkit-font-smoothing: unset !important;
     }
 
+    .gform_wrapper.gravity-theme .gform_footer,
+    .gform_wrapper.gravity-theme .gform_page_footer {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
     .gform_footer {
         margin-top: 15px !important;
     }
@@ -317,4 +323,6 @@
         font-family: Plus Jakarta Sans, sans-serif !important;
         color: #000 !important;
     }
+
+
 }
