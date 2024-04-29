@@ -135,6 +135,28 @@ get_header( 'shop' ); ?>
                     echo 'Geen producten gevonden';
                 endif;
                 ?>
+                <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full">
+                    <?php
+                        // Controleer of de SEO-beschrijving is ingevuld
+                        if (function_exists('apply_filters') && has_filter('wpc_seo_text')) {
+                            // Haal de SEO-beschrijving op met behulp van de filter
+                            $seoText = apply_filters('wpc_seo_text', '');
+
+                            // Controleer of de SEO-tekst niet leeg is
+                            if (!empty($seoText)) {
+                                // Toon de SEO-tekst
+                                echo $seoText;
+                            } else {
+                                // Toon een standaardbericht als de SEO-tekst leeg is
+                                echo "Standaard SEO-beschrijving";
+                            }
+                        } else {
+                            // Toon een fallback-bericht als de filterfunctie niet beschikbaar is
+                            echo "SEO-filter is niet beschikbaar";
+                        }
+                        ?>
+
+                </div>
             </div>
         </div>
     </div>
