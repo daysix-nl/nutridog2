@@ -136,19 +136,7 @@ get_header( 'shop' ); ?>
                 endif;
                 ?>
                 <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full">
-                    <?php
-                    // Haal de SEO-tekst op
-                    $seoText = apply_filters('wpc_seo_text', '');
-
-                    // Controleer of de SEO-tekst niet leeg is
-                    if (!empty($seoText)) {
-                        // Toon de SEO-tekst
-                        echo $seoText;
-                    } else {
-                        // Toon een standaardbericht als de SEO-tekst leeg is
-                        echo "Standaard SEO-beschrijving";
-                    }
-                    ?>
+                    <?php the_content();?>
 
                 </div>
             </div>
