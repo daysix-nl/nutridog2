@@ -941,3 +941,14 @@ add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
 
 
 
+// Functie om de SEO-tekst aan te passen
+function modify_seo_text($seoText) {
+    // Voeg hier je aanpassingen toe aan de SEO-tekst
+    $modifiedText = ucfirst($seoText); // Bijvoorbeeld, hier capitaliseren we de eerste letter van de SEO-tekst
+    
+    // Geef de aangepaste SEO-tekst terug
+    return $modifiedText;
+}
+
+// Voeg de filter toe voor de SEO-tekst
+add_filter('wpc_seo_text', 'modify_seo_text');
