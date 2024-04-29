@@ -1070,11 +1070,11 @@ video {
 .w-\[200px\] {
   width: 200px;
 }
-.w-\[210px\] {
-  width: 210px;
-}
 .w-\[228px\] {
   width: 228px;
+}
+.w-\[230px\] {
+  width: 230px;
 }
 .w-\[283px\] {
   width: 283px;
@@ -1152,9 +1152,6 @@ video {
 }
 .w-screen {
   width: 100vw;
-}
-.w-\[230px\] {
-  width: 230px;
 }
 .min-w-full {
   min-width: 100%;
