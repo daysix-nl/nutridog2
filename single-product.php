@@ -158,7 +158,7 @@ if ( post_password_required() ) {
                         if ($out_of_stock) { ?>
                            <div class="mt-4 pb-[40px]">
                             <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder je e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
-                            <div class="nutriform mt-[15px] max-w-[350px]">
+                            <div class="nutriform mt-[15px] max-w-[360px]">
                                 <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
                             </div>
                         </div>
@@ -211,7 +211,7 @@ if ( post_password_required() ) {
                         if ($voorraad <= 0) {?>
                         <div class="mt-4 pb-[40px]">
                             <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
-                             <div class="nutriform mt-[15px] max-w-[350px]">
+                             <div class="nutriform mt-[15px] max-w-[360px]">
                                 <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
                             </div>
                         </div>
@@ -284,7 +284,7 @@ if ( post_password_required() ) {
                 } else { ?>
                    <div class="mt-4 pb-[4]">
                         <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijke uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
-                         <div class="nutriform mt-[15px] max-w-[350px]">
+                         <div class="nutriform mt-[15px] max-w-[360px]">
                             <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
                         </div>
                     </div>
