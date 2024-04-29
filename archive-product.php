@@ -136,7 +136,7 @@ get_header( 'shop' ); ?>
                 endif;
                 ?>
                 <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full">
-                    <?php the_content();?>
+                    <!-- HIER KOMT SEO TEKST TE STAAN -->
 
                 </div>
             </div>
