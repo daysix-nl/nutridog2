@@ -1285,15 +1285,16 @@ span.page-numbers.current {
     color: #C2EAFF !important;
 }
 
-.payment_method_buckaroo_afterpaynew {
+.payment_method_buckaroo_afterpaynew fieldset {
     label {
         margin-top: 8px !important;
         font-size: 13px !important;
         font-weight: 600 !important;
         font-family: Plus Jakarta Sans, sans-serif;
+        color: #000 !important;
     }
 
-    input {
+    input.buckaroo-afterpaynew-birthdate {
         border: 1px solid #DEDEDE !important;
         height: 53px !important;
         padding-left: 10px !important;
