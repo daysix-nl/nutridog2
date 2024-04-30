@@ -84,11 +84,17 @@
                 <div class="flex justify-between">
                     <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Subtotaal</h4>
                     <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
-                        <?php $total = WC()->cart->get_cart_total();
-                        echo '' . $total;
-                        ?>
+                        <?php wc_cart_totals_subtotal_html(); ?>
                     </p>
                 </div>
+                 <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+                    <div class="flex justify-between lg:mt-[8px]">
+                    <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]"><?php wc_cart_totals_coupon_label( $coupon ); ?></h4>
+                    <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
+                        <?php wc_cart_totals_coupon_html( $coupon ); ?>
+                    </p>
+                </div>
+                <?php endforeach; ?>
                 <div class="flex justify-between lg:mt-[8px]">
                     <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Verzendkosten</h4>
                     <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
