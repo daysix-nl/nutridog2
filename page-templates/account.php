@@ -48,7 +48,8 @@
                         echo 'Inloggen';
                     }
                     ?></span></h2>
-                    <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[360px]">Dit is de plek waar je alle relevante informatie over je bestellingen kan vinden.</p>
+                    <!-- <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[360px]">Dit is de plek waar je alle relevante informatie over je bestellingen kan vinden.</p> -->
+                    <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[360px]">Dit gedeelte is momenteel nog in ontwikkeling. Binnenkort zal hier alle relevante informatie over je bestellingen beschikbaar zijn.</p>
                 </div>
             </div>
         </div>
