@@ -55,7 +55,7 @@
                   <div class="px-[15px] pb-[15px] lg:px-[25px] lg:pb-[25px]">
                      <h3 class="text-[#121212] font-jakarta text-15 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
                      <?php if (get_field('subtitel', $post_id)): ?>   
-                     <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2"><?php echo get_field('subtitel', $post_id);?></p>
+                     <p class="text-[#8D8D8D] font-jakarta text-14 leading-20 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-normal tracking-[0.025em] line-clamp-2 mt-[5px]"><?php echo get_field('subtitel', $post_id);?></p>
                      <?php endif; ?>
                   </div>
                </a>
