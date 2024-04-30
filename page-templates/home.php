@@ -510,33 +510,38 @@
             <img src="https://images.unsplash.com/photo-1575859431774-2e57ed632664?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center-top">
         </div>
         <div class="lg:absolute top-0 left-0 right-0 bottom-0 order-1 z-[3]">
-            <div class="w-full h-full flex items-center">
-                <div class="container h-[592px] lg:h-[202px] xl:h-[228px]">
+            <div class="w-full h-full flex items-center relative">
+                <div class="container md:h-[592px] lg:h-[202px] xl:h-[228px]">
                     <div class="w-full lg:max-w-[956px] xl:max-w-[1080px] h-full lg:ml-[45px] xl:ml-[50px] flex flex-col lg:flex-row items-center justify-between">
-                        <div class="h-full w-full lg:w-[288px] xl:w-[329px] flex items-center order-2 lg:order-1">
+                        <div class="h-full w-full lg:w-[288px] xl:w-[329px] flex items-center order-2 lg:order-1 pt-[130px] md:pt-[unset] pb-[50px] md:pb-[unset]">
                             <div class="">
                                 <h3 class="font-jakarta italic text-16 leading-28 uppercase tracking-[0.1em] text-white">@Nutridog.nl</h3>
                                 <h2 class="text-white font-grotesk font-bold text-21 leading-25 md:text-24 md:leading-30 xl:text-26 xl:leading-30 uppercase mt-[8px]">Volg ons <br><span class="font-syne">op Instagram</span></h2>
                                 <a href="https://www.instagram.com/nutridog.nl/" target="_blank" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Follow us</a>
                             </div>
                         </div>
-                        <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
-                            <?php
-                            if( have_rows('instagramposts', 'option') ):
-                                while( have_rows('instagramposts', 'option') ) : the_row(); ?>
-                                <?php
-                                $image = get_sub_field('afbeelding', 'option');
-                                $image_url = isset($image['url']) ? esc_url($image['url']) : '';
-                                $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
-                                ?>
-                                 <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
-                                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="min-h-full min-w-full object-cover ocject-center">
+                        <div class="h-[50vw] w-[360px] md:h-full md:w-full max-w-full lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
+                            <div class="swiper mySwiperInsta absolute md:relative top-[80px] md:top-[unset] left-0 right-0 md:left-[unset] md:right-[unset]">
+                            <div class="swiper-wrapper ml-[calc(50vw-180px)] md:ml-[unset] mr-[calc(50vw+380px)] md:mr-[unset]">
+                                    <?php
+                                    if( have_rows('instagramposts', 'option') ):
+                                        while( have_rows('instagramposts', 'option') ) : the_row(); ?>
+                                        <?php
+                                        $image = get_sub_field('afbeelding', 'option');
+                                        $image_url = isset($image['url']) ? esc_url($image['url']) : '';
+                                        $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
+                                        ?>
+                                        <div class="swiper-slide aspect-[1/1] w-[50vw] h-[50vw] md:w-[228px] md:h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
+                                            <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="min-h-full min-w-full object-cover ocject-center">
+                                        </div>
+                                        <?php
+                                        endwhile;
+                                    else :
+                                    endif;
+                                    ?>
                                 </div>
-                                <?php
-                                endwhile;
-                            else :
-                            endif;
-                            ?>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

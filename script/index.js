@@ -335,3 +335,26 @@ try {
     });
   }
 } catch (error) { }
+
+try {
+  var swiperInsta = new Swiper(".mySwiperInsta", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+    },
+
+  });
+} catch (error) { }
