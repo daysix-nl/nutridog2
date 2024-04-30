@@ -521,15 +521,22 @@
                             </div>
                         </div>
                         <div class="h-full flex lg:w-full lg:max-w-[652px] xl:max-w-[733px] justify-between order-1 lg:order-2 pt-[80px] lg:pt-[unset]">
-                            <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
-                                <img src="https://images.unsplash.com/photo-1587463272361-565200f82b33?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center">
-                            </div>
-                            <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
-                                <img src="https://images.unsplash.com/photo-1579807351146-e6dd49462635?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-bottom">
-                            </div>
-                            <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden">
-                                <img src="https://plus.unsplash.com/premium_photo-1675881735301-5c9170e4793e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="min-h-full min-w-full object-cover ocject-center">
-                            </div>
+                            <?php
+                            if( have_rows('instagramposts', 'option') ):
+                                while( have_rows('instagramposts', 'option') ) : the_row(); ?>
+                                <?php
+                                $image = get_sub_field('afbeelding', 'option');
+                                $image_url = isset($image['url']) ? esc_url($image['url']) : '';
+                                $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
+                                ?>
+                                 <div class="aspect-[1/1] w-[228px] h-[228px] lg:w-[202px] xl:w-[228px] lg:h-[202px] xl:h-[228px] bg-black overflow-hidden mr-[30px] lg:mr-[unset]">
+                                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="min-h-full min-w-full object-cover ocject-center">
+                                </div>
+                                <?php
+                                endwhile;
+                            else :
+                            endif;
+                            ?>
                         </div>
                     </div>
                 </div>
