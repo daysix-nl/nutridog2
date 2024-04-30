@@ -71,22 +71,23 @@
                             <?php
                             if (WC()->cart->get_cart_contents_count() > 0) { ?>
                              
+                            
+                            <div class="flex justify-between">
+                                <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Subtotaal</h4>
+                                <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
+                                    <?php wc_cart_totals_subtotal_html(); ?>
+                                </p>
+                            </div>
                             <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-                                <div class="flex justify-between pl-0 md:pl-3 lg:pl-0">
-                                <h4 class="font-karlsen text-16 leading-16 font-normal text-[#2B2828] tracking-[0.05em]">Kortings- of giftcard </h4>
-                                <p class="font-karlsen text-16 leading-16 font-normal text-[#2B2828] tracking-[0.05em]">
+                                <div class="flex justify-between lg:mt-[8px]">
+                                <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]"><?php wc_cart_totals_coupon_label( $coupon ); ?></h4>
+                                <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
                                     <?php wc_cart_totals_coupon_html( $coupon ); ?>
                                 </p>
                             </div>
                             <?php endforeach; ?>
-                            <div class="flex justify-between">
-                                <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Subtotaal</h4>
-                                <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">
-                                    <?php $total = WC()->cart->get_cart_total();
-                                    echo '' . $total;
-                                    ?>
-                                </p>
-                            </div>
+                         
+     
                               <div class="flex justify-between lg:mt-[8px]">
                                 <h4 class="font-jakarta font-medium text-15 leading-25 text-[#000]">Verzendkosten</h4>
                                 <p class="font-jakarta font-medium text-15 leading-25 text-[#000]">

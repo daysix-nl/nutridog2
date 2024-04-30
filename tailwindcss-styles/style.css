@@ -1571,9 +1571,6 @@ video {
 .pb-\[80px\] {
   padding-bottom: 80px;
 }
-.pl-0 {
-  padding-left: 0;
-}
 .pl-4 {
   padding-left: 40px;
 }
@@ -2284,10 +2281,6 @@ video {
     padding-bottom: 50px;
   }
 
-  .md\:pl-3 {
-    padding-left: 30px;
-  }
-
   .md\:pt-\[10px\] {
     padding-top: 10px;
   }
@@ -2937,10 +2930,6 @@ video {
 
   .lg\:pb-\[90px\] {
     padding-bottom: 90px;
-  }
-
-  .lg\:pl-0 {
-    padding-left: 0;
   }
 
   .lg\:pt-2 {
