@@ -894,9 +894,9 @@ ins {
         }
     }
 
-    .woocommerce-error {
-        display: none !important;
-    }
+    // .woocommerce-error {
+    //     display: none !important;
+    // }
 
     * {
         font-family: Plus Jakarta Sans, sans-serif;
@@ -905,6 +905,7 @@ ins {
     label {
         font-size: 13px !important;
         font-weight: 600 !important;
+        font-family: Plus Jakarta Sans, sans-serif;
     }
 
     .woocommerce-checkout-review-order-table {
@@ -1282,4 +1283,24 @@ a.page-numbers {
 
 span.page-numbers.current {
     color: #C2EAFF !important;
+}
+
+.payment_method_buckaroo_afterpaynew {
+    label {
+        margin-top: 8px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        font-family: Plus Jakarta Sans, sans-serif;
+    }
+
+    input {
+        border: 1px solid #DEDEDE !important;
+        height: 53px !important;
+        padding-left: 10px !important;
+        font-family: Plus Jakarta Sans, sans-serif;
+    }
+
+    .required {
+        display: none !important;
+    }
 }
