@@ -1192,6 +1192,9 @@ video {
 .max-w-full {
   max-width: 100%;
 }
+.max-w-\[410px\] {
+  max-width: 410px;
+}
 .origin-left {
   transform-origin: left;
 }
