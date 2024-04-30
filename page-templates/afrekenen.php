@@ -12,7 +12,7 @@
 <main class="custom-checkout bg-white md:bg-[#F6FAFC]">
 
     <!-- CHECKOUT -->
-    <div class="custom-afrekenen mt-[30px] md:pt-[30px] lg:pt-[60px] xl:pt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px]">
+    <div class="custom-afrekenen pt-[30px] md:pt-[30px] lg:pt-[60px] xl:pt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px]">
         <div class="container lg:flex lg:justify-between lg:px-[0px] xl:px-[unset]">
             <div class="w-full lg:max-w-[651px] xl:max-w-[736px]">
                 <?php echo do_shortcode( '[woocommerce_checkout]' ); ?>
