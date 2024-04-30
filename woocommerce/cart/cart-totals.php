@@ -224,10 +224,18 @@ defined( 'ABSPATH' ) || exit;
                                 <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
                                     <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                                 </svg>
-                                <?php // Haal de product-ID op
-                               $cart_subtotal = WC()->cart->get_cart_subtotal(); // Haal de winkelwagensubtotaal op
-								$verkoopprijs = wc_format_decimal($cart_subtotal, 2); // Formatteer de prijs
-								$resultaat = floor($verkoopprijs / 1); // Rond de prijs af ?>
+                                <?php
+                                    $cart_subtotal = 0; // Initialiseer het subtotaal op nul
+
+                                    // Loop door alle items in de winkelwagen om het subtotaal te berekenen
+                                    foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+                                        $cart_subtotal += $cart_item['data']->get_price() * $cart_item['quantity']; // Bereken de prijs van elk item en tel deze op bij het subtotaal
+                                    }
+
+                                    $cart_discount_total = floatval(WC()->cart->get_cart_discount_total()); // Haal het totale kortingsbedrag in de winkelwagen op en zet het om naar een float
+                                    $verkoopprijs = wc_format_decimal($cart_subtotal - $cart_discount_total, 2); // Subtotaal minus korting
+                                    $resultaat = floor($verkoopprijs / 1); // Rond de prijs af
+                                ?>
                                 <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij deze order ontvang je <?php echo $resultaat ?> <a href="/spaar-voorwaarden/" class="underline">spaarbotjes</a></p>
                             </div>
                             <div class="flex items-start">
