@@ -50,7 +50,7 @@
                $thumbnail_alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>
                <a href="<?php echo get_permalink();?>" class="col-span-1 bg-white block rounded-[13px] overflow-hidden">
                   <div class="w-full aspect-[1/1] bg-[#F9F9F9] flex items-center justify-center overflow-hidden">
-                     <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="min-h-full min-w-full object-center object-cover">
+                     <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $thumbnail_alt ); ?>" class="h-full min-h-full min-w-full object-center object-cover">
                   </div>
                   <div class="px-[15px] pb-[15px] lg:px-[25px] lg:pb-[25px]">
                      <h3 class="text-[#121212] font-jakarta text-15 leading-28 md:text-15 md:leading-25 xl:text-16 xl:leading-25 font-semibold mt-[10px] xl:mt-[20px] tracking-[0.025em] flex"><?php the_title(); ?> <span class="mt-[1px] arrow-link">→</span></h3>
