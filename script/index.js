@@ -340,7 +340,6 @@ try {
   var swiperInsta = new Swiper(".mySwiperInsta", {
     slidesPerView: 2,
     spaceBetween: 10,
-    loop: true,
 
     breakpoints: {
       640: {
