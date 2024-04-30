@@ -941,14 +941,46 @@ add_filter( 'lostpassword_url', 'custom_lost_password_url', 10, 2 );
 
 
 
-// Functie om de SEO-tekst aan te passen
-function modify_seo_text($seoText) {
-    // Voeg hier je aanpassingen toe aan de SEO-tekst
-    $modifiedText = ucfirst($seoText); // Bijvoorbeeld, hier capitaliseren we de eerste letter van de SEO-tekst
-    
-    // Geef de aangepaste SEO-tekst terug
-    return $modifiedText;
+add_action( 'woocommerce_order_status_processing', 'custom_send_email_on_order_processing' );
+
+function custom_send_email_on_order_processing( $order_id ) {
+    // Get the order object
+    $order = wc_get_order( $order_id );
+
+    // Check if the order status is "in behandeling"
+    if ( $order && $order->get_status() === 'processing' ) {
+        // Check if the order contains products with the specified brand attribute
+        $products_with_brand = array('Dogguo', 'Nutridog');
+        $found_products = array();
+        foreach ( $order->get_items() as $item ) {
+            $product = $item->get_product();
+            $product_brands = $product->get_attribute('pa_brand');
+            if ( $product_brands && array_intersect( $products_with_brand, explode(', ', $product_brands) ) ) {
+                $found_products[] = array(
+                    'name'     => $product->get_name(),
+                    'quantity' => $item->get_quantity()
+                );
+            }
+        }
+
+        // If products with specified brand attribute are found, send email
+        if ( !empty($found_products) ) {
+            $to = 'info@nutridog.nl';
+            $subject = 'Nieuwe bestelling vereist intern beheer';
+            $message = 'Er is een nieuwe bestelling geplaatst die een product omvat dat door ons intern wordt verzonden.' . PHP_EOL . PHP_EOL;
+            $message .= 'Ordernummer: #' . $order_id . PHP_EOL . PHP_EOL;
+            $message .= 'Producten:' . PHP_EOL;
+            foreach ($found_products as $found_product) {
+                $message .= $found_product['name'] . ' - Aantal: ' . $found_product['quantity'] . PHP_EOL;
+            }
+            wp_mail( $to, $subject, $message );
+        }
+    }
 }
 
-// Voeg de filter toe voor de SEO-tekst
-add_filter('wpc_seo_text', 'modify_seo_text');
+
+
+
+
+
+

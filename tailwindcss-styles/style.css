@@ -1183,6 +1183,9 @@ video {
 .max-w-\[360px\] {
   max-width: 360px;
 }
+.max-w-\[410px\] {
+  max-width: 410px;
+}
 .max-w-\[430px\] {
   max-width: 430px;
 }
@@ -1191,9 +1194,6 @@ video {
 }
 .max-w-full {
   max-width: 100%;
-}
-.max-w-\[410px\] {
-  max-width: 410px;
 }
 .origin-left {
   transform-origin: left;
