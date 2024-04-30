@@ -210,7 +210,7 @@ if ( post_password_required() ) {
                         $voorraad = $product->get_stock_quantity();
                         if ($voorraad <= 0) {?>
                         <div class="mt-4 pb-[40px]">
-                            <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijk uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                            <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijk uitverkocht. Vul hieronder je e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
                              <div class="nutriform mt-[15px] max-w-[360px]">
                                 <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
                             </div>
@@ -283,7 +283,7 @@ if ( post_password_required() ) {
                     }
                 } else { ?>
                    <div class="mt-4 pb-[4]">
-                        <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijk uitverkocht. Vul hieronder uw e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
+                        <p class="text-[#000] text-14 leading-25 font-jakarta font-bold">Dit product is tijdelijk uitverkocht. Vul hieronder je e-mailadres in om een bericht te ontvangen zodra wij dit product weer op voorraad hebben.</p>
                          <div class="nutriform mt-[15px] max-w-[360px]">
                             <?php echo do_shortcode('[gravityform id="2" title="false"]'); ?>
                         </div>
