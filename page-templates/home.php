@@ -81,6 +81,7 @@
                     $args = array(
                         'post_type' => 'product',
                         'posts_per_page' => 4, 
+                        'orderby' => 'rand', // Willekeurige volgorde
                         'meta_query'     => array(
                         'relation' => 'AND',
                         array(
