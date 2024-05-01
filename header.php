@@ -21,7 +21,7 @@
     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <title><?php bloginfo( 'name' ); ?> - <?php the_title();?> </title>
+    <title><?php bloginfo( 'name' ); ?> - <?php echo get_the_title();?> </title>
     <?php wp_head(); ?>
 
     <!-- /**
