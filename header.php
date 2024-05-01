@@ -22,10 +22,18 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title><?php bloginfo( 'name' ); ?> - 
-        <?php if ( is_shop() ) { ?>Een ruim assortiment speciaal samengesteld voor healthy honden en trendy hondenbaasjes<?php
-            } else {
-                echo get_the_title();
-        } ?>
+    <?php 
+    if ( is_shop() ) { 
+        // Dit is een WooCommerce winkelpagina (archiefpagina)
+        echo "Een ruim assortiment speciaal samengesteld voor healthy honden en trendy hondenbaasjes";
+    } elseif ( is_search() ) {
+        // Dit is een zoekpagina
+        echo "Zoeken";
+    } else {
+        // Dit is geen WooCommerce winkelpagina (archiefpagina) of zoekpagina
+        echo get_the_title();
+    } 
+    ?>
     </title>
     <?php wp_head(); ?>
 
