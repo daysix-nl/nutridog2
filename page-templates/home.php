@@ -81,7 +81,6 @@
                     $args = array(
                         'post_type' => 'product',
                         'posts_per_page' => 4, 
-                        'orderby' => 'rand', // Willekeurige volgorde
                         'meta_query'     => array(
                         'relation' => 'AND',
                         array(
@@ -97,6 +96,7 @@
                             'type'    => 'NUMERIC',
                         ),
                     ),
+                    'orderby' => 'rand', // Willekeurige volgorde
                     );
                     $products_query = new WP_Query($args);
                     if ($products_query->have_posts()) :
