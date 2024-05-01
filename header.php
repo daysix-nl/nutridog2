@@ -34,7 +34,7 @@
     <?php 
     if ( is_shop() ) { 
         // Dit is een WooCommerce winkelpagina (archiefpagina)
-        echo "Een ruim assortiment speciaal samengesteld voor healthy honden en trendy hondenbaasjes";
+        echo "Producten voor healthy honden en trendy hondenbaasjes";
     } elseif ( is_search() ) {
         // Dit is een zoekpagina
         echo "Zoeken";
