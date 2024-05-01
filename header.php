@@ -21,12 +21,12 @@
     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <title><?php bloginfo( 'name' ); ?> - <?php if ( is_shop() ) { ?>
-    Een ruim assortiment speciaal samengesteld voor healthy honden en trendy hondenbaasjes
-    <?php
-} else {
-    echo get_the_title();
-} ?></title>
+    <title><?php bloginfo( 'name' ); ?> - 
+        <?php if ( is_shop() ) { ?>Een ruim assortiment speciaal samengesteld voor healthy honden en trendy hondenbaasjes<?php
+            } else {
+                echo get_the_title();
+        } ?>
+    </title>
     <?php wp_head(); ?>
 
     <!-- /**
