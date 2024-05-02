@@ -59,7 +59,40 @@ if ( post_password_required() ) {
                 <?php
                 global $product;
                 if ($product->get_gallery_image_ids()) { ?>
-          
+
+                    <?php 
+                    if (get_field('intern_product') === "yes"): ?>
+                     <div class=" w-full pb-3 md:pb-[0px]">
+                          <div class="swiper mySwiper-shop relative rounded-[10px] overlow-hidden">
+                                <div class="swiper-wrapper ">
+                                    <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
+                                        <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%-30px)] lg:max-h-[calc(100%-100px)] lg:min-h-[446px] xl:min-h-[480px]">
+                                            <img src="<?php the_post_thumbnail_url($product->get_id());?>" alt="" class="packshot mix-blend-multiply">
+                                        </div>
+                                    </div>
+                                    <?php
+                                        global $product;
+                                        if ( $product->get_gallery_image_ids() ) {
+                                            $gallery_image_ids = $product->get_gallery_image_ids(); 
+                                            foreach ( $gallery_image_ids as $image_id ) { 
+                                                $image_url = wp_get_attachment_url($image_id); ?>
+                                                <div class="swiper-slide aspect-[16/12] w-full bg-[#F2FBFF] flex justify-center items-center">
+                                                    <div class="aspect-[1/1] w-full flex justify-center items-center max-h-[calc(100%)] lg:max-h-[calc(100%)] lg:min-h-[446px] xl:min-h-[480px] overflow-hidden">
+                                                        <img src="<?php echo esc_url($image_url);?>" alt="" class="min-h-full min-w-full object-cover">
+                                                    </div>
+                                                </div>
+                                            <?php
+                                            }
+                                        }
+                                    ?>
+                                </div>
+                                <div class="swiper-button-next-shop"></div>
+                                <div class="swiper-button-prev-shop"></div>
+                            </div>
+                    </div>
+
+                        <?php
+                    else: ?>
                     <div class=" w-full pb-3 md:pb-[0px]">
                           <div class="swiper mySwiper-shop relative rounded-[10px] overlow-hidden">
                                 <div class="swiper-wrapper ">
@@ -88,6 +121,9 @@ if ( post_password_required() ) {
                                 <div class="swiper-button-prev-shop"></div>
                             </div>
                     </div>
+                        <?php
+                    endif; 
+                    ?>
                 <?php
                 } else { ?>
                 <div class="grid grid-cols-1 pb-3 md:pb-[0px]">
