@@ -356,7 +356,7 @@
             </div>
             <div class="md:w-[415px] lg:w-[757px] xl:w-[892px] grid grid-cols-3 lg:grid-cols-5 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit mt-[30px] md:mt-[unset]">
                 <a href="/producten/merk-renske/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-renske.png" alt="" class="merklogo"></a>
-                <a href="/producten/merk-royal-canin/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-royalcanin.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-dogguo/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/dogguo-logo.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-trixie/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-trixie.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-hov-hov/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-hovhov.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-kong/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-kong.png" alt="" class="merklogo"></a>
