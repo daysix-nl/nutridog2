@@ -38,12 +38,12 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 		
 			
 			<input
-				type="<?php echo esc_attr( $type ); ?>"
+				type="number"
 				<?php echo $readonly ? 'readonly="readonly"' : ''; ?>
 				id="<?php echo esc_attr( $input_id ); ?>"
 				class="h-3 w-[35px] font-jakarta md:ml-[12px] text-16 flex justify-center items-center text-center rounded-none"
 				name="<?php echo esc_attr( $input_name ); ?>"
-				value="<?php echo esc_attr( $input_value ); ?>"
+				value="<?php echo esc_attr( $input_value > 1 ? $input_value : 1 ); ?>" 
 				aria-label="<?php esc_attr_e( 'Product quantity', 'woocommerce' ); ?>"
 				size="4"
 				min="<?php echo esc_attr( $min_value ); ?>"
