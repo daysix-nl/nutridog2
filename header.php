@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="h-[34px] lg:flex items-center pr-4 hidden">
-        <a href="/klantenservice" class="font-jakarta text-12 leading-12">Klantenservice</a>
+        <a href="/support" class="font-jakarta text-12 leading-12">Support</a>
     </div>
 </section>
 
@@ -245,7 +245,7 @@
         <div class="flex flex-col justify-center text-center pb-[111px]">
             <a href="/producten" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Assortiment</a>
             <a href="/producten/aanbieding-yes/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Aanbiedingen</a>
-            <a href="/klantenservice" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Klantenservice</a>
+            <a href="/support" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Support</a>
             <a href="/veelgestelde-vragen" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Veelgestelde vragen</a>
             <a href="/account" class="flex items-center space-x-[15px] w-fit mx-auto mt-[45px] md:mt-[45px]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">

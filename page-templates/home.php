@@ -151,7 +151,7 @@
                         </div>
                     <h3 class="text-white text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Spaarbotjes</h3>
                     <h2 class="text-white text-center md:text-left text-26 leading-24 md:text-32 md:leading-37 lg:text-36 lg:leading-42 font-grotesk uppercase mt-[10px] md:mt-[15px]">Hoe werkt het?</h2>
-                    <p class="text-white text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal mt-[10px] md:mt-[15px] lg:mt-[25px] px-[10px] md:px-[unset]">Om te sparen heb je een account nodig. Bij het registreren van een account ontvang je van ons de eerste 50 Spaarbotjes cadeau. Bij elke bestelling krijg je vervolgens 1 Spaarbotje per uitgegeven euro. Heb je 200 Spaarbotjes verzemeld? Dan ontvang je €10,00 korting op je volgende bestelling.</p>
+                    <p class="text-white text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal mt-[10px] md:mt-[15px] lg:mt-[25px] px-[10px] md:px-[unset]">Om te sparen heb je een account nodig. Bij het registreren van een account ontvang je van ons de eerste 50 Spaarbotjes cadeau. Bij elke bestelling krijg je vervolgens 1 Spaarbotje per uitgegeven euro. Heb je 200 Spaarbotjes verzameld? Dan ontvang je €10,00 korting op je volgende bestelling.</p>
                     <a href="/account" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px] mx-auto md:mx-[unset] mb-[15px] lg:mb-[unset]">Account aanmaken</a>
                 </div>
             </div>
