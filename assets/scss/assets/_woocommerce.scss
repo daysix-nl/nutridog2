@@ -1361,3 +1361,9 @@ span.page-numbers.current {
         display: none !important;
     }
 }
+
+
+.custom-checkout .succes-order .woocommerce-order-details,
+.custom-checkout .succes-order .woocommerce-customer-details {
+    display: none !important;
+}

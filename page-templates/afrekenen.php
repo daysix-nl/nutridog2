@@ -4,7 +4,7 @@
  *  * @var WC_Order $order
  */
 
-
+defined( 'ABSPATH' ) || exit;
  get_header(); ?>
 
 
@@ -25,7 +25,7 @@
 
      <!-- THNKS -->
     <div class="custom-bedankt">
-        <?php do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
+       
         <div class="md:bg-[#C2EAFF] relative overflow-hidden">
            
             <div class="container md:pt-[10px] lg:pt-[60px] xl:pt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px] flex justify-center items-center relative z-[2]">
@@ -44,8 +44,7 @@
                 <img src="/wp-content/themes/nutridog2/img/local/bg-header.png" alt="" class="w-[120%] h-[120%] object-cover object-center">
             </div>
         </div>
-        <?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
-		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+      
     </div>
 </main>
 
