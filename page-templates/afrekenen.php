@@ -26,6 +26,7 @@
      <!-- THNKS -->
     <div class="custom-bedankt">
         <div class="md:bg-[#C2EAFF] relative overflow-hidden">
+           
             <div class="container md:pt-[10px] lg:pt-[60px] xl:pt-[70px] pb-[70px] lg:pb-[90px] xl:pb-[100px] flex justify-center items-center relative z-[2]">
                 <div class="w-full md:w-[686px] lg:w-[680px] xl:w-[715px] mx-auto bg-white">
                     <div class="w-[183px] h-[183px] rounded-full mx-auto overflow-hidden mt-[50px] relative">
