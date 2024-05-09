@@ -1392,3 +1392,12 @@ span.page-numbers.current {
         font-family: Plus Jakarta Sans, sans-serif;
     }
 }
+
+.product-add-single {
+    position: relative !important;
+
+    .woocommerce-variation-price {
+        position: absolute !important;
+        top: -40px !important;
+    }
+}
