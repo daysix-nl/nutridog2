@@ -733,6 +733,9 @@ function custom_frontend_translations($translated_text, $text, $domain) {
             case 'Op uitverkoop':
             $translated_text = 'Aanbiedingen';
             break;
+            case 'On sale':
+            $translated_text = 'Aanbiedingen';
+            break;
        
     }
     return $translated_text;
