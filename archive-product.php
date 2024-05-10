@@ -137,7 +137,16 @@ get_header( 'shop' ); ?>
                 ?>
                 <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full">
                     <!-- HIER KOMT SEO TEKST TE STAAN -->
+                    <?php
+                        if( function_exists('flrt_get_seo_data') ){
+                            $seoText = flrt_get_seo_data('text');
+                            if( $seoText ){
+                                $seoText = apply_filters( 'the_content', wp_kses_post($seoText) );
+                                echo sprintf( '<div class="wpc-page-seo-description">%s</div>', $seoText )."\r\n";
 
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
