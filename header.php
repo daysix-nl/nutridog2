@@ -24,8 +24,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   
     <title><?php
-        if ( is_shop() || is_product_category() || is_product_tag() ) {
-            woocommerce_page_title();
+        // Controleer of filters zijn toegepast
+        if ( function_exists('fe_filter_active') && fe_filter_active() ) {
+            echo 'Filtered: ' . fe_active_filters_string(); // Hier haal je de actieve filters op
             echo ' | ';
         }
         wp_title( '|', true, 'right' );
