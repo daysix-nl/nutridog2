@@ -24,11 +24,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   
     <title><?php
-        // Controleer of filters zijn toegepast
-        if ( function_exists('fe_filter_active') && fe_filter_active() ) {
-            echo 'Filtered: ' . fe_active_filters_string(); // Hier haal je de actieve filters op
-            echo ' | ';
+        // Check if Filter Everything plugin function exists
+        if ( function_exists('flrt_get_seo_data') ) {
+            $seo_title = flrt_get_seo_data('title'); // Get SEO title
+            if ( $seo_title ) {
+                echo esc_html( $seo_title ) . ' | ';
+            }
         }
+
         wp_title( '|', true, 'right' );
     ?></title>
     <?php wp_head(); ?>
