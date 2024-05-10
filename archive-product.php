@@ -28,9 +28,6 @@ get_header( 'shop' ); ?>
 <!-- SHOP CONTAINER -->
 <div class="max-w-[354px] md:max-w-[725px] lg:max-w-[1168px] xl:max-w-[1330px] mx-auto pb-[70px] lg:pb-[90px] xl:pb-[100px] pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px]">
 
-
-   
-
     <div class="flex justify-between">
         <!-- FILTER -->
         <div class="hidden lg:block lg:w-[214px] filter mt-[-15px]">
@@ -136,17 +133,20 @@ get_header( 'shop' ); ?>
                 endif;
                 ?>
                 <div class="col-span-2 md:col-span-3 lg:col-span-4 w-full">
-                    <!-- HIER KOMT SEO TEKST TE STAAN -->
+                    <div class="text-15 leading-30 font-jakarta text-black w-fit text-editor">
                     <?php
-                        if( function_exists('flrt_get_seo_data') ){
-                            $seoText = flrt_get_seo_data('text');
-                            if( $seoText ){
-                                $seoText = apply_filters( 'the_content', wp_kses_post($seoText) );
-                                echo sprintf( '<div class="wpc-page-seo-description">%s</div>', $seoText )."\r\n";
-
+                        // Check if Filter Everything plugin function exists
+                        if ( function_exists('flrt_get_seo_data') ) {
+                            $seo_text = flrt_get_seo_data('text');
+                            $seo_title = flrt_get_seo_data('title');
+                            if ( $seo_text ) {
+                                $seo_text = apply_filters( 'the_content', wp_kses_post($seo_text) );
+                                echo '<h1>' . esc_html( $seo_title ) . '</h1>'; // Plaats de titel tussen de <h1> tags
+                                echo sprintf( '<div class="wpc-page-seo-description">%s</div>', $seo_text ) . "\r\n";
                             }
                         }
                     ?>
+                    </div>
                 </div>
             </div>
         </div>
