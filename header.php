@@ -10,6 +10,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="facebook-domain-verification" content="nvtdvfw9dfjni0mv7vcwrik0z4wxp1" />
     <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/CyGroteskGrandDark.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/Wedges Italic.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/Wedges.woff2" type="font/woff2" crossorigin="anonymous">
