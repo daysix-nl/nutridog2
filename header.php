@@ -23,7 +23,13 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php
+        if ( is_shop() || is_product_category() || is_product_tag() ) {
+            woocommerce_page_title();
+            echo ' | ';
+        }
+        wp_title( '|', true, 'right' );
+    ?></title>
     <?php wp_head(); ?>
 
     <!-- /**
