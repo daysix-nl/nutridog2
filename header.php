@@ -8,15 +8,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ8SEK6X66"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RQ8SEK6X66');
-    </script>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="preload" as="font" href="/wp-content/themes/nutridog2/fonts/CyGroteskGrandDark.woff2" type="font/woff2" crossorigin="anonymous">
@@ -64,7 +55,6 @@
 </head>
 <body <?php body_class( 'page-block menu-non-active filter-scroll-notactive' ); ?>>
 <header class="fixed w-screen z-[9999]">
-
 <section class="h-[34px] w-full bg-[#C2F0A0] justify-between hidden lg:flex">
     <div class="h-[34px] lg:flex items-center pl-4 hidden">
         <div class="flex items-center pr-3">
@@ -90,7 +80,6 @@
         <a href="/support" class="font-jakarta text-12 leading-12">Support</a>
     </div>
 </section>
-
 <section class="h-[34px] w-full bg-[#C2F0A0] justify-between flex lg:hidden swiper swiperhero overflow-x-hidden relative">
     <div id="scroll-text"  class="w-full swiper-wrapper">
         <div class="h-[34px] flex items-center w-max space-x-3 swiper-slide">
@@ -226,22 +215,12 @@
         </div>
     </div>
 </section>
-
 </header>
-
-
 <div class="menu fixed h-[calc(100dvh-111px)] w-full top-[111px] bottom-0 bg-white z-[999] lg:hidden min-h-[650px] overflow-y-auto">
     <div class="h-full flex flex-col justify-between w-[390px] px-[20px] md:w-[768px] md:px-[40px] mx-auto">
         <div class="pt-[40px] md:pt-[15px]">
             <?php aws_get_search_form( true ); ?>
         </div>
-        
-         <!-- <form action="/" method="get" class="pt-[40px] md:pt-[15px]">
-            <div class="border-b-[1px] border-[#1F1F1F] w-full flex pb-[10px]">
-                <input class="w-full font-jakarta font-normal text-15 text-[#38241B]" type="text" name="s" id="search" placeholder="Waar ben je naar opzoek?" value="<?php the_search_query(); ?>" />
-                <button class="font-jakarta font-bold text-[#000000]" type="image" alt="Search">Zoeken</button>
-            </div>
-        </form> -->
         <div class="flex flex-col justify-center text-center pb-[111px]">
             <a href="/producten" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Assortiment</a>
             <a href="/producten/aanbieding-yes/" class="font-jakarta font-medium text-18 leading-48 md:text-20 md:leading-60 text-[#121212]">Aanbiedingen</a>
