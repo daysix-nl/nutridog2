@@ -154,27 +154,28 @@ hr {
   }
 
   h1 {
-    font-size: 22px;
-    line-height: 30px;
-    font-weight: 600;
-    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: 26px;
+    line-height: 24px;
+    font-family: Grotesk, sans-serif;
+    text-transform: uppercase;
+    color: #039c47;
 
     // MD
     @media (min-width: 768px) {
-      font-size: 40px;
-      line-height: 46px;
+      font-size: 32px;
+      line-height: 30px;
     }
 
     // LG
     @media (min-width: 1200px) {
-      line-height: 70px;
-      font-size: 61px;
+      line-height: 36px;
+      font-size: 34px;
     }
 
     // XL
     @media (min-width: 1352px) {
-      font-size: 70px;
-      line-height: 80px;
+      line-height: 36px;
+      font-size: 34px;
     }
   }
 
