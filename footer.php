@@ -52,7 +52,7 @@
             <div class="md:w-[243px] lg:w-[224px] xl:w-[238px] order-2 md:order-2 lg:order-2 block">
                 <h3 class="font-grotesk font-bold text-16 leading-225 text-[#000] uppercase mb-[20px] xl:mb-[30px]">Informatie</h3>
                 <div class="grid">
-                     <a href="/support" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Support</a>
+                     <a href="/support" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Klantenservice</a>
                     <a href="/veelgestelde-vragen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Veelgestelde vragen</a>
                     <a href="/bestellen-en-versturen" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Bestellen & Versturen</a>
                     <a href="/retourneren-en-klachten" class="font-jakarta font-normal text-15 leading-26 xl:text-16 xl:leading-30 tracking-[0.02em] text-[#121212] w-fit">Retourneren & Klachten</a>
