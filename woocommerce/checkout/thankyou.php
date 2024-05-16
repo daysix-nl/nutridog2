@@ -56,7 +56,7 @@ defined( 'ABSPATH' ) || exit;
 											</div>
 											<div class="w-[297px] md:w-[450px] mx-auto mt-[30px] mb-[80px]">
 												<h2 class="text-center font-jakarta text-22 leading-30 font-extrabold text-[#000000]">Bedankt voor je aankoop!</h2>
-												<p class="text-center mt-[25px] font-jakarta font-medium text-15 leading-25 text-[#000000]">We gaan direct voor je aan de slag! Je kunt deze bestelling doorgaans de volgende werkdag verwachten. Naast onze reguliere orderbevestigingsmail ontvang je ook een track & trace code van PostNL. </p>
+												<p class="text-center mt-[25px] font-jakarta font-medium text-15 leading-25 text-[#000000]">We gaan direct voor je aan de slag! Je kunt deze bestelling doorgaans de volgende werkdag verwachten. Houd er rekening mee dat custom producten iets langer onderweg kunnen zijn. Naast onze reguliere orderbevestigingsmail ontvang je ook een track & trace code van PostNL. </p>
 											</div>
 										<!-- EIND 2 -->
 
