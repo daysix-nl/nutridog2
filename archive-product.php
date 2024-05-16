@@ -36,38 +36,41 @@ get_header( 'shop' ); ?>
         <div class="w-full max-w-[354px] md:max-w-[725px] lg:max-w-[898px] xl:max-w-[1082px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
             <?php
             // Haal de huidige slug op
-            $current_slug = $_SERVER['REQUEST_URI'];
+            $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            $parsed_url = parse_url($current_url);
+            $current_path = $parsed_url['path'];
+
 
             // Controleren of "producten" in de slug voorkomt
-            if ($current_slug === '/producten/')  { ?>
+            if ($current_path === '/producten/')  { ?>
              <!-- CATEGORIE SLIDER -->
-           <div class="col-span-2 md:col-span-3 lg:col-span-4">
-              
-                <div class="swiper mySwiper-categorie">
-                    <div class="flex items-center mb-[30px]">
-                        <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000] w-[283px] md:w-[auto]">Selecteer een categorie</h2>
-                        <div class="swiper-button-prev-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center ml-[30px] mr-[5px]">
-                            <svg class="rotate-[-180deg]" xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
-                            <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
-                                <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
-                                <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
-                            </g>
-                            </svg>
+            <div class="col-span-2 md:col-span-3 lg:col-span-4">
+                
+                    <div class="swiper mySwiper-categorie">
+                        <div class="flex items-center mb-[30px]">
+                            <h2 class="font-jakarta font-bold text-28 leading-28 text-[#000] w-[283px] md:w-[auto]">Selecteer een categorie</h2>
+                            <div class="swiper-button-prev-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center ml-[30px] mr-[5px]">
+                                <svg class="rotate-[-180deg]" xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
+                                <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
+                                    <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                    <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                </g>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
+                                <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
+                                    <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                    <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                </g>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="swiper-button-next-categorie bg-[#C2F0A0] rounded-full h-[33px] w-[33px] flex justify-center items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="9.264" height="12.657" viewBox="0 0 9.264 12.657">
-                            <g id="Group_82" data-name="Group 82" transform="translate(1.697 1.697)">
-                                <line id="Line_3" data-name="Line 3" x2="5.359" y2="2.436" transform="matrix(0.94, 0.342, -0.342, 0.94, 0.833, 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
-                                <line id="Line_4" data-name="Line 4" x2="5.359" y2="2.436" transform="matrix(-0.342, 0.94, -0.94, -0.342, 4.921, 4.227)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
-                            </g>
-                            </svg>
+                        <div class="swiper-wrapper max-h-[calc(113px+30px)] md:max-h-[calc(175px+30px)] lg:max-h-[calc(104px+30px)] xl:max-h-[calc(113px+30px)]">
+                            <?php  include get_template_directory() . '/componenten/categorie-slider.php'; ?>
                         </div>
-                    </div>
-                    <div class="swiper-wrapper max-h-[calc(113px+30px)] md:max-h-[calc(175px+30px)] lg:max-h-[calc(104px+30px)] xl:max-h-[calc(113px+30px)]">
-                        <?php  include get_template_directory() . '/componenten/categorie-slider.php'; ?>
-                    </div>
-                </div>        
-            </div>
+                    </div>        
+                </div>
                 <?php
             } else { ?>
            
