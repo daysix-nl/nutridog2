@@ -986,10 +986,6 @@ function custom_send_email_on_order_processing( $order_id ) {
 
 
 
-
-
-
-
 function gebruik_originele_afbeeldingen_in_zoekresultaten( $size ) {
     return 'full'; // Gebruik de volledige afbeelding
 }
