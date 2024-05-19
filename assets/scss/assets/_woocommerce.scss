@@ -1409,6 +1409,7 @@ span.page-numbers.current {
     .woo-variation-items-wrapper,
     .woocommerce-variation-price {
         display: none !important;
+        opacity: 0 !important;
     }
 
     .woocommerce-variation-add-to-cart {
