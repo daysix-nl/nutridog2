@@ -1402,3 +1402,16 @@ span.page-numbers.current {
         top: -40px !important;
     }
 }
+
+
+.postid-4699 {
+
+    .woo-variation-items-wrapper,
+    .woocommerce-variation-price {
+        display: none !important;
+    }
+
+    .woocommerce-variation-add-to-cart {
+        margin-top: 0px !important;
+    }
+}
