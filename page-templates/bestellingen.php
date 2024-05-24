@@ -66,7 +66,7 @@
                                                 foreach ( $refunds as $refund ) {
                                                     foreach ( $refund->get_items() as $refund_item ) {
                                                         if ( $refund_item->get_product_id() === $item->get_product_id() ) {
-                                                            $returned_quantity += $refund_item->get_quantity();
+                                                            $returned_quantity -= $refund_item->get_quantity();
                                                         }
                                                     }
                                                 }
