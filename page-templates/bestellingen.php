@@ -86,17 +86,21 @@
                                         <div class="grid grid-cols-2 pr-[50px] md:pr-[40px] xl:pr-[40px]">
                                             <div class="">Totaal</div>
                                             <div class="text-right"><?php echo  wc_price( $order->get_total() ) ?></div>
-                                            <?php 
+                                           <?php 
                                             $refunds = $order->get_refunds();
-                                                if ( $refunds ) {
-                                                    echo '<div>Retour</div>';
-                                                    echo '<ul class="text-right">';
-                                                    foreach ( $refunds as $refund ) {
-                                                        echo '<li>Retour ID #' . $refund->get_id() . ': -' . wc_price( $refund->get_amount() ) . ' <br>' . wc_price( $order->get_total() - $total_refund_amount ) . '</li>';
-                                                    }
-                                            
-                                                } 
+                                            if ( $refunds ) {
+                                                echo '<div>Retour</div>';
+                                                echo '<ul class="text-right">';
+                                                $total_refund_amount = 0; // Houd het totaalbedrag van de retouren bij
+                                                foreach ( $refunds as $refund ) {
+                                                    echo '<li>Retour ID #' . $refund->get_id() . ': ' . wc_price( $refund->get_amount() ) . '</li>';
+                                                    $total_refund_amount -= $refund->get_amount(); // Voeg het bedrag van elk retour toe aan het totaalbedrag
+                                                }
+                                                // Toon het totaalbedrag na de retour buiten de lus
+                                                echo '<li><strong>Totaal na retour:</strong> ' . wc_price( $order->get_total() - $total_refund_amount ) . '</li>';
+                                            } 
                                             ?>
+
                                         </div>
                                       <a href="/retour-aanvraag/?order_id=<?php echo $order->get_id(); ?>&email=<?php echo $order->get_billing_email(); ?>&products=" class="mt-[20px] underline block">Retour aanvragen</a>
 
