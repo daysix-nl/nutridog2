@@ -265,10 +265,17 @@
     //     display: none !important;
     // }
 
-    input,
-    textarea {
+    input {
         border: 1px solid #dedede !important;
         height: 53px !important;
+        padding-left: 10px !important;
+        box-shadow: none !important;
+        border-radius: 0px !important;
+    }
+
+
+    textarea {
+        border: 1px solid #dedede !important;
         padding-left: 10px !important;
         box-shadow: none !important;
         border-radius: 0px !important;
