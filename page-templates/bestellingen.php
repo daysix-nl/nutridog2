@@ -92,7 +92,7 @@
                                                     echo '<div>Retour</div>';
                                                     echo '<ul class="text-right">';
                                                     foreach ( $refunds as $refund ) {
-                                                        echo '<li>Retour ID #' . $refund->get_id() . ': ' . wc_price( $refund->get_amount() ) . '</li>';
+                                                        echo '<li>Retour ID #' . $refund->get_id() . ': -' . wc_price( $refund->get_amount() ) . ' <br>' . wc_price( $order->get_total() - $total_refund_amount ) . '</li>';
                                                     }
                                             
                                                 } 
