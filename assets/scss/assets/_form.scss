@@ -261,11 +261,12 @@
 }
 
 .nutriform {
-    label {
-        display: none !important;
-    }
+    // label {
+    //     display: none !important;
+    // }
 
-    input {
+    input,
+    textarea {
         border: 1px solid #dedede !important;
         height: 53px !important;
         padding-left: 10px !important;
@@ -327,4 +328,12 @@
     }
 
 
+}
+
+.gform_title {
+    display: none !important;
+}
+
+textarea::placeholder {
+    color: #BCBCBC !important;
 }

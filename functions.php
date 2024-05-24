@@ -990,3 +990,5 @@ function gebruik_originele_afbeeldingen_in_zoekresultaten( $size ) {
     return 'full'; // Gebruik de volledige afbeelding
 }
 add_filter( 'aws_image_size', 'gebruik_originele_afbeeldingen_in_zoekresultaten' );
+
+

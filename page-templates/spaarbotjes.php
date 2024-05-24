@@ -42,17 +42,48 @@
                         }
 
                         // Toon de punten transacties van de ingelogde gebruiker
-                        if ( $points_transactions ) {
-                            echo '<h2>Huidige saldo: ' . $total_balance . ' spaarbotjes</h2>';
-                            echo '<h3>Inkomende en uitgaande spaarbotjes:</h3>';
-                            echo '<ul>';
-                            foreach ( $points_transactions as $transaction ) {
-                                $points = $transaction['points'];
-                                $date = $transaction['date']; // Datum van de transactie
-                                $type = $points > 0 ? 'Inkomend' : 'Uitgaand';
-                                echo '<li>' . $type . ' - ' . abs( $points ) . ' spaarbotjes - Datum: ' . $date . '</li>';
-                            }
-                            echo '</ul>';
+                        if ( $points_transactions ) { ?>
+                          
+                            <div class="mt-[30px] bg-[#F2FBFF] rounded-[10px] flex justify-center items-center h-[200px] w-[390px]">
+                                <div class="text-center">
+                                    <p class="text-16 leading-28 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Jouw spaarbotjes</p>
+                                    <p class="text-36 leading-42 lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#019C46] uppercase "><?php echo $total_balance ?></p>
+                                </div>
+                            </div>
+                            <div class="mt-[30px]">
+                                <p class="">Hoe jij al je spaarbotjes hebt verzameld? Dat vind je hier.</p>
+                                <ul class="mt-[25px]">
+                                    <li class="grid grid-cols-3 pr-1">
+                                        <div class="text-14 leading-26 md:text-14 md:leading-25 lg:text-14 lg:leading-25 font-jakarta font-bold">Spaarbotjes</div>
+                                        <div class="text-14 leading-26 md:text-14 md:leading-25 lg:text-14 lg:leading-25 font-jakarta font-bold">Activiteit</div>
+                                        <div class="text-14 leading-26 md:text-14 md:leading-25 lg:text-14 lg:leading-25 font-jakarta font-bold text-right">Datum</div>
+                                    </li>
+                                    <hr class="my-1 border-[#DDDDDD]">
+                                    <?php 
+                                        foreach ( $points_transactions as $transaction ) {
+                                            $points = $transaction['points'];
+                                            $date = $transaction['date']; // Datum van de transactie
+                                            $type = $points > 0 ? 'Inkomend' : 'Uitgaand'; 
+
+                                            // Converteer de datum naar het gewenste formaat
+                                            $dateObject = new DateTime($date);
+                                            $formattedDate = $dateObject->format('d-m-Y');
+                                            ?>
+                                            <li class="grid grid-cols-3 pr-1">
+                                                <div class="text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal"><?php echo abs( $points ) ?></div>
+                                                <div class="text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal"><?php echo $type ?></div>
+                                                <div class="text-15 leading-26 md:text-15 md:leading-25 lg:text-15 lg:leading-25 font-jakarta font-normal uppercase text-right"><?php echo $formattedDate ?></div>
+                                            </li>
+                                            <hr class="my-1 border-[#DDDDDD]">
+                                            <?php
+                                        }
+                                    ?>
+
+                                </ul>
+                            </div>
+
+                            <?php
+                   
                         } else {
                             echo '<p>Geen spaarbotjes transacties gevonden.</p>';
                         }
