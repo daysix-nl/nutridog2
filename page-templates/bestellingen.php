@@ -93,7 +93,7 @@
                                                 echo '<ul class="text-right">';
                                                 $total_refund_amount = 0; // Houd het totaalbedrag van de retouren bij
                                                 foreach ( $refunds as $refund ) {
-                                                    echo '<li>Retour ID #' . $refund->get_id() . ': -' . wc_price( $refund->get_amount() ) . '</li>';
+                                                    echo '<li>Retour ID #' . $refund->get_id() . ': ' . wc_price( $refund->get_amount() ) . '</li>';
                                                     $total_refund_amount += $refund->get_amount(); // Voeg het bedrag van elk retour toe aan het totaalbedrag
                                                 }
                                                 // Bereken het totaalbedrag na de retouren
