@@ -90,9 +90,9 @@
                                             $refunds = $order->get_refunds();
                                                 if ( $refunds ) {
                                                     echo '<div>Retour</div>';
-                                                    echo '<ul>';
+                                                    echo '<ul class="text-right">';
                                                     foreach ( $refunds as $refund ) {
-                                                        echo '<li>#' . $refund->get_id() . ': ' . wc_price( $refund->get_amount() ) . '</li>';
+                                                        echo '<li>Retour ID #' . $refund->get_id() . ': ' . wc_price( $refund->get_amount() ) . '</li>';
                                                     }
                                             
                                                 } 
