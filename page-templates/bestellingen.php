@@ -58,11 +58,28 @@
                                                 $product = $item->get_product();
                                                 if ( ! $product ) {
                                                     continue;
-                                                } ?>
+                                                }
+
+                                                // Controleren op geretourneerde items
+                                                $returned_quantity = 0;
+                                                $refunds = $order->get_refunds();
+                                                foreach ( $refunds as $refund ) {
+                                                    foreach ( $refund->get_items() as $refund_item ) {
+                                                        if ( $refund_item->get_product_id() === $item->get_product_id() ) {
+                                                            $returned_quantity += $refund_item->get_quantity();
+                                                        }
+                                                    }
+                                                }
+
+                                                // Aangepaste hoeveelheid
+                                                $adjusted_quantity = $item->get_quantity() - $returned_quantity;
+                                            ?>
+
                                                 <li class="flex">
-                                                    <div class="w-[50px] text-left"><?php echo $item->get_quantity() ?> x</div>
+                                                    <div class="w-[50px] text-left"><?php echo $adjusted_quantity ?> x</div>
                                                     <div class=""><?php echo $product->get_name() ?></div>
                                                 </li>
+
                                             <?php } ?>
                                         </ul>
                                         <hr class="my-[20px]">
