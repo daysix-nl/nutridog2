@@ -155,7 +155,7 @@ if ( post_password_required() ) {
                 <div class="grid gap-[8px]">
                     <p id="productprice" class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
                     <?php if (get_field('aangepast_levertijd') === "yes"): ?>   
-                        <p class="text-12 leading-17 font-jakarta text-[#039c47]"><?php echo get_field('levertijd_opmerking');?></p>
+                        <p class="text-14 leading-25 font-jakarta text-[#039c47]"><?php echo get_field('levertijd_opmerking');?></p>
                     <?php endif; ?>
                 </div>
                 <div class="">
