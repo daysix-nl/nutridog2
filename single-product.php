@@ -152,8 +152,14 @@ if ( post_password_required() ) {
                     </div>
                     
                 </div>
-                <div class="">
+                <div class="grid gap-[8px]">
                     <p id="productprice" class="font-jakarta text-25 leading-30 text-[#000000] font-extrabold"><?php echo $product->get_price_html(); ?></p>
+                    <?php if (get_field('aangepast_levertijd') === "yes"): ?>   
+                    <div class="">
+                        <p class="text-11 leading-15 font-jakarta font-bold text-[#FF6248]">Opmerking levertijd</p>
+                        <p class="text-11 leading-15 font-jakarta text-[#FF6248]"><?php echo get_field('levertijd_opmerking');?></p>
+                    </div>
+                    <?php endif; ?>
                 </div>
                 <div class="">
                     <a href="#info" class="preview-info nohtml line-clamp-6 md:line-clamp-3 text-[#525252] text-14 leading-25 font-jakarta"><?php echo get_the_content();?></a>
@@ -271,11 +277,19 @@ if ( post_password_required() ) {
                                 $resultaat = floor($verkoopprijs / 1); ?>
                                 <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij dit product ontvang je <?php if ($product->is_type('variable')) { echo "minimaal"; }?> <?php echo $resultaat ?> <a href="/spaar-voorwaarden/" class="underline">spaarbotjes</a></p>
                             </div>
+                            <?php if (get_field('aangepast_levertijd') !== "yes"): ?>   
                             <div class="flex items-start">
                                 <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
                                     <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                                 </svg>
                                 <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Voor 17:00 besteld de volgende werkdag in huis</p>
+                            </div>
+                            <?php endif; ?>
+                            <div class="flex items-start">
+                                <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
+                                    <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Gratis verzending vanaf 50 euro</p>
                             </div>
                         </div>
                         <!-- PRODUCT TOEVOEGEN -->

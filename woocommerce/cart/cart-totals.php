@@ -221,7 +221,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="w-full grid gap-[15px] mt-4">
                             <!-- USP'S -->
                             <div class="flex items-start">
-                                <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
+                                <svg class="mt-[4px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
                                     <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                                 </svg>
                                 <?php
@@ -236,13 +236,13 @@ defined( 'ABSPATH' ) || exit;
                                     $verkoopprijs = wc_format_decimal($cart_subtotal - $cart_discount_total, 2); // Subtotaal minus korting
                                     $resultaat = floor($verkoopprijs / 1); // Rond de prijs af
                                 ?>
-                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2 block">Bij deze order ontvang je <?php echo $resultaat ?> <a href="/spaar-voorwaarden/" class="underline">spaarbotjes</a></p>
+                                <p class="text-[#525252] text-14 leading-17 font-jakarta w-full ml-2 block">Log in of maak een account aan en ontvang <?php echo $resultaat ?> <a href="/spaar-voorwaarden/" class="underline">spaarbotjes</a></p>
                             </div>
                             <div class="flex items-start">
                                 <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
                                     <path id="Path_202" data-name="Path 202" d="M8331.749,406.758l-7.468,7.367-3.4-3.4" transform="translate(-8319.466 -405.343)" fill="none" stroke="#8cc63f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                                 </svg>
-                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Voor 17:00 besteld de volgende werkdag in huis</p>
+                                <p class="text-[#525252] text-14 leading-14 font-jakarta w-full ml-2">Gratis verzending vanaf 50 euro</p>
                             </div>
                         </div>
 			<hr class="border-[#DDDDDD] my-[30px]">
