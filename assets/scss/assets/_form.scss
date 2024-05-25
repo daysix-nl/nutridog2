@@ -265,9 +265,15 @@
 }
 
 .nutriform {
-    // label {
-    //     display: none !important;
-    // }
+    label {
+        display: none !important;
+    }
+
+    .labeltrue {
+        label {
+            display: block !important;
+        }
+    }
 
     input {
         border: 1px solid #dedede !important;
