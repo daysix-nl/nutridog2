@@ -64,7 +64,7 @@
                         // Toon de punten transacties van de ingelogde gebruiker
                         if ( $points_transactions ) { ?>
                           
-                            <div class="mt-[30px] bg-[#F2FBFF] rounded-[10px] flex justify-center items-center h-[200px] w-[390px]">
+                            <div class="mt-[30px] bg-[#F2FBFF] rounded-[10px] flex justify-center items-center h-[200px] w-[360px]">
                                 <div class="text-center">
                                     <p class="text-16 leading-28 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Jouw spaarbotjes</p>
                                     <p class="text-36 leading-42 lg:text-36 lg:leading-42 tracking-[0.07em] font-grotesk text-[#019C46] uppercase "><?php echo $total_balance ?></p>
