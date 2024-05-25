@@ -17,7 +17,27 @@
             <?php include get_template_directory() . '/componenten/login.php'; ?>
         <?php
     } else { ?>
-        
+        <?php
+        // Controleren of er een HTTP-referer is ingesteld
+        if(isset($_SERVER['HTTP_REFERER'])) {
+            // URL van de vorige pagina ophalen
+            $referer_url = $_SERVER['HTTP_REFERER'];
+            
+            // Controleren of de vorige pagina een interne pagina is
+            if(strpos($referer_url, home_url()) !== false) {
+                // Als het een interne pagina is, weergeef de stap-terugknop
+                ?>
+                <div class="container xl:px-[60px] mt-[30px] mb-[-20px] md:mb-[-25px] lg:mb-[-35px] xl:mb-[-40px]">
+                    <a href="javascript:history.back()" class="back-button mb-[20px] block underline font-jakarta font-semibold text-[#626262] text-15 xl:text-16">Stap terug</a>
+                </div>
+                <?php
+            }
+        }
+        else { ?>
+            
+            <?php
+        }
+    ?>
         <div class="container pb-[70px] lg:pb-[90px] xl:pb-[100px] pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px] flex justify-between xl:px-[60px]">
             <div class="w-[322px] hidden lg:block">
                  <?php include get_template_directory() . '/componenten/account-navbar.php'; ?>

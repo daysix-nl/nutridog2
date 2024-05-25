@@ -48,8 +48,20 @@
                         echo 'Inloggen';
                     }
                     ?></span></h2>
-                    <!-- <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[360px]">Dit is de plek waar je alle relevante informatie over je bestellingen kan vinden.</p> -->
-                    <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[410px]">Dit gedeelte is momenteel nog in ontwikkeling. Binnenkort zal hier alle relevante informatie over je bestellingen beschikbaar zijn.</p>
+                    <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[360px]">Dit is de plek waar je alle relevante informatie over je bestellingen kan vinden.</p>
+                    <!-- <p class="text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] lg:mt-[15px] max-w-[410px]">Dit is de plek waar je alle relevante informatie over je bestellingen kan vinden.</p> -->
+                    <!-- BESTELLINGEN -->
+                    <div class="mt-[50px]">
+                        <h2 class="font-jakarta font-bold text-22 leading-30">Bestellingen</h2>
+                        <p class="text-[#525252] text-14 leading-25 font-jakarta mt-[4px]">Alle details over je laatste bestellingen.</p>
+                        <a href="/account/bestellingen/" class="text-[#525252] text-14 leading-25 font-jakarta underline mt-[10px]">Bekijk al je bestellingen</a>
+                    </div>
+                    <!-- SPAARBOTJES -->
+                    <div class="mt-[50px]">
+                        <h2 class="font-jakarta font-bold text-22 leading-30">Spaarbotjes</h2>
+                        <p class="text-[#525252] text-14 leading-25 font-jakarta mt-[4px]">Benieuwd hoeveel spaarbotjes je hebt verzameld?</p>
+                        <a href="/account/spaarbotjes/" class="text-[#525252] text-14 leading-25 font-jakarta underline mt-[10px]">Bekijk al je spaarbotjes</a>
+                    </div>
                 </div>
             </div>
         </div>
