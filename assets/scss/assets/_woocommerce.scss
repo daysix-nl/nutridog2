@@ -720,6 +720,10 @@ ins {
             order: 2 !important;
         }
 
+        .postcode-eu-autofill {
+            order: 3 !important;
+        }
+
         #billing_phone_field,
         #shipping_phone_field {
             width: 100% !important;
@@ -771,6 +775,10 @@ ins {
             #shipping_last_name_field {
                 width: 65% !important;
                 order: 2 !important;
+            }
+
+            .postcode-eu-autofill {
+                order: 3 !important;
             }
 
             #billing_phone_field,
@@ -1023,6 +1031,10 @@ ins {
             order: 2 !important;
         }
 
+        .postcode-eu-autofill {
+            order: 3 !important;
+        }
+
         #billing_phone_field,
         #shipping_phone_field {
             width: 100% !important;
@@ -1074,6 +1086,10 @@ ins {
             #shipping_last_name_field {
                 width: 65% !important;
                 order: 2 !important;
+            }
+
+            .postcode-eu-autofill {
+                order: 3 !important;
             }
 
             #billing_phone_field,
@@ -1422,4 +1438,43 @@ span.page-numbers.current {
     font-family: Plus Jakarta Sans, sans-serif !important;
     color: #000 !important;
     font-weight: 700 !important;
+}
+
+div.postcode-eu-autofill {
+    width: 100% !important;
+}
+
+.postcode-eu-autofill-address {
+    padding: 20px;
+    font-size: 14px !important;
+    background-color: #f9f9f9 !important;
+}
+
+#billing_postcodeEuAutofillNlPostcode_field,
+#shipping_postcodeEuAutofillNlPostcode_field {
+    width: 100% !important;
+}
+
+#billing_postcodeEuAutofillNlHouseNumberWithAddition_field,
+#shipping_postcodeEuAutofillNlHouseNumberWithAddition_field {
+    width: 100% !important;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #billing_postcodeEuAutofillNlPostcode_field,
+    #shipping_postcodeEuAutofillNlPostcode_field {
+        width: 35% !important;
+    }
+
+    #billing_postcodeEuAutofillNlHouseNumberWithAddition_field,
+    #shipping_postcodeEuAutofillNlHouseNumberWithAddition_field {
+        width: 65% !important;
+    }
+
+
+}
+
+.postcode-eu-address-validation-warning {
+    font-size: 10px !important;
 }
