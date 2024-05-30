@@ -68,55 +68,67 @@
         </g>
         </svg>
     </section>
-    <!-- KORTING -->
+
+    <!-- AANBIEDINGEN -->
     <section>
-        <div class="container lg:flex justify-between xl:px-[40px] mt-[50px] lg:mt-[90px]">
-            <div class="lg:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
-                <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Slim shoppen</h3>
-                <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-34 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
-                <p class="text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px] xl:max-w-[230px]">Ondek onze week- en seizoensaanbiedingen.</p>
+        <div class="mt-[50px] lg:mt-[90px] lg:flex">
+            <div class="w-[360px] md:w-[718px] mx-auto lg:w-[unset] lg:mx-[unset] pl-[unset] lg:pl-[calc(50vw-555px)] xl:pl-[calc(50vw-600px)]">
+                <div class="lg:w-[325px] mb-[15px] md:mb-[30px] lg:mb-[unset]">
+                    <h3 class="text-center md:text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">Slim shoppen</h3>
+                    <h2 class="text-center md:text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-34 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Voor mooie prijzen</h2>
+                    <p class="text-center md:text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px] xl:max-w-[230px]">Ondek onze week- en seizoensaanbiedingen.</p>
+                </div>
             </div>
-            <div class="lg:w-[757px] xl:w-[892px] grid grid-cols-2 md:grid-cols-3 gap-x-[15px] gap-y-[30px] lg:gap-x-[15px] ld:gap-y-[40px] items-start h-fit">
-                <?php
-                    $args = array(
-                        'post_type' => 'product',
-                        'posts_per_page' => 4, 
-                        'meta_query'     => array(
-                        'relation' => 'AND',
-                        array(
-                            'key'     => '_sale_price',
-                            'value'   => '',
-                            'compare' => '!=', // Check of er een verkoopprijs is ingesteld
-                            'type'    => 'NUMERIC',
-                        ),
-                        array(
-                            'key'     => '_regular_price',
-                            'value'   => 0,
-                            'compare' => '>',
-                            'type'    => 'NUMERIC',
-                        ),
-                    ),
-                    'orderby' => 'rand', // Willekeurige volgorde
-                    );
-                    $products_query = new WP_Query($args);
-                    if ($products_query->have_posts()) :
-                        while ($products_query->have_posts()) : $products_query->the_post();
-                    $product = wc_get_product(get_the_ID());
-                    ?>
-                    <div class="md:last-of-type:hidden">
-                        <?php include get_template_directory() . '/componenten/product-item.php'; ?>
+            <div class="w-full lg:w-[calc(50vw+281px)] xl:w-[calc(50vw+281px)]">
+                <div class="swiper mySwiper-aanbiedingen pl-[calc(50vw-180px)] md:pl-[calc(50vw-359px)] pr-[15px] lg:pl-[unset] lg:pr-[unset]">
+                    <div class="swiper-wrapper ">
+                        <?php
+                            $args = array(
+                                'post_type' => 'product',
+                                'posts_per_page' => 20, 
+                                'meta_query'     => array(
+                                'relation' => 'AND',
+                                array(
+                                    'key'     => '_sale_price',
+                                    'value'   => '',
+                                    'compare' => '!=', // Check of er een verkoopprijs is ingesteld
+                                    'type'    => 'NUMERIC',
+                                ),
+                                array(
+                                    'key'     => '_regular_price',
+                                    'value'   => 0,
+                                    'compare' => '>',
+                                    'type'    => 'NUMERIC',
+                                ),
+                            ),
+                            'orderby' => 'rand', // Willekeurige volgorde
+                            );
+                            $products_query = new WP_Query($args);
+                            if ($products_query->have_posts()) :
+                                while ($products_query->have_posts()) : $products_query->the_post();
+                            $product = wc_get_product(get_the_ID());
+                            ?>
+                            <div class="swiper-slide w-[220px] md:w-[280px]">
+                                <?php include get_template_directory() . '/componenten/product-item.php'; ?>
+                            </div>
+                            
+                            <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        else :
+                            echo 'Geen kortingen gevonden';
+                        endif;
+                        ?>
                     </div>
-                    <?php
-                    endwhile;
-                    wp_reset_postdata();
-                else :
-                    echo 'Geen kortingen gevonden';
-                endif;
-                ?>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
+            
+
         </div>
     </section>
 
+    
     <!-- CATEGORIEN -->
     <section>
         <h2 class="text-center text-32 leading-32 max-w-[304px] md:max-w-[unset] lg:text-40 lg:leading-40 font-grotesk text-[#FF6248] mt-[50px] lg:mt-[90px] mx-auto uppercase">Shop op categorie</h2>

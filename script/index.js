@@ -12,6 +12,32 @@ try {
 }
 
 try {
+  var swiperAanbiedingen = new Swiper(".mySwiper-aanbiedingen", {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+      },
+      1352: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+      },
+    },
+  });
+} catch (error) {
+  console.error(error);
+}
+
+
+
+
+try {
   var swiperShop = new Swiper(".mySwiper-categorie", {
     slidesPerView: 3,
     loop: false,
@@ -358,7 +384,6 @@ try {
 
   });
 } catch (error) { }
-
 
 
 
