@@ -1495,3 +1495,11 @@ div.postcode-eu-autofill {
     float: none;
     vertical-align: top;
 }
+
+.woosb-products .woosb-product {
+    display: flex;
+    align-items: start !important;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px dotted #e5e5e5;
+}
