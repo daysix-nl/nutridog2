@@ -1507,3 +1507,16 @@ div.postcode-eu-autofill {
 .woosb-products .woosb-product .woosb-thumb {
     display: none !important;
 }
+
+.woosb-item-product {
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: #525252 !important;
+    border-bottom: 0px dotted #e5e5e5 !important;
+}
+
+.woosb-products {
+    border-width: 0px 0 0 0 !important;
+    border-style: dotted;
+    border-color: #e5e5e5;
+}
