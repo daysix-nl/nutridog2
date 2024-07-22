@@ -257,7 +257,7 @@ if ( post_password_required() ) {
                     <?php
                         } else { ?>
                             <!-- INFORMATIE -->
-                        <div id="usps" class="w-full grid gap-[15px] mt-4">
+                        <div id="usps" class="w-full grid gap-[15px] mt-4 <?php echo get_field('toon_usps');?>">
                             <!-- USP'S -->
                             <div class="flex items-start">
                                 <svg class="mt-[2px] w-[13.697px]" xmlns="http://www.w3.org/2000/svg" width="13.697" height="9.781" viewBox="0 0 13.697 9.781">
