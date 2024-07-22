@@ -2033,6 +2033,10 @@ video {
     margin-top: 35px;
   }
 
+  .md\:mt-\[3px\] {
+    margin-top: 3px;
+  }
+
   .md\:mt-\[40px\] {
     margin-top: 40px;
   }
@@ -2435,6 +2439,10 @@ video {
     font-size: 16px;
   }
 
+  .md\:text-18 {
+    font-size: 18px;
+  }
+
   .md\:text-20 {
     font-size: 20px;
   }
@@ -2600,6 +2608,10 @@ video {
 
   .lg\:mr-\[unset\] {
     margin-right: unset;
+  }
+
+  .lg\:mt-\[10px\] {
+    margin-top: 10px;
   }
 
   .lg\:mt-\[15px\] {
@@ -3106,6 +3118,10 @@ video {
     font-size: 20px;
   }
 
+  .lg\:text-30 {
+    font-size: 30px;
+  }
+
   .lg\:text-36 {
     font-size: 36px;
   }
@@ -3148,6 +3164,10 @@ video {
 
   .lg\:leading-34 {
     line-height: 34px;
+  }
+
+  .lg\:leading-36 {
+    line-height: 36px;
   }
 
   .lg\:leading-40 {
