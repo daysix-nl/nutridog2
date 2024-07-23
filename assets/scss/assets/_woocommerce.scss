@@ -597,7 +597,7 @@ p.out-of-stock {
     width: 100% !important;
 
     li {
-        width: 30% !important;
+        width: 32% !important;
         font-size: 10px !important;
         font-family: Plus Jakarta Sans, sans-serif !important;
         color: #525252 !important;
@@ -612,19 +612,19 @@ p.out-of-stock {
 
         // MD
         @media (min-width: 768px) {
-            width: 30% !important;
+            width: 32% !important;
             font-size: 11px !important;
         }
 
         // LG
         @media (min-width: 1200px) {
-            width: 23% !important;
+            width: 24% !important;
             font-size: 11px !important;
         }
 
         // XL
         @media (min-width: 1352px) {
-            width: 23% !important;
+            width: 24% !important;
             font-size: 11px !important;
         }
 
