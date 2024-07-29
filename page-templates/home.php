@@ -372,7 +372,7 @@
                 <a href="/producten/merk-trixie/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-trixie_v2.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-district-70/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo_district70.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-kong/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-kong.png" alt="" class="merklogo"></a>
-                <a href="/producten/merk-vets-best/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-vetsbest.png" alt="" class="merklogo"></a>
+                <a href="/producten/merk-farm-food/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/farmfood.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-beaphar/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-beaphar.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-greenfields/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo_greenfields.png" alt="" class="merklogo"></a>
                 <a href="/producten/merk-lilys-kitchen/" class="w-full h-[50px] flex justify-center items-center"><img src="/wp-content/themes/nutridog2/img/local/logo-lilys.png" alt="" class="merklogo"></a>
