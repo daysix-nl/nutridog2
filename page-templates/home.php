@@ -423,7 +423,7 @@
                         </div>
                         <div class="absolute top-0 right-[30px] lg:right-0 lg:left-0 bottom-[40px]">
                             <div class="w-full h-full flex items-center">
-                                <img src="/wp-content/themes/nutridog2/img/local/img2.png" alt="" class="w-auto h-[325px] lg:h-[360px] xl:h-[432px] ml-[40px]">
+                                <img src="/wp-content/themes/nutridog2/img/local/inthespotlights_001.png" alt="" class="w-auto h-[325px] lg:h-[360px] xl:h-[432px] ml-[40px]">
                             </div>
                         </div>
                     </div>
@@ -431,9 +431,9 @@
                 <div class="flex lg:justify-center mt-[30px] lg:mt-[unset]">
                     <div class="w-full max-w-[300px] lg:max-w-[365px] xl:max-w-[395px]">
                         <h3 class="text-left text-15 leading-16 md:text-16 md:leading-28 tracking-[0.1em] font-jakarta italic uppercase">In de spotlight</h3>
-                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-34 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Renske <span class="text-[#2A813B]">verse zalm (graanvrij)</span></h2>
-                        <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Super premium droogvoeding</p>
-                        <a href="/producten/renske-super-premium-adult-zalm-graanvrij/" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Shop nu</a>
+                        <h2 class="text-left text-26 leading-24 md:text-32 md:leading-30 md:max-w-[510px] lg:max-w-[unset] lg:text-36 lg:leading-34 font-grotesk text-[#FF91C8] uppercase mt-[10px] md:mt-[15px]">Farm food <span class="text-[#2A813B]">natuurlijke hondenvoeding</span></h2>
+                        <p class="text-left text-15 leading-26 md:text-15 md:leading-25 lg:text-18 lg:leading-30 font-jakarta font-medium mt-[10px] md:mt-[15px] lg:mt-[25px]">Vrij van kunstmatige geurstoffen, kleurstoffen en smaakstoffen.</p>
+                        <a href="/producten/merk-farm-food/" class="btn font-jakarta text-15 leading-40 lg:text-20 lg:leading-40 h-[38px] lg:h-[50px] z-[5] w-fit px-[30px] block mt-[30px]">Shop nu</a>
                     </div>
                 </div>
             </div>
