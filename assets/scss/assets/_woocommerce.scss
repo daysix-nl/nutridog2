@@ -1612,15 +1612,11 @@ div.postcode-eu-autofill {
         border-radius: 0px !important;
     }
 
-    #add_payment_method #payment div.payment_box::before,
-    .woocommerce-cart #payment div.payment_box::before,
-    .woocommerce-checkout #payment div.payment_box::before {
+    #payment div.payment_box::before {
         display: none !important;
     }
 
-    #add_payment_method #payment div.payment_box,
-    .woocommerce-cart #payment div.payment_box,
-    .woocommerce-checkout #payment div.payment_box {
+    #payment div.payment_box {
         background-color: #ffffff !important;
 
     }
