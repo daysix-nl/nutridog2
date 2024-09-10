@@ -1600,4 +1600,36 @@ div.postcode-eu-autofill {
     .woocommerce input#email {
         height: 53px !important;
     }
+
+    .payment_method_buckaroo_afterpaynew,
+    .payment_method_buckaroo_paypal {
+        display: none !important;
+    }
+
+    #add_payment_method #payment,
+    .woocommerce-cart #payment,
+    .woocommerce-checkout #payment {
+        background: #ffffff !important;
+        border-radius: 0px !important;
+    }
+
+    #add_payment_method #payment div.payment_box::before,
+    .woocommerce-cart #payment div.payment_box::before,
+    .woocommerce-checkout #payment div.payment_box::before {
+        display: none !important;
+    }
+
+    #add_payment_method #payment div.payment_box,
+    .woocommerce-cart #payment div.payment_box,
+    .woocommerce-checkout #payment div.payment_box {
+        background-color: #ffffff !important;
+
+    }
+
+    #payment select {
+        height: 52px !important;
+        border: 1px solid #dedede !important;
+        min-width: 306px !important;
+        margin-top: 10px !important;
+    }
 }
