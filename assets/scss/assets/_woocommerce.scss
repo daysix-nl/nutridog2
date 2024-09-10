@@ -1564,3 +1564,36 @@ div.postcode-eu-autofill {
     position: absolute !important;
     top: -45px !important;
 }
+
+
+.woocommerce-order-pay {
+    main {
+        background: #F6FAFC !important;
+    }
+
+    .woocommerce {
+        max-width: 410px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .woocommerce table.shop_table td {
+        text-align: left !important;
+    }
+
+    .woocommerce table.shop_table strong {
+        font-weight: 400 !important;
+    }
+
+    .woocommerce table.shop_table th,
+    .woocommerce table.shop_table td {
+
+        font-size: 10px !important;
+        line-height: 23px !important;
+
+    }
+}
