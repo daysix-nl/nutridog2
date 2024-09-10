@@ -1606,9 +1606,8 @@ div.postcode-eu-autofill {
         display: none !important;
     }
 
-    #add_payment_method #payment,
-    .woocommerce-cart #payment,
-    .woocommerce-checkout #payment {
+
+    #payment {
         background: #ffffff !important;
         border-radius: 0px !important;
     }
