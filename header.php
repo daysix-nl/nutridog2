@@ -130,7 +130,7 @@
             <span></span>
         </button>
         <a href="/producten" class="font-jakarta font-normal text-black text-15 leading-15 hidden md:flex items-center hide-in-menu">Assortiment</a>
-        <a href="/producten/seizoen-voorjaar-or-zomer/" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Zomer</a>
+        <a href="/producten/seizoen-herfst-or-winter/" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Herfst</a>
         <a href="/producten/aanbieding-yes/" class="font-jakarta font-normal text-black text-15 leading-15 hidden lg:block">Aanbiedingen</a>
     </div>
     <a href="/" class="flex justify-center w-[143.448px] mx-auto">
