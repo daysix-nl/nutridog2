@@ -1092,9 +1092,14 @@ function show_margin_alert() {
     ];
     $query = new WP_Query($args);
 
-    $low_margin_count = 0;
-    $very_low_margin_count = 0;
-    $critical_margin_count = 0;
+    // Initialiseer de tellers
+    $low_margin_count = 0;         // Tussen 10% en 20%
+    $mid_margin_count = 0;         // Tussen 20% en 50%
+    $high_margin_count = 0;        // Tussen 50% en 100%
+    $very_high_margin_count = 0;   // Tussen 100% en 200%
+    $critical_high_margin_count = 0; // Meer dan 200%
+    $very_low_margin_count = 0;    // Tussen 1% en 10%
+    $critical_margin_count = 0;    // Onder 1%
 
     if ($query->have_posts()) {
         while ($query->have_posts()) {
@@ -1111,13 +1116,19 @@ function show_margin_alert() {
                 if ($b2b_price > 0 && $effective_price > 0) {
                     $margin = (($effective_price - $b2b_price) / $b2b_price) * 100;
 
-                    if ($margin < 20) {
+                    if ($margin >= 10 && $margin < 20) {
                         $low_margin_count++;
-                    }
-                    if ($margin < 10) {
+                    } elseif ($margin >= 20 && $margin < 50) {
+                        $mid_margin_count++;
+                    } elseif ($margin >= 50 && $margin < 100) {
+                        $high_margin_count++;
+                    } elseif ($margin >= 100 && $margin < 200) {
+                        $very_high_margin_count++;
+                    } elseif ($margin >= 200) {
+                        $critical_high_margin_count++;
+                    } elseif ($margin >= 1 && $margin < 10) {
                         $very_low_margin_count++;
-                    }
-                    if ($margin < 1) {
+                    } elseif ($margin < 1) {
                         $critical_margin_count++;
                     }
                 }
@@ -1127,13 +1138,21 @@ function show_margin_alert() {
     }
 
     // Toon de melding
-    if ($low_margin_count > 0 || $very_low_margin_count > 0 || $critical_margin_count > 0) {
+    if (
+        $low_margin_count > 0 || $mid_margin_count > 0 || $high_margin_count > 0 ||
+        $very_high_margin_count > 0 || $critical_high_margin_count > 0 ||
+        $very_low_margin_count > 0 || $critical_margin_count > 0
+    ) {
         echo '<div class="notice notice-warning is-dismissible">';
         echo '<p><strong>Marge-informatie:</strong></p>';
         echo '<ul>';
-        echo '<li>Producten met een marge < 20%: ' . $low_margin_count . '</li>';
-        echo '<li>Producten met een marge < 10%: ' . $very_low_margin_count . '</li>';
-        echo '<li>Producten met een marge < 1%: ' . $critical_margin_count . '</li>';
+        echo '<li>Producten met een marge onder 1%: ' . $critical_margin_count . '</li>';
+        echo '<li>Producten met een marge tussen 1% en 10%: ' . $very_low_margin_count . '</li>';
+        echo '<li>Producten met een marge tussen 10% en 20%: ' . $low_margin_count . '</li>';
+        echo '<li>Producten met een marge tussen 20% en 50%: ' . $mid_margin_count . '</li>';
+        echo '<li>Producten met een marge tussen 50% en 100%: ' . $high_margin_count . '</li>';
+        echo '<li>Producten met een marge tussen 100% en 200%: ' . $very_high_margin_count . '</li>';
+        echo '<li>Producten met een marge groter dan 200%: ' . $critical_high_margin_count . '</li>';
         echo '</ul>';
         echo '</div>';
     }
