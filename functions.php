@@ -1015,7 +1015,7 @@ function show_custom_columns($column, $post_id) {
             // Toon de inkoopprijs
             echo sprintf('€ %.2f', $b2b_price);
         } else {
-            echo __('Geen inkoopprijs', 'day-six');
+            echo __('', 'day-six');
         }
     }
 
@@ -1037,7 +1037,7 @@ function show_custom_columns($column, $post_id) {
             // Toon de marge met 2 decimalen
             echo sprintf('%.2f%%', $margin);
         } else {
-            echo __('Geen inkoopprijs', 'day-six');
+            echo __('', 'day-six');
         }
     }
 }
