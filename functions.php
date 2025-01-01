@@ -992,3 +992,79 @@ function gebruik_originele_afbeeldingen_in_zoekresultaten( $size ) {
 add_filter( 'aws_image_size', 'gebruik_originele_afbeeldingen_in_zoekresultaten' );
 
 
+
+
+
+// Voeg kolommen toe aan het productoverzicht in de WooCommerce backend
+add_filter('manage_edit-product_columns', 'add_custom_columns', 10);
+function add_custom_columns($columns) {
+    $columns['product_cost_price'] = __('Inkoopprijs', 'day-six');
+    $columns['product_margin'] = __('Marge %', 'day-six');
+    return $columns;
+}
+
+// Vul de kolommen met gegevens
+add_action('manage_product_posts_custom_column', 'show_custom_columns', 10, 2);
+function show_custom_columns($column, $post_id) {
+    if ($column === 'product_cost_price') {
+        // Haal de inkoopprijs op (eigenschap 'b2b')
+        $b2b_price = get_post_meta($post_id, 'b2b_price', true);
+        $b2b_price = floatval($b2b_price);
+
+        if ($b2b_price > 0) {
+            // Toon de inkoopprijs
+            echo sprintf('€ %.2f', $b2b_price);
+        } else {
+            echo __('Geen inkoopprijs', 'day-six');
+        }
+    }
+
+    if ($column === 'product_margin') {
+        // Haal de inkoopprijs op
+        $b2b_price = get_post_meta($post_id, 'b2b_price', true);
+        $b2b_price = floatval($b2b_price);
+
+        if ($b2b_price > 0) {
+            // Haal de reguliere verkoopprijs op
+            $regular_price = floatval(get_post_meta($post_id, '_regular_price', true));
+            // Controleer of er een kortingsprijs actief is
+            $sale_price = floatval(get_post_meta($post_id, '_sale_price', true));
+            $effective_price = $sale_price > 0 ? $sale_price : $regular_price;
+
+            // Bereken de marge
+            $margin = (($effective_price - $b2b_price) / $b2b_price) * 100;
+
+            // Toon de marge met 2 decimalen
+            echo sprintf('%.2f%%', $margin);
+        } else {
+            echo __('Geen inkoopprijs', 'day-six');
+        }
+    }
+}
+
+// Maak de kolommen sorteerbaar
+add_filter('manage_edit-product_sortable_columns', 'make_custom_columns_sortable');
+function make_custom_columns_sortable($columns) {
+    $columns['product_cost_price'] = 'product_cost_price';
+    $columns['product_margin'] = 'product_margin';
+    return $columns;
+}
+
+// Voeg sorting-functionaliteit toe
+add_action('pre_get_posts', 'sort_custom_columns');
+function sort_custom_columns($query) {
+    if (!is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->get('orderby') === 'product_cost_price') {
+        $query->set('meta_key', 'b2b_price');
+        $query->set('orderby', 'meta_value_num');
+    }
+
+    if ($query->get('orderby') === 'product_margin') {
+        // Omdat marge een berekende waarde is, sorteren we voorlopig op inkoopprijs als alternatief.
+        $query->set('meta_key', 'b2b_price');
+        $query->set('orderby', 'meta_value_num');
+    }
+}
