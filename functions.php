@@ -992,6 +992,11 @@ function gebruik_originele_afbeeldingen_in_zoekresultaten( $size ) {
 add_filter( 'aws_image_size', 'gebruik_originele_afbeeldingen_in_zoekresultaten' );
 
 
+
+
+
+
+
 // Voeg kolommen toe aan het productoverzicht in de WooCommerce backend
 add_filter('manage_edit-product_columns', 'add_custom_columns', 10);
 function add_custom_columns($columns) {
@@ -1007,17 +1012,15 @@ function show_custom_columns($column, $post_id) {
         $product = wc_get_product($post_id);
 
         if ($product->is_type('variable')) {
-            // Voor variabele producten
             echo __('Variabel', 'day-six');
         } else {
-            // Voor eenvoudige producten
             $b2b_price = get_post_meta($post_id, 'b2b_price', true);
             $b2b_price = floatval($b2b_price);
 
             if ($b2b_price > 0) {
                 echo sprintf('€ %.2f', $b2b_price);
             } else {
-                echo __('Geen inkoopprijs', 'day-six');
+                echo __('', 'day-six');
             }
         }
     }
@@ -1026,10 +1029,8 @@ function show_custom_columns($column, $post_id) {
         $product = wc_get_product($post_id);
 
         if ($product->is_type('variable')) {
-            // Voor variabele producten
             echo __('Variabel', 'day-six');
         } else {
-            // Voor eenvoudige producten
             $b2b_price = floatval(get_post_meta($post_id, 'b2b_price', true));
 
             if ($b2b_price > 0) {
@@ -1040,7 +1041,7 @@ function show_custom_columns($column, $post_id) {
                 $margin = (($effective_price - $b2b_price) / $b2b_price) * 100;
                 echo sprintf('%.2f%%', $margin);
             } else {
-                echo __('Geen inkoopprijs', 'day-six');
+                echo __('', 'day-six');
             }
         }
     }
@@ -1050,7 +1051,7 @@ function show_custom_columns($column, $post_id) {
 add_filter('manage_edit-product_sortable_columns', 'make_custom_columns_sortable');
 function make_custom_columns_sortable($columns) {
     $columns['product_cost_price'] = 'product_cost_price';
-    $columns['product_margin'] = 'product_margin';
+    $columns['product_margin'] = 'b2b_price'; // Gebruik inkoopprijs voor sorteren
     return $columns;
 }
 
@@ -1066,8 +1067,7 @@ function sort_custom_columns($query) {
         $query->set('orderby', 'meta_value_num');
     }
 
-    if ($query->get('orderby') === 'product_margin') {
-        // Voorlopig sorteren op inkoopprijs, omdat marge dynamisch is.
+    if ($query->get('orderby') === 'b2b_price') {
         $query->set('meta_key', 'b2b_price');
         $query->set('orderby', 'meta_value_num');
     }
