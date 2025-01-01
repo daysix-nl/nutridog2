@@ -1072,3 +1072,69 @@ function sort_custom_columns($query) {
         $query->set('orderby', 'meta_value_num');
     }
 }
+
+
+
+// Voeg een admin notice toe met marge-informatie
+add_action('admin_notices', 'show_margin_alert');
+function show_margin_alert() {
+    // Zorg ervoor dat de melding alleen op de productpagina's verschijnt
+    $screen = get_current_screen();
+    if ($screen->id !== 'edit-product') {
+        return;
+    }
+
+    // Query om alle producten op te halen
+    $args = [
+        'post_type'      => 'product',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+    ];
+    $query = new WP_Query($args);
+
+    $low_margin_count = 0;
+    $very_low_margin_count = 0;
+    $critical_margin_count = 0;
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+
+            $product = wc_get_product(get_the_ID());
+
+            if (!$product->is_type('variable')) {
+                $b2b_price = floatval(get_post_meta(get_the_ID(), 'b2b_price', true));
+                $regular_price = floatval(get_post_meta(get_the_ID(), '_regular_price', true));
+                $sale_price = floatval(get_post_meta(get_the_ID(), '_sale_price', true));
+                $effective_price = $sale_price > 0 ? $sale_price : $regular_price;
+
+                if ($b2b_price > 0 && $effective_price > 0) {
+                    $margin = (($effective_price - $b2b_price) / $b2b_price) * 100;
+
+                    if ($margin < 20) {
+                        $low_margin_count++;
+                    }
+                    if ($margin < 10) {
+                        $very_low_margin_count++;
+                    }
+                    if ($margin < 1) {
+                        $critical_margin_count++;
+                    }
+                }
+            }
+        }
+        wp_reset_postdata();
+    }
+
+    // Toon de melding
+    if ($low_margin_count > 0 || $very_low_margin_count > 0 || $critical_margin_count > 0) {
+        echo '<div class="notice notice-warning is-dismissible">';
+        echo '<p><strong>Marge-informatie:</strong></p>';
+        echo '<ul>';
+        echo '<li>Producten met een marge < 20%: ' . $low_margin_count . '</li>';
+        echo '<li>Producten met een marge < 10%: ' . $very_low_margin_count . '</li>';
+        echo '<li>Producten met een marge < 1%: ' . $critical_margin_count . '</li>';
+        echo '</ul>';
+        echo '</div>';
+    }
+}
